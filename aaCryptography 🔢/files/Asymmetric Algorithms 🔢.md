@@ -46,7 +46,7 @@
 asd
 
 <p align="center">
- <img src="img/Immagine 2022-02-03 170205.jpg" alt="Title Scene: the game's logo is shown" width="400" />
+ <img src="img/Immagine 2022-02-03 170205.jpg" />
 </p>
  
  <p align="center">
