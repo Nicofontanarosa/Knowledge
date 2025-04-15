@@ -45,22 +45,20 @@
 > 
 asd
 
-![Descrizione](https://github.com/Nicofontanarosa/Knowledge/tree/main/aaCryptography%20🔢/img/Immagine%202022-02-03%20170205.jpg)
-
+<p align="center">
+  <img src="img/Immagine 2022-02-03 170205.jpg" alt="Title Scene: the game's logo is shown" width="400" />
+</p>
  ---
 > 
 > *Per n utenti avrò bisogno di 2n chiavi ( coppia <Kpub, Kpriv> )*
 > 
 > Con la crittografia asimmetrica -->
 > 
-> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decrittarlo
-> - Si risolve il problema della **autenticità del mittente**
+> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decritta![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-09 185310.jpg]]a **autenticità del mittente**
 > 
 > Distinguiamo due modalità di funzionamento -->
 > 
-> - **Modalità confidenziale** --> sono garantite la riservatezza e l'integrità del messaggio
-> 
-> ![[Immagine 2022-02-09 185310.jpg]]
+> - **Modalità confidenziale** --> sono garantite la riservatezza e l'inte![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-09 185333.jpg]]e 2022-02-09 185310.jpg]]
 > 
 > - **Modalità autenticazione** --> garantisce l'autenticità del messaggio ma non viene garantita la riservatezza ( firma elettronica sul messaggio ) 
 > 
@@ -106,7 +104,7 @@ asd
 > La difficoltà nel forzare l' RSA sta nella fattorizzare un numero arbitrariamente molto grande, problema difficile, ma non come un tempo ->
 > 
 > - La potenza di calcolo aumenta ogni giorno
-> - Esiste un algoritmo chiamato **GNFS** ( *General Number Field Sieve* ) che richiede O( 2^rad( b log b ) ) rispetto ad un forza bruta che ne impiega O ( 2^b ) => Ad oggi è possibile fattorizzare semiprimi fino a 829 bit ( / 3 = 250 digit )
+> - Esiste un algoritmo chiamato **GNFS** ( *General Number Field Sieve* ) che richiede O( 2^rad( b log b ) ) rispetto ad un forza bruta che ne impiega O ( 2^b ) =>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-23 092334.png]]iprimi fino a 829 bit ( / 3 = 250 digit )
 > - La fattorizzazione e il logaritmo discreto non sono problemi NP - Hard e si risolvono in tempo polinomiale su macchine quantistiche
 > 
 > ![[Screenshot 2023-12-23 092334.png]]
@@ -123,7 +121,7 @@ asd
 >
 >- e != ( φ(n) + k ) / k con (p - 1)/k e (q - 1)/k non dia resto => k divide p e q - 1 poiché altrimenti il messaggio rimane invariato dopo la cifratura
 >- *e* e *d* piccoli accellera la cifratura o decifratura ma se uno è piccolo => l'altro deve essere grande altrimenti basterebbero gli attacchi bruteforce
->- Se m ed e sono piccoli | m^e < n => si può trovare la radice e-esima di e poiché c = m^e ( *non interviene la riduzione in modulo* ) => **padding**
+>- Se m ed e sono piccoli | m^e < n => si può ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-31 102055.png]] c = m^e ( *non interviene la riduzione in modulo* ) => **padding**
 >- Se e utenti hanno scelto lo stesso valore di e, e ricevono lo stesso messaggio m attraverso i crittogrammi: 
 >
 >![[Screenshot 2023-12-31 102055.png]]

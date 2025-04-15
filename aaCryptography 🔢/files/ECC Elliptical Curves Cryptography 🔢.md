@@ -14,7 +14,7 @@
 
 > [!radar]- AES vs RSA vs ECC
 > 
-> ![[Screenshot 2023-11-11 094259.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-11 094259.png]]
 > 
 
 ---
@@ -32,7 +32,7 @@
 
 > [!terminal]- Example
 > 
-> ![[Screenshot 2023-10-31 220312.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-31 220312.png]]
 > 
 
 > [!brain]- Impressions

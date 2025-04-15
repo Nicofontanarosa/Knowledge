@@ -7,19 +7,19 @@
 
 > [!key]- How Enigma is made
 > 
-> ![[Screenshot 2023-10-11 105018.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105018.png]]
 >
->![[Screenshot 2023-10-11 105047.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105047.png]]
 >
->![[Screenshot 2023-10-11 105117.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105117.png]]
 >
->![[Screenshot 2023-10-11 105143.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105143.png]]
 >
->![[Screenshot 2023-10-11 105209.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105209.png]]
 >
->![[Screenshot 2023-10-11 105233.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 105233.png]]
 >
->![[Screenshot 2023-10-11 114002.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-11 114002.png]]
 > 
 
 > [!radar]- External View

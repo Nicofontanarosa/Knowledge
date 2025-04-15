@@ -17,13 +17,13 @@
 >
 > 	Questi tre **requisiti devono** inoltre **essere verificabili** da una terza parte ovvero dal **giudice** ovvero certificare la comunicazione
 > 
-> ![[Screenshot 2023-12-30 095344.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-30 095344.png]]
 > 
-> ![[Screenshot 2023-12-30 095415.png]] 
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-30 095415.png]] 
 > 
-> ![[Screenshot 2023-12-30 095441.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-30 095441.png]]
 > 
-> ![[Screenshot 2023-12-30 095504.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-30 095504.png]]
 > 
  
 > [!radar]- Note
@@ -94,7 +94,7 @@
 > 2. ***One-Way*** -> E' computazionalmente difficile trovare x ∈ X conoscendo y ∈ Y . f(x) = y
 > 3. ***Claw-Free*** -> E' computazionalmente difficile determinare una coppia x, x' ∈ X . f(x) = f(x') = y ∈ Y 
 > 
-> ![[Screenshot 2023-11-11 111117.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-11 111117.png]]
 > 
 
 > [!key]- Hash Functions SHA
@@ -109,7 +109,7 @@
 > 
 > 2. Il messaggio m viene concatenato con una sequenza di di **padding** per renderne la lunghezza un multiplo di **512 bit**
 > 
-> ![[Screenshot 2023-11-11 114739.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-11 114739.png]]
 > > Struttura di massima del ciclo i-esimo di SHA1
 > 
 > 1. **F** è una **funzione non lineare** 
@@ -146,7 +146,7 @@ Spesso non serve la segretezza ma basta l'autenticazione e la certezza che il me
 > 
 > Il formato dei file firmati digitalmente è il **.p7m / pkcs#7** ( Dal 1999. Oggi usate anche le firme in formato pdf e xml )
 > 
-> ![[Immagine 2022-02-16 160605.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-16 160605.jpg]]
 > 
 
 ---
@@ -157,7 +157,7 @@ Spesso non serve la segretezza ma basta l'autenticazione e la certezza che il me
 > 
 > La smartcard è una carta plastificata, su cui è integrato un microchip programmabile, con una ***ROM*** che contiene il sistema operativo e i programmi " fissi ", una ***PROM*** che contiene il numero seriale della smartcard, un'altra ROM che contiene i dati del proprietario e i meccanismi di protezione che ne evitano la clonazione
 > 
-> ![[Immagine 2022-02-20 111703.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-20 111703.jpg]]
 > 
 
 ---
@@ -174,7 +174,7 @@ Spesso non serve la segretezza ma basta l'autenticazione e la certezza che il me
 > 
 > Si utilizza una ***funzione hash*** attraverso la quale si calcola una stringa identificativa del messaggio, detta ***fingerprint*** o ***message digest***. Il calcolo di questa fingerprint risulta essere vantaggioso poichè nella fase di crittazione andremo ad operare su pochi byte invece che su tutto il messaggio ( è ***irreversibile*** )
 > 
-> ![[Immagine 2022-02-20 112328.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-20 112328.jpg]]
 > 
 > Quando A vuole mandare a B un mesaggi -->
 > 
@@ -183,7 +183,7 @@ Spesso non serve la segretezza ma basta l'autenticazione e la certezza che il me
 > - L'impronta crittografata viene accodata al messaggio in chiaro
 > - Al messaggio vine anche accodato il certificato del firmataio
 > 
-> ![[Immagine 2022-06-28 091452.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-06-28 091452.jpg]]
 > 
 
 > [!key]- Create a Digital Signature with DH
@@ -349,7 +349,7 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > 
 > I protocolli, essendo insicuri, necessitano di sistemi di protezione applicabili nei livelli di sessione o di rete =>
 > 
-> ![[Immagine 2022-03-01 173637.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-03-01 173637.jpg]]
 > 
 
 ---
@@ -388,7 +388,7 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > 2. Si **accordano**  sugli **algoritmi** da usare
 > 3. Si scambiano un **master - secret**
 > 
-> ![[Screenshot 2023-11-21 092909.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-21 092909.png]]
 > 
 > 1. U manda un messaggio chiamato **client hello** con cui richiede di voler creare una comunicazione cifrata con SSL specificando le "prestazioni" di sicurezza che vorrebbe instaurare + una sequenza di byte casuali. In particolare ->
 > 
@@ -396,7 +396,7 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > - Un elenco di algoritmi di compressione
 > - Una **Cipher Suite** che comprende i meccanismi di cifratura quali ->
 > 
-> ![[Screenshot 2023-11-21 101317.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-21 101317.png]]
 > 
 > Questo è un esempio che prevede **RSA** per lo scambio di chiavi di sessione, **2TDES_EDE_CBC** per la cifratura simmetrica dei blocchi del messaggio e **SHA1** come funzione hash one - way per il calcolo del MAC
 > 
@@ -505,11 +505,11 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 >2. ***Change Cipher Protocol***
 >3. ***Alert Protocol***
 >
->![[Immagine 2022-03-01 194112.jpg]]
+>![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-03-01 194112.jpg]]
 >
 >Prende i dati dal livello superiore, lisuddivide in blocchi, ne calcola il ***MAC***, cifra il tutto e trasmette il risultato
 >
->![[Immagine 2022-03-01 194526.jpg]]
+>![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-03-01 194526.jpg]]
 >
 
 > [!radar]- Forward Secrecy

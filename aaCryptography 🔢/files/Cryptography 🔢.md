@@ -68,7 +68,7 @@ Il desiderio di mantenere i messaggi nascosti tra due interlocutori agli occhi d
 > 
 > Invece  di rotare l'alfabeto di 3 posizioni possiamo rotarlo di una quantità arbitraria **1 <= k <= 25** dove k è la **chiave**
 >
-> ![[Screenshot 2023-09-26 221511.png]] 
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-09-26 221511.png]] 
 > 
 
 > [!quote]-  Augusto 50 a.c
@@ -77,7 +77,7 @@ Il desiderio di mantenere i messaggi nascosti tra due interlocutori agli occhi d
 > 
 > > [!terminal] Example
 > > 
-> > ![[Screenshot 2023-10-02 185751.png]]
+> > ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-02 185751.png]]
 > > 
 > 
 > *Tale cifrario è stato svelato poiché Claudio rinvenne casualmente un'edizione dell'iliade usata da Augusto che riportava annotazioni*  
@@ -103,7 +103,7 @@ Il desiderio di mantenere i messaggi nascosti tra due interlocutori agli occhi d
 > 
 > Era basato su un **disco cifrante** che mittente e destinatario dovevano possedere uguale, il che ne limitava un uso generale
 > 
-> ![[Screenshot 2023-10-10 160021.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 160021.png]]
 > 
 > Questo attrezzo era costituito da due dischi rotanti che affiancavano due alfabeti. L'alfabeto esterno era usato per scrivere il messaggio. Il disco interno conteneva un alfabeto più ricco, usato per costruire il crittogramma
 > 
@@ -164,7 +164,7 @@ Il desiderio di mantenere i messaggi nascosti tra due interlocutori agli occhi d
 > 
 > E' un cifrario meno sofisticato di quello di Alberti, ma è più pratico poiché basato su una tabella T di dominio pubblico. Questa **tabella** di dimensioni **26 \* 26** contiene l'alfabeto sia per le righe che per le colonne
 > 
-> ![[Screenshot 2023-10-10 165006.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 165006.png]]
 > 
 > La **chiave** del cifrario è costituita da una parola segreta k
 > 
@@ -178,7 +178,7 @@ Il desiderio di mantenere i messaggi nascosti tra due interlocutori agli occhi d
 > 
 > La **decifrazione** di un crittogramma si esegue in maniera del tutto analoga alla crittazione
 > 
-> ![[Screenshot 2023-10-10 170243.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 170243.png]]
 > 
 > Anche se questo cifrario è polialfabetico la sicurezza dipende dalla **lunghezza h** della **chiave** poiché se la chiave è ripetuta avrò sempre la stessa cifratura ogni multiplo di h 
 >  
@@ -236,7 +236,7 @@ Il cifrario di Cesare ci ha permesso di distinguere due proprietà che caratteri
 > 
 > I **Cifrari Completi** permutano le lettere del messaggio in chiaro secondo una permutazione dell'alfabeto -> La **chiave** diventa la **permutazione dell'alfabeto** portando un attacco di forza bruta a provare **26! - 1** -> Impraticabile
 > 
-> ![[Screenshot 2023-10-02 183411.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-02 183411.png]]
 > 
 
 > [!radar]- Note
@@ -247,7 +247,7 @@ Il cifrario di Cesare ci ha permesso di distinguere due proprietà che caratteri
 > 2. **Occorrenza statica delle lettere** -> Il messaggio in chiaro conserva le informazioni di frequenza dell'alfabeto originale -> La struttura del testo in chiaro permane nel testo cifrato
 > 
 > >*Frequenze dei caratteri in italiano*
-> ![[Screenshot 2023-10-02 184059.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-02 184059.png]]
 > 
 
 ---
@@ -261,7 +261,7 @@ Il cifrario di Cesare ci ha permesso di distinguere due proprietà che caratteri
 > 
 > *Se la lunghezza di m non è divisibile per h, si aggiungono alla fine del messaggio delle lettere causali* -> **Padding** *che sono aggiunte alla trasposizione ma sono ignorate dal destinatario perché situate alla fine del messaggio*
 > 
-> ![[Screenshot 2023-10-10 172614.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 172614.png]]
 > 
 > Il numero delle chiavi totali è **h! - 1** ( la permutazione identica ) -> Tanto più h è grande tanto più l'algoritmo sarà efficiente
 > 
@@ -277,11 +277,11 @@ Il cifrario di Cesare ci ha permesso di distinguere due proprietà che caratteri
 > 
 > *Se la lunghezza di m non è divisibile per h, si aggiungono alla fine del messaggio delle lettere causali* -> **Padding** *che sono aggiunte alla trasposizione ma sono ignorate dal destinatario perché situate alla fine del messaggio*
 > 
-> ![[Screenshot 2023-10-10 173334.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 173334.png]]
 > 
 > Dopo aver disposto il blocco nella tabella si permutano le colonne
 > 
-> ![[Screenshot 2023-10-10 173500.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 173500.png]]
 > 
 
 ---
@@ -296,7 +296,7 @@ Il cifrario di Cesare ci ha permesso di distinguere due proprietà che caratteri
 > 
 > Si scrivono i primi s caratteri del messaggio nelle posizioni corrispondenti alle celle trasparenti. Successivamente la griglia viene **ruotata** tre volte di 90 gradi in senso orario e, per ogni rotazione, si ripete l'operazione di scrittura di tre successivi gruppi di s caratteri
 > 
-> ![[Screenshot 2023-10-10 202040.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-10 202040.png]]
 > 
 > *La griglia deve essere scelta in modo che le posizioni corrispondenti alle celle trasparenti non si sovrappongano mai nelle rotazioni*
 >  
@@ -384,7 +384,7 @@ Generalmente questo algoritmo di cifratura è noto, pertanto diviene soggetto a 
 > 
 > 7. ***Letters Frequency*** -> Quando la forza bruta non funziona possiamo usare la tecnica delle frequenze dei caratteri per ridurre il numero di opzioni all'attacco
 > 
-> ![[Screenshot 2023-09-20 114126.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-09-20 114126.png]]
 > 
 
 ---
@@ -442,11 +442,11 @@ Generalmente questo algoritmo di cifratura è noto, pertanto diviene soggetto a 
 > 
 > Se la chiave di cifratura coincide con quella di decifratura si parla di **schema crittografico simmetrico** e la chiave prende il nome di **chiave comune**
 > 
-> ![[Immagine 2022-02-03 161949.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-03 161949.jpg]]
 > 
 > Quando la chiave è diversa invece, si parla di **schema crittografico asimmetrico** e le due chiavi sono una **pubblica** ed una **privata** ( alla base delle comunicazione odierne )
 > 
-> ![[Immagine 2022-02-03 162132.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-03 162132.jpg]]
 > 
 > Il numero delle ***chiavi*** deve essere così grande da essere praticamente ***immune*** dagli attacchi di ***Brute Force*** e la chiave deve essere scelta in maniera ***casuale*** in modo tale da non permettere al crittoanalista di decifrare il messaggio se non dispone della chiave in tempo **polinomiale**
 > 

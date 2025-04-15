@@ -37,7 +37,7 @@
 > 
 > Protocollo nato negli anni '80 per sostituire il protocollo DH e gli altri venuti per lo stesso scopo, scambiarsi chiavi. Il meccanismo dello scambio di chiavi tra due utenti mediante l'invio di fotoni polarizzati è noto come ***QKD*** ( **Q**uantum **K**ey **D**istribution ) nato nel 1984 da **Charles Bennet** e **Gilles Brassard** nominato BB84. La prima realizzazione pratica è avvenuta nel 2001 presso il CERN dove è stato effettuato uno scambio di chiavi lungo un cavo di fibra ottica lungo 67km da Ginevra a Losanna
 > 
-> ![[Screenshot 2023-12-20 230551.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-12-20 230551.png]]
 > 
 
 > [!brain]- Impressions

@@ -5,7 +5,7 @@
 > 
 > In questi algoritmi il mittente e il destinatario devono scambiarsi la chiave prima di poter effettuare la cifratura del messaggio
 > 
-> ![[Immagine 2022-02-03 165645.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-03 165645.jpg]]
 > 
 > Sono molto **più veloci** degli algoritmi asimmetrici ma come fare per ***scambiarsi la chiave?*** si utilizza la **crittografia asimmetrica**
 > 
@@ -75,7 +75,7 @@
 > 
 > Dalla **chiave k** vengono create le **sottochiavi di fase** ( **usate** nei vari **round** )
 > 
-> ![[Immagine 2022-02-09 173340.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-09 173340.jpg]]
 > 
 > **La decifrazione consiste nel ripetere il processo invertendo l’ordine delle chiavi, caratteristica per nulla ovvia vista la struttura del cifrario**
 > 
@@ -109,16 +109,16 @@
 > - La **S - BOX** garantisce la **non linearità** del DES
 > - Ogni bit della chiave partecipa a 14 delle 16 fasi del DES
 > 
-> ![[Screenshot 2023-10-21 092703.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 092703.png]]
 > 
 > 1. Il **messaggio** viene **permutato** inizialmente e anche alla fine -> Tranquillamente **omissibile**
 > 
-> ![[Screenshot 2023-10-21 093108.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 093108.png]]
 > > Permutazione iniziale e finale
 >
 > 1. La **chiave** viene **depurata** togliendo i **bit di parità** e **mescolando** i **56 bit** rimanente
 > 
-> ![[Screenshot 2023-10-21 093226.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 093226.png]]
 > > Bit mescolati e rimossi i multipli di 8
 > 
 > 3. Il **messaggio** viene **diviso** in **blocco sx** e **blocco dx**
@@ -127,9 +127,9 @@
 > 
 > 5. in ogni **round** cambio la **parte sinistra con quella destra** e alla **parte destra applico una funzione non lineare** ( **Feistel Network** )
 > 
-> ![[Screenshot 2023-10-20 233127.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-20 233127.png]]
 > 
-> ![[Screenshot 2023-10-21 093513.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 093513.png]]
 > > Il trapezio significa espansione ( EP ) mentre quello rovesciato significa riduzione ( CT )
 > 
 > **Estrazione della sottochiave di fase** -> 
@@ -138,10 +138,10 @@
 > 
 > **S - BOX** -> **Riduce** il numero di **bit** da 48 a 32
 > 
-> ![[Screenshot 2023-10-21 103026.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 103026.png]]
 > > Dove i 4 bit centrali corrispondo alla colonna di una tabella mentre i due bit estremi corrispondono alla riga
 > 
-> ![[Screenshot 2023-10-21 103259.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 103259.png]]
 > > Dove tutte le altre sottofunzioni S2, S2, ..., S8 sono definite similmente
 > 
 > - Il ***vantaggio*** di questa S - BOX è quello di essere **super veloce** nel fornire il risultato dato che ce l'ho già scritto in forma tabellare
@@ -150,7 +150,7 @@
 >
 > **Permutazione dopo S - BOX** ->
 > 
-> ![[Screenshot 2023-10-21 121809.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-10-21 121809.png]]
 > 
 
 > [!key]- Property of S - BOX
@@ -199,7 +199,7 @@
 > 
 > Nel 1999 è stato introdotto Triple DES. Nella cifratura e decifratura alterniamo un passo di cifratura ed un passo di decifratura. Nel 2T-DES k3 = k1 -> chiave complessiva = 112 bit ( 128 - 16 di parità )
 > 
-> ![[Immagine 2022-02-09 175256.jpg]]
+> ![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-09 175256.jpg]]
 > 
 > Nel 3T-DES k1 != k3 -> chiave complessiva = 112 bit ? perché ->
 > 
@@ -274,11 +274,11 @@
 > 
 > Prevede che i **blocchi** in cui è diviso il **messaggio** e la **chiave** segreta siano formati da **128, 192 o 256 bit**. L'AES prevede solo queste dimensioni per i blocchi
 > 
-> ![[Screenshot 2023-11-05 192511.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 192511.png]]
 > 
 > **Ogni fase** impiega una **propria chiave locale** creata a partire dalla chiave segreta e opera su una **matrice** di 128bit, ovvero **16 byte** ( 4 x 4 )
 > 
-> ![[Screenshot 2023-11-05 192843.png]] 
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 192843.png]] 
 >
 > La **chiave iniziale** è caricata in una **matrice W** successivamente ampliata **aggiungendo 40** colonne generate dalla prime 4 ->
 >
@@ -286,22 +286,22 @@
 >- W[i] = W[i-4] XOR T(W[i-1]) con i multiplo di 4
 > Dove **T** è la **S - BOX non lineare**
 > 
->![[Screenshot 2023-11-05 194153.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 194153.png]]
 >
 > questo poiché la chiave k(i) per la i-esima fase è data dalle 4 colonne W[4i], W[4i+1], W[4i+2] ...
 >
->![[Screenshot 2023-11-05 194616.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 194616.png]]
 > 
 
 > [!key]- Definition of T
 > 
-> ![[Screenshot 2023-11-05 195039.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 195039.png]]
 > 
 > - ***Shift ciclico a sinistra***
 > - ***Applico la S - Box che lascia invariato il numero dei bit***
 > - ***Eseguo lo XOR bit a bit per il primo elemento con una costante dinamica***
 > 
-> ![[Screenshot 2023-11-05 195113.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 195113.png]]
 > 
 > Dove **RC(i) = 1 se i = 1 e 2RC(i-1) con 2 <= i <= 10**
 >  
@@ -317,15 +317,15 @@
 > 
 > Il **messaggio** viene **cifrato** tramite **4 operazioni** principali tranne nell'ultima fase ( *la decifrazione non è neanche del tutto identica a questa cifratura* )-->
 > 
->![[Screenshot 2023-11-05 195659.png]]
+>![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-05 195659.png]]
 >
 > Dove la fase ***Add Round Key*** significa porre ogni byte del **messaggio** posto nella matrice B in **XOR** bit a bit con il corrispondente byte della **chiave**
 >
-> ![[Screenshot 2023-11-06 164309.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-06 164309.png]]
 > 
 > 1. ***Substitute Bytes*** -> Ad ogni byte del blocco applico la **S - Box**
 > 
-> ![[Screenshot 2023-11-06 182833.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-06 182833.png]]
 > 
 > 2. ***Shift Rows*** -> I byte di **ogni riga** i vengono **shiftati** a sinistra di i posizioni 
 > 3. ***Mix Columns*** -> **Ogni colonna** del messaggio viene **moltiplicata** per una **matrice 4 x 4 byte** ( *eseguita in mod 2^8* ). In questo modo l'elemento ai,j si trasforma in bi,j che dipende da ciascun byte della colonna con a1,1, a1,2 ...
@@ -339,11 +339,11 @@
 > 
 > La S - Box è una **matrice 16 x 16 byte** ( 256 byte ) che contiene una **permutazione** di tutti i **256 interi a 8 bit**
 > 
-> ![[Screenshot 2023-11-06 183122.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-06 183122.png]]
 > 
 > Applicare la S - Box al messaggio significa **sostituirlo** con il suo **inverso moltiplicativo in GF(2^8)** ( operazione **non lineare** poiché **(b1 XOR b2)^-1 != (b1^-1 XOR b2^-1)** ). Questo equivale a **sostituire bi** nella tabella di sopra in questo modo -->
 > 
-> ![[Screenshot 2023-11-06 184021.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-06 184021.png]]
 > 
 > e poi **moltiplicarlo** per una **matrice 8 x 8 bit** ( fissata ) **sommato** con un **vettore colonna** ( fissato )
 > 
@@ -374,7 +374,7 @@
 > 
 > **Si crea una dipendenza con i blocchi del messaggio** seguendo sempre il principio della diffusione di Shannon
 > 
-> ![[Screenshot 2023-11-09 161853.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-09 161853.png]]
 > 
 > - ***Cifratura*** -> c(i) = C(m(i) XOR c(i - 1), k)
 > - ***Decifratura*** -> m(i) = c(i - 1) XOR D(c(i), k)
@@ -383,7 +383,7 @@
 >
 > L'**introduzione** per produrre la sequenza c(0) è essenziale altrimenti messaggi uguali avranno la stessa cifratura -> questa può essere costruita tramite una stringa generata **pseudocasualmente** ( marca temporale )
 > 
-> ![[Screenshot 2023-11-09 161945.png]]
+> ![[AEv2rt5_Cryptography 🔢/img/Screenshot 2023-11-09 161945.png]]
 > 
 
 > [!radar]- Note
