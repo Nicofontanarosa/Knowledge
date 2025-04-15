@@ -45,6 +45,8 @@
 > 
 asd
 
+prova git obsidian
+
 <p align="center">
  <img src="img/Immagine 2022-02-03 170205.jpg" />
 </p>
