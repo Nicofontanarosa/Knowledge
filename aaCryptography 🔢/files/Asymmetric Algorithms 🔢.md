@@ -46,8 +46,15 @@
 asd
 
 <p align="center">
-  <img src="img/Immagine 2022-02-03 170205.jpg" alt="Title Scene: the game's logo is shown" width="400" />
+ <img src="img/Immagine 2022-02-03 170205.jpg" alt="Title Scene: the game's logo is shown" width="400" />
 </p>
+ 
+ <p align="center">
+<img src="./app/src/main/res/mipmap-xxxhdpi/grass_background.png" alt="Sheep" width="100" style=''>
+<img src="./app/src/main/res/drawable/my_sheep.png" alt="Sheep" width="100" style=''>
+<img src="./app/src/main/res/drawable/my_dark_sheep.png" alt="Sheep" width="100" style=''>
+</p>
+ 
  ---
 > 
 > *Per n utenti avrò bisogno di 2n chiavi ( coppia <Kpub, Kpriv> )*
