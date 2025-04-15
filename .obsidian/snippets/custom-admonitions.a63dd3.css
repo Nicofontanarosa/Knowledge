@@ -1,0 +1,145 @@
+
+.callout {
+  border-left-width: 8px;
+  padding: unset;
+  border-left-color: rgba(var(--callout-color), 0.4);
+}
+
+.callout-title {
+  padding: 0.8em 1.5em;
+  background-color: rgba(var(--callout-color), 0.1);
+  color: rgba(255,255,255);
+}
+
+.callout-content {
+  padding: 0.5em 1.5em;
+}
+
+/* Algorithm */
+
+.callout[data-callout="newspaper"] {
+	--callout-color: 108,150,255;
+	--callout-icon: lucide-newspaper;
+}
+
+.callout[data-callout="note"] {
+	--callout-color: 88,175,255;
+}
+
+/* ------------ */
+
+.callout[data-callout="file-code"] {
+	--callout-color: 54,56,57;
+  --callout-icon: lucide-file-code;
+}
+
+.callout[data-callout="album"] {
+	--callout-color: 255,196,21;
+  --callout-icon: lucide-album;
+}
+
+.callout[data-callout="codepen"] {
+	--callout-color: 255,67,33;
+  --callout-icon: codepen;
+}
+
+.callout[data-callout="book"] {
+	--callout-color: 255,164,54;
+	--callout-icon: lucide-book;
+}
+
+/* Cryptography */
+
+.callout[data-callout="terminal"] {
+	--callout-color: 137,255,183;
+  --callout-icon: terminal-square;
+}
+
+.callout[data-callout="key"] {
+	--callout-color: 86,255,40;
+  --callout-icon: folder-lock;
+}
+
+.callout[data-callout="radar"] {
+  --callout-color: 141,66,41;
+  --callout-icon: file-key-2;
+}
+
+/* ------------ */
+
+.callout[data-callout="c"] {
+  --callout-color: 96,81,255;
+  --callout-icon: chevron-right-square;
+}
+
+/* Paradigmi di Programmazione */
+
+.callout[data-callout="calculator"] {
+  --callout-color: 255,157,31;
+  --callout-icon: calculator;
+}
+
+.callout[data-callout="history"] {
+  --callout-color: 255,243,85;
+  --callout-icon: history;
+}
+
+/* Assembler */
+
+.callout[data-callout="arm"] {
+  --callout-color: 36,255,246;
+  --callout-icon: cpu;
+}
+
+.callout[data-callout="not"] {
+  --callout-color: 171,255,72;
+  --callout-icon: binary;
+}
+
+/* Quantum Cryptography */
+
+.callout[data-callout="atom"] {
+  --callout-color: 199,107,255;
+  --callout-icon: atom;
+}
+
+.callout[data-callout="note_qua"] {
+  --callout-color: 50,63,212;
+  --callout-icon: file-key-2;
+}
+
+/* Impressions */
+
+.callout[data-callout="brain"] {
+  --callout-color: 255,247,42;
+  --callout-icon: brain;
+}
+
+/* Windows */
+
+.callout[data-callout="win"] {
+  --callout-color: 52,195,255;
+  --callout-icon: layout-template;
+}
+
+/* Networks */
+
+.callout[data-callout="network"] {
+  --callout-color: 141,206,255;
+  --callout-icon: network;
+}
+
+/* Artificial Intelligence */
+
+.callout[data-callout="software"] {
+  --callout-color: 111,255,110;
+  --callout-icon: brain-circuit;
+}
+
+.callout[data-callout="ingen"] {
+  --callout-color: 232,255,138;
+  --callout-icon: slack;
+}
+
+
+/* ------------ */

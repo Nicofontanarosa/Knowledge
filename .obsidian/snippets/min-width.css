@@ -1,0 +1,10 @@
+
+/* Custom Line Width */
+body {
+	--line-width: 60rem !important;
+	--tab-stacked-pane-width: 900px; /* Optional pane width increase */
+}
+/* Custom Line Width - fixes custom html elements except dataview plugin which this negatively impacts */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div:not(.block-language-dataview) {
+	max-width: 100%;
+}
