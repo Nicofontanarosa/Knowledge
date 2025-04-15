@@ -2,7 +2,7 @@
 #TTP 
 
 > [!TIP]
-> 
+> Definition of Trusted 3rd Party
 > Per scambiarsi le chiavi prima di ovviare all' utilizzo di una chiave pubblica e una chiave privata, la gente si affidava a delle organizzazioni che comunicavano le chiavi da utilizzare ( simmetriche ) da utilizzare per il DES o AES ...
 > 
 > Ogni utente doveva memorizzare solamente la chiave che serviva per comunicare in sicurezza con la TTP
@@ -34,8 +34,8 @@
 > Introdussero il concetto di cifrari a chiave pubblica, ovvero un modo per scambiare una chiave segreta su un canale insicuro
 > 
 
-> [!key]- Definition of Asymmetric Algorithms
-> 
+> [!key] 
+> Definition of Asymmetric Algorithms
 > In questi algoritmi il mittente non deve comunicare con il destinatario per accordarsi poiché utilizza la chiave pubblica del destinatario
 > 
 > Le due chiavi devono essere tra loro indipendenti, in modo che dalla prima non si possa in nessun modo ricavare la seconda => D( C( m, Kpub ), Kpriv ) = m dove ->
@@ -43,7 +43,7 @@
 > 1. < Kpub, Kpriv > è facile da generare e deve essere impossibile ai due utenti generare la stessa chiave
 > 2. D e C sono facili da calcolare conoscendo Kpriv e Kpub ma difficili se non si conosce la chiave => C = **One - Way Trap - Door**
 > 
-> ![Immagine 2022-02-03 170205.jpg](https://github.com/Nicofontanarosa/Knowledge/tree/main/aaCryptography%20🔢/img)
+> ![Descrizione](https://github.com/Nicofontanarosa/Knowledge/tree/main/aaCryptography%20🔢/img/Immagine 2022-02-03 170205.jpg)
 > 
 > ---
 > 
