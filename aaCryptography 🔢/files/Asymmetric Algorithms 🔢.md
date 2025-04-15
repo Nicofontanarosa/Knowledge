@@ -45,7 +45,7 @@
 > 
 
 
-![Descrizione](https://github.com/Nicofontanarosa/Knowledge/tree/main/aaCryptography%20🔢/img/Immagine 2022-02-03 170205.jpg)
+![Descrizione](https://github.com/Nicofontanarosa/Knowledge/tree/main/aaCryptography%20🔢/img/Immagine%2022-02-03% %170205.jpg)
 
  ---
 > 
