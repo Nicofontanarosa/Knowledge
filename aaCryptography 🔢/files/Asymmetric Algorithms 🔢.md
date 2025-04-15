@@ -34,7 +34,7 @@
 > Introdussero il concetto di cifrari a chiave pubblica, ovvero un modo per scambiare una chiave segreta su un canale insicuro
 > 
 
-> [!key] 
+> [!IMPORTANT]
 > Definition of Asymmetric Algorithms
 > In questi algoritmi il mittente non deve comunicare con il destinatario per accordarsi poiché utilizza la chiave pubblica del destinatario
 > 
@@ -54,9 +54,8 @@ asd
 <img src="./app/src/main/res/drawable/my_sheep.png" alt="Sheep" width="100" style=''>
 <img src="./app/src/main/res/drawable/my_dark_sheep.png" alt="Sheep" width="100" style=''>
 </p>
- 
- ---
-> 
+
+> [!IMPORTANT] 
 > *Per n utenti avrò bisogno di 2n chiavi ( coppia <Kpub, Kpriv> )*
 > 
 > Con la crittografia asimmetrica -->
