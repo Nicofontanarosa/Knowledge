@@ -1,7 +1,7 @@
 
 #TTP 
 
-> [!TIP]  Definition of Trusted 3rd Party
+> [!TIP]
 > 
 > Per scambiarsi le chiavi prima di ovviare all' utilizzo di una chiave pubblica e una chiave privata, la gente si affidava a delle organizzazioni che comunicavano le chiavi da utilizzare ( simmetriche ) da utilizzare per il DES o AES ...
 > 
