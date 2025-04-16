@@ -45,13 +45,6 @@
 <p align="center">
  <img src="img/Immagine 2022-02-03 170205.jpg" />
 </p>
- 
- <p align="center">
-<img src="./app/src/main/res/mipmap-xxxhdpi/grass_background.png" alt="Sheep" width="100" style=''>
-<img src="./app/src/main/res/drawable/my_sheep.png" alt="Sheep" width="100" style=''>
-<img src="./app/src/main/res/drawable/my_dark_sheep.png" alt="Sheep" width="100" style=''>
-</p>
-
 > [!IMPORTANT] 
 > *Per n utenti avrò bisogno di 2n chiavi ( coppia <Kpub, Kpriv> )*
 > 
@@ -174,4 +167,8 @@
 > - #RSA -> Non c'è la versione su curve ellittiche poiché vi è già quella di ELGamal e basa la sua difficoltà sulla fattorizzazione di numeri e ben presto non potrà più essere usato. Recentemente è stato attaccato tramite #static_cryptanalysis e #ssh 
 > 
 
----
+---<p align="center">
+<img src="./app/src/main/res/mipmap-xxxhdpi/grass_background.png" alt="Sheep" width="100" style=''>
+<img src="./app/src/main/res/drawable/my_sheep.png" alt="Sheep" width="100" style=''>
+<img src="./app/src/main/res/drawable/my_dark_sheep.png" alt="Sheep" width="100" style=''>
+</p>
