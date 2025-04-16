@@ -72,7 +72,7 @@
 > E' anche possibile garantire sia la riservatezza che l'autenticazione del messaggio combinando le due modalità
 > 
  
-> [!danger]- 
+> [!danger]+ 
 > 
 > Per loro natura però sono esposti ad attacchi di tipo ***chosen plain-text*** poiché il crittoanalista può decidere quale messaggio inviare al destinatario e confrontare tutti i messaggi cifrati con la chiave pubblica per trovare la chiave privata
 > 
@@ -83,14 +83,14 @@
 #RSA #GNFS #padding
 # RSA Algorithm
 
-> [!quote]- Quote
+> [!quote]+ Quote
 > 
 > #Rivest #Shamir #Adleman
 > 
 > Le iniziali di RSA sono quelle dei nomi dei suoi creatori Rives, Shamir e Adleman al MIT, brevettato nel 1983
 > 
 
-> [!key]- Definition of RSA Algorithm
+> [!key]+ Definition of RSA Algorithm
 > 
 > L'algoritmo RSA lavora sfruttando i numeri primi e **n** ottenuto proprio dal prodotto di due numeri **p x q**. Il funzionamento è il seguente -->
 > 
@@ -104,7 +104,7 @@
 > *Risalire a p e q conoscendo n è computazionalmente difficile* => **Fattorizzazione**
 > 
 
-> [!attention]- Security of RSA Algorithm
+> [!attention]+ Security of RSA Algorithm
 > 
 > La difficoltà nel forzare l' RSA sta nella fattorizzare un numero arbitrariamente molto grande, problema difficile, ma non come un tempo ->
 > 
@@ -134,7 +134,7 @@
 >per il **Teorema Cinese del Resto** si può calcolare in tempo polinomiale m' < n = n1 \* n2 \* n3 ... \* ne che soddisfi l'equazione m' = m^e mod n e successivamente si può intervenire con la radice e-esima che viene eseguita facilmente perchè non interviene l'operazione in modulo
 > 
 
-> [!Danger]- Common modules attack
+> [!Danger]+ Common modules attack
 > 
 > Cosa succede se due utenti usano lo stesso modulo?
 >
@@ -146,7 +146,7 @@
 > m = m^(e1x + e2y) = (c1^x \* c2^y) mod n = ((c1^-1)^-x \* c2^y) mod n con x < 0
 > 
 
-> [!Danger]- Time attack
+> [!Danger]+ Time attack
 > 
 > Si basa sul tempo di esecuzione dell'algoritmo di decifrazione => determino d analizzando il tempo impiegato per decifrare => Aggiungere un ritardo casuale per confondere l'attaccante
 > 
@@ -155,7 +155,7 @@
 #ELGamal
 ## ELGamal Cipher
 
-> [!key]- Definition of ELGamal Cipher
+> [!key]+ Definition of ELGamal Cipher
 > 
 > Sistema a chiave pubblica pubblicato nel 1985 basato sul problema del **logaritmo discreto** ->
 > 
@@ -165,7 +165,7 @@
 > 4. Adesso la Kpub = <p, g, y> e Kpriv = \<x>
 > 
 
-> [!brain]- Impressions
+> [!brain]+ Impressions
 > 
 > #mind
 > 
