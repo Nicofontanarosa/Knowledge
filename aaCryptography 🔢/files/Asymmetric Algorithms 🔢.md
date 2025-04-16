@@ -2,13 +2,15 @@
 #TTP 
 
 > [!TIP]
-> Definition of Trusted 3rd Party
-> Per scambiarsi le chiavi prima di ovviare all' utilizzo di una chiave pubblica e una chiave privata, la gente si affidava a delle organizzazioni che comunicavano le chiavi da utilizzare ( simmetriche ) da utilizzare per il DES o AES ...
+> 
+> ***Definition of Trusted 3rd Party***
+> 
+> Per scambiarsi le chiavi prima di ovviare all'utilizzo di una chiave pubblica e una chiave privata, la gente si affidava a delle organizzazioni che comunicavano le chiavi da utilizzare ( *simmetriche* ) da utilizzare per il DES o AES ...
 > 
 > Ogni utente doveva memorizzare solamente la chiave che serviva per comunicare in sicurezza con la TTP
 > 
 
-> [!terminal]- Example
+> [!NOTE]
 > 
 > Alice vuole comunicare con Bob che usando una TTP che conosce la chiave Ka e Kb =>
 > 
