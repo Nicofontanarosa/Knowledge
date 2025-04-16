@@ -1,7 +1,8 @@
+# Asymmetric Algorithms 🔢
 
 #TTP 
 
-> [!TIP]
+> [!NOTE]
 > 
 > ***Definition of Trusted 3rd Party***
 > 
@@ -10,7 +11,7 @@
 > Ogni utente doveva memorizzare solamente la chiave che serviva per comunicare in sicurezza con la TTP
 > 
 
-> [!NOTE]
+> [!TIP]
 > 
 > Alice vuole comunicare con Bob che usando una TTP che conosce la chiave Ka e Kb =>
 > 
@@ -20,7 +21,7 @@
 > 4. Alice e Bob iniziano la comunicazione con la chiave Kab
 > 
 
-> [!danger]- 
+> [!CAUTION]
 > 
 > **TTP dovrà essere sempre online e dovrà conoscere tutte le chiavi** 
 >  
