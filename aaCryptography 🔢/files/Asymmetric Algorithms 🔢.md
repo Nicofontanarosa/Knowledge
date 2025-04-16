@@ -28,17 +28,13 @@
 
 ---
 #asymmetric_algorithms #DH
-## Asymmetric Algorithms
-
-> [!quote]- Quote
-> 
-> #Diffie #Hellman #Merkle
-> 
-> Introdussero il concetto di cifrari a chiave pubblica, ovvero un modo per scambiare una chiave segreta su un canale insicuro
-> 
 
 > [!IMPORTANT]
-> Definition of Asymmetric Algorithms
+> 
+> **Definition of Asymmetric Algorithms**
+> 
+> #Diffie #Hellman #Merkle Introdussero il concetto di cifrari a chiave pubblica, ovvero un modo per scambiare una chiave segreta su un canale insicuro
+>
 > In questi algoritmi il mittente non deve comunicare con il destinatario per accordarsi poiché utilizza la chiave pubblica del destinatario
 > 
 > Le due chiavi devono essere tra loro indipendenti, in modo che dalla prima non si possa in nessun modo ricavare la seconda => D( C( m, Kpub ), Kpriv ) = m dove ->
@@ -46,9 +42,6 @@
 > 1. < Kpub, Kpriv > è facile da generare e deve essere impossibile ai due utenti generare la stessa chiave
 > 2. D e C sono facili da calcolare conoscendo Kpriv e Kpub ma difficili se non si conosce la chiave => C = **One - Way Trap - Door**
 > 
-asd
-
-prova git obsidian
 
 <p align="center">
  <img src="img/Immagine 2022-02-03 170205.jpg" />
