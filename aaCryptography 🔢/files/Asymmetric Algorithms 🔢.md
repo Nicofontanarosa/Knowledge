@@ -42,7 +42,6 @@
 > 1. < Kpub, Kpriv > è facile da generare e deve essere impossibile ai due utenti generare la stessa chiave
 > 2. D e C sono facili da calcolare conoscendo Kpriv e Kpub ma difficili se non si conosce la chiave => C = **One - Way Trap - Door**
 > 
-
 <p align="center">
  <img src="img/Immagine 2022-02-03 170205.jpg" />
 </p>
