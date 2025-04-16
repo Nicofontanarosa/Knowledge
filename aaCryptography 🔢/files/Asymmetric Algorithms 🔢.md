@@ -52,14 +52,14 @@
 > 
 > Con la crittografia asimmetrica -->
 > 
-> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decritta a **autenticità del mittente**
+> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decifrare il messaggio e garantisce l' **autenticità del mittente**
 >  
 
 <p align="center">
  <img src="img/Immagine 2022-02-09 185310.jpg" />
 </p>
 
-> 
+> [!IMPORTANT] 
 > 
 > Distinguiamo due modalità di funzionamento -->
 > 
