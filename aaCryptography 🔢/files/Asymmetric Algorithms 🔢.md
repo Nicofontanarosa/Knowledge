@@ -41,16 +41,25 @@
 > 
 > 1. < Kpub, Kpriv > è facile da generare e deve essere impossibile ai due utenti generare la stessa chiave
 > 2. D e C sono facili da calcolare conoscendo Kpriv e Kpub ma difficili se non si conosce la chiave => C = **One - Way Trap - Door**
-> 
+
 <p align="center">
  <img src="img/Immagine 2022-02-03 170205.jpg" />
 </p>
+
 > [!IMPORTANT] 
+> 
 > *Per n utenti avrò bisogno di 2n chiavi ( coppia <Kpub, Kpriv> )*
 > 
 > Con la crittografia asimmetrica -->
 > 
-> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decritta![[AEv2rt5_Cryptography 🔢/img/Immagine 2022-02-09 185310.jpg]]a **autenticità del mittente**
+> - Si risolve il problema della **riservatezza** del messaggio dato che solo il possessore della chiave primaria è in grado di decritta a **autenticità del mittente**
+>  
+
+<p align="center">
+ <img src="img/Immagine 2022-02-09 185310.jpg" />
+</p>
+
+> 
 > 
 > Distinguiamo due modalità di funzionamento -->
 > 
