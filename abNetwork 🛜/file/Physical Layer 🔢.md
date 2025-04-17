@@ -149,7 +149,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 181951.png" /></p>
 > 
-> - ***Switch*** => Operano sia a livello fisico rigenerando il segnale che a livello link verificando gli indirizzi MAC. Lo switch distrugge e rigenera il pacchetto dato che controlla il CRC e genera il preambolo. Una sua proprietà è chiamata di **==Store and Forward==**. Questi dispositivi hanno una tabella che usano per filtrare i frame in maniera selettiva
+> - ***Switch*** => Operano sia a livello fisico rigenerando il segnale che a livello link verificando gli indirizzi MAC. Lo switch distrugge e rigenera il pacchetto dato che controlla il CRC e genera il preambolo. Una sua proprietà è chiamata di <mark>**Store and Forward**</mark>. Questi dispositivi hanno una tabella che usano per filtrare i frame in maniera selettiva
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 182437.png" /></p>
 > <p align="center"><img src="img/Screenshot 2024-08-30 182459.png" /></p>
