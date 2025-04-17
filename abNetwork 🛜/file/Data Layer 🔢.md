@@ -111,7 +111,7 @@
 > - NIC inizia a trasmettere se non sente nulla, altrimenti aspetta fin quando il canale non si libera
 > - Se la NIC riesce a trasmettere tutto il frame senza collisioni allora ha finito
 > - Altrimenti abortisce inviando uno **jam signal**
-> - Dopo aver abortito la NIC entra in uno stato di ***==binary exponential backoff==*** cioè dopo tot collisioni NIC sceglie un numero random K da 0 a 2^tot - 1 e aspetta K x 512 bit times e ritorna allo step 2. Questo significa che più collido più aspetto 
+> - Dopo aver abortito la NIC entra in uno stato di <mark>***binary exponential backoff***</mark> cioè dopo tot collisioni NIC sceglie un numero random K da 0 a 2^tot - 1 e aspetta K x 512 bit times e ritorna allo step 2. Questo significa che più collido più aspetto 
 > 
 > <p align="center"><img src="img/IEEE 802.11.jpg" /></p>
 > 
@@ -171,7 +171,7 @@
 > 
 > ***ARP Poisoning / Spoofing***
 > 
-> ARP è stato progettato per essere il + possibile efficiente. Proprio per questo presenta delle vulnerabilità che possono essere sfruttate ad esempio **==Man in the middle==** o **==Denial of Service Dos==** che inviano pacchetti ARP malevoli che reindirizzano i pacchetti ad un altro host malevolo
+> ARP è stato progettato per essere il + possibile efficiente. Proprio per questo presenta delle vulnerabilità che possono essere sfruttate ad esempio <mark>**Man in the middle**</mark> o <mark>**Denial of Service Dos**</mark> che inviano pacchetti ARP malevoli che reindirizzano i pacchetti ad un altro host malevolo
 > 
 
 > [!TIP]
