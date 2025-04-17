@@ -133,6 +133,7 @@
 > ARP risolve gli indirizzi IP solo per i nodi della stessa LAN e quindi ho corrispondenza fra indirizzi IP e indirizzi MAC della mia stessa sottorete
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 113908.png" /></p>
+>  
 >  ( *questo schema è fatto male perché mettendo 32 bit di indirizzi e vanno a capo ma è lo stesso campo* )
 >  
 >  <p align="center"><img src="img/Screenshot 2025-02-01 170650.png" /></p>
