@@ -4,7 +4,7 @@
 
 **Ethernet** Detiene una posizione dominante nel mercato delle LAN cablate; è stata la prima LAN ad alta velocità dopo la DSL nella metà degli anni '70. La **topologia** della rete era a bus e adesso abbiamo lo switch con configurazione a stella=>
  
- <p align="center"><img src="Screenshot 2024-08-30 131125.png" /></p>
+ <p align="center"><img src="img/Screenshot 2024-08-30 131125.png" /></p>
  
 > [!IMPORTANT]
 > 
