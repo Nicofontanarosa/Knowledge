@@ -2,7 +2,7 @@
 
 #physical #layer #ISO #ISO/OSI #TCP #TCP/IP #VLAN #VTP #vampire_tap #PoE #ethernet #_802_1X #_802_11 #_802_
 
-**Ethernet** Detiene una posizione dominante nel mercato delle LAN cablate; è stata la prima LAN ad alta velocità dopo la DSL nella metà degli anni '70. La **topologia** della rete era a bus e adesso abbiamo lo switch con configurazione a stella=>
+**Ethernet** Detiene una posizione dominante nel mercato delle LAN cablate; è stata la prima LAN ad alta velocità dopo la DSL nella metà degli anni '70. La **topologia** della rete era a bus e adesso abbiamo lo switch con configurazione a stella =>
  
  <p align="center"><img src="img/Screenshot 2024-08-30 131125.png" /></p>
  
@@ -33,7 +33,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-01 124853.png" /></p>
 > 
-> Questo livello è **connectionless e non affidabile** poiché che non abbiamo ACK e i pacchetti danneggiati che si perdono o non arrivano a destinazione vengono eliminati. Per rilevare le collisioni si usa **CSMA/CD** con **binary backoff**. Un protocollo per aggiungere sicurezza a questo livello è l' **==802.1X==**
+> Questo livello è **connectionless e non affidabile** poiché che non abbiamo ACK e i pacchetti danneggiati che si perdono o non arrivano a destinazione vengono eliminati. Per rilevare le collisioni si usa **CSMA/CD** con **binary backoff**. Un protocollo per aggiungere sicurezza a questo livello è l' <mark>**802.1X**</mark>
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 180942.png" /></p>
 > 
