@@ -78,11 +78,12 @@
 > 
 > ```
 > IfEntry ::= SEQUENCE {
-    ifIndex     INTEGER,
-    ifDescr     OCTET STRING,
-    ifType      INTEGER
+>    ifIndex     INTEGER,
+>    ifDescr     OCTET STRING,
+>    ifType      INTEGER
 > }   
 > IfTable ::= SEQUENCE OF IfEntry
+> 
 > ```
 >  
 > <p align="center"><img src="img/Screenshot 2025-03-08 115428.png" /></p>
