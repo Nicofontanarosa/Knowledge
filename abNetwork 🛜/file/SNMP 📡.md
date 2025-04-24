@@ -70,8 +70,21 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 120427.png" /></p>
 > 
-> È come se la tabella, che normalmente leggeremmo in modalità **riga/colonna**, venisse letta **invertita**: prima la **colonna**, poi la **riga** ( *cioè l’indice* ). Questo è **l’unico caso** in cui, in **SNMP SMIv2**, viene utilizzato il tipo **`SEQUENCE OF`**: serve per definire la **struttura della tabella**, dove ogni colonna è rappresentata come un nodo all’interno della **`SEQUENCE`**, e l’insieme delle righe viene generato dinamicamente tramite gli indici
+> È come se la tabella, che normalmente leggeremmo in modalità **riga/colonna**, venisse letta **invertita**: prima la **colonna**, poi la **riga** ( *cioè l’indice* ). Questo è **l’unico caso** in cui, in **SNMP SMIv2**, viene utilizzato il tipo **`SEQUENCE OF`**. La **tabella SNMP** è vista come un oggetto composto da =>
 > 
+> 3. Un oggetto "container" che rappresenta **la tabella**
+> 4. La **riga** definita da una struttura (`SEQUENCE`) di colonne
+> 5. La tabella nel suo insieme è definita come una **`SEQUENCE OF` righe** gli indici
+> 
+> ```
+> IfEntry ::= SEQUENCE {
+    ifIndex     INTEGER,
+    ifDescr     OCTET STRING,
+    ifType      INTEGER
+
+}IfTable ::= SEQUENCE OF IfEntry
+> ```
+>  
 > <p align="center"><img src="img/Screenshot 2025-03-08 115428.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-08 115957.png" /></p>
 > 
