@@ -64,13 +64,13 @@
 > Gli **oggetti scalari** hanno **una sola istanza**, identificata aggiungendo **`.0`** alla fine dell’**Object Identifier ( OID )**. Per gli **oggetti tabellari**, invece, l’istanza viene determinata leggendo la **tabella** tramite **indici** =>
 > 
 > > si specifica prima l’**OID della colonna** e poi l’**indice ( o gli indici ) della riga**
-> > Esempio: l’elemento al centro della tabella ha OID `1.3.1.2.3`.
+> > Esempio: l’elemento al centro della tabella ha OID `1.3.1.2.9`.
 > 
 > Questo approccio, però, **non è molto efficiente**, poiché l’indice viene **ripetuto all’interno dell’OID** per ogni elemento, aumentando la lunghezza e la ridondanza dell’identificativo. Inoltre, **gli indici non sono necessariamente interi**: ad esempio, nei router possono essere utilizzati **indirizzi IP** come indice
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 120427.png" /></p>
 > 
-> Quindi è come se la mia tabella che leggo normalmente riga / colonna la leggessi invertita. Questo è l'unico caso in cui SNMP SMIv2 usa il tipo **sequence of** per definire il nodo colonna che definisce la tabella
+> È come se la tabella, che normalmente leggeremmo in modalità **riga/colonna**, venisse letta **invertita**: prima la **colonna**, poi la **riga** ( *cioè l’indice* ). Questo è **l’unico caso** in cui, in **SNMP SMIv2**, viene utilizzato il tipo **`SEQUENCE OF`**: serve per definire la **struttura della tabella**, dove ogni colonna è rappresentata come un nodo all’interno della **`SEQUENCE`**, e l’insieme delle righe viene generato dinamicamente tramite gli indici
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 115428.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-08 115957.png" /></p>
