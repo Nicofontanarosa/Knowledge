@@ -46,17 +46,17 @@
 >  - Il **Gauge** è un intero che rappresenta valori che **possono salire o scendere**, come ad esempio la temperatura, l’utilizzo della CPU o della memoria. Può avere picchi e fluttuazioni
 >  - Il **Counter**, invece, è un valore che **aumenta solo** nel tempo. Viene utilizzato per misurare eventi cumulativi, come il numero di pacchetti trasmessi su un’interfaccia. Il problema è che, essendo un intero con dimensione fissa, **quando raggiunge il valore massimo, si resetta** a zero: questo fenomeno si chiama <mark>**wrap-around**</mark>
 >
->Per gestire questo comportamento ci sono due soluzioni comuni:
-
-1. **Utilizzare contatori a 64 bit**, che richiedono molto più tempo per arrivare al massimo e quindi riducono la frequenza del wrap.
-    
-2. **Monitorare intervalli di byte** anziché il valore assoluto, in modo da comprendere l’andamento nel tempo. Tuttavia, se il wrap avviene troppo spesso, si rischia comunque di **perdere il conteggio preciso** degli eventi.
+> Per gestire questo comportamento ci sono due soluzioni comuni =>
+> 
+> 1. **Utilizzare contatori a 64 bit**, che richiedono molto più tempo per arrivare al massimo e quindi riducono la frequenza del wrap
+> 2. **Monitorare intervalli di byte** anziché il valore assoluto, in modo da comprendere l’andamento nel tempo
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-08 102201.png" /></p>
 >  
->  Quindi ogni oggetto è identificato dall' **Object identifier** nell'albero di registrazione
+>  Ogni oggetto è identificato dall' **Object identifier** nell'albero di registrazione
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-08 114132.png" /></p>
+>  
 >  > *I nomi dei nodi sono rilevanti solo per l'uomo*
 >
 > <p align="center"><img src="img/Screenshot 2025-03-08 114320.png" /></p>
