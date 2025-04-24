@@ -6,13 +6,14 @@
 >
 >  <p align="center"><img src="img/Screenshot 2025-03-07 201616.png" /></p>
 >  
->  Cera la necessità di gestire i dispositivi di rete, switch, router, ma anche sensori, apparecchi medici etc ... per chiedere informazioni riguardo lo stato o per farsi inviare dei dati. Quello che appunto è rimasto costante è il protocollo mentre quello che è cambiato sono i dati ( *ASN tree* ). Gli obiettivi di SNMP sono =>
+>  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, ecc., per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
 >  
->  - Minimizzare la complessità delle funzioni di management implementate dall'agent
->  - Usare le stesse funzioni per ogni dispositivo di rete
->  - Creare nuove funzioni senza dover rifare tutto l'agent
+>  - Minimizzare la complessità delle funzioni di gestione implementate dagli agent
+>  - Utilizzare le stesse funzioni su tutti i dispositivi di rete
+>  - Permettere l’aggiunta di nuove funzionalità senza dover riscrivere tutto l’agent
 >
-> Questo è stato possibile definendo un #MIB ovvero una collezione di oggetti che io posso interrogare e ricevere risposta ( *ad una stampante non chiedo quanti caffè ha fatto -> non c'è nel MIB* )
+> Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): una collezione di oggetti che possono essere interrogati per ottenere risposte.  
+(_Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto—quel dato non esiste nella sua MIB._)
 > 
 > **==Robustness by a simple, connectionless transport service ( #UDP )==**. *Perché UDP?*
 > 
