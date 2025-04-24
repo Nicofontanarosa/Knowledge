@@ -33,20 +33,24 @@
 > 
 > ***Structure of Management Information SMI v.2***
 > 
-> #SMIv2 o #SMI **SMIv2**, spesso abbreviato semplicemente in **SMI**, è una versione ridotta e semplificata di **ASN.1**.  
-(_SMIv2 is based on an extended subset of ASN.1 – 1998._)
-
-In SMIv2 esistono solo **tipi di variabili primitivi**, e le variabili possono essere:
-
-- **Scalari** (valori singoli)
-    
-- **Colonne** (parte di tabelle, dette anche **tabular objects**)
-    
-
-Le uniche operazioni consentite sono **lettura** e **scrittura**, rendendo il modello semplice, ma sufficiente per la maggior parte delle esigenze di gestione della rete
+> #SMIv2 o #SMI è una versione ridotta e semplificata di **ASN.1**. ( _SMIv2 is based on an extended subset of ASN.1 – 1998_ )
+> 
+> In SMIv2 esistono solo **tipi di variabili primitivi**, e le variabili possono essere **Scalari** ( *valori singoli* ) o **Colonne** ( *parte di tabelle, dette anche* **tabular objects** )
+> 
+> Le uniche operazioni consentite sono **lettura** e **scrittura**, rendendo il modello semplice, ma sufficiente per la maggior parte delle esigenze di gestione della rete
+> 
 > <p align="center"><img src="img/Screenshot 2025-03-08 101425.png" /></p>
 > 
->  Dove è importante definire la differenza tra **Gauge e Counter**. Il Gauge è un integer normale usato per valori tipo temperatura che variano e hanno dei picchi, mentre il counter è un valore destinato solo a salire. Il problema di questa variabile è che se continua a salire prima o poi arriverà al massimo ( *pacchetti di rete che passano* ) => Si resetta ovvero si **wrappa** => una soluzione è aumentare a 64bit il tipo oppure considero i blocchi di byte ( *rallento il wrap e così capisco cosa è successo, se si wrappa troppo non so quanti pacchetti sono passati* )
+>  Dove è fondamentale distinguere tra **Gauge** e **Counter** =>
+>  
+>  - Il **Gauge** è un intero che rappresenta valori che **possono salire o scendere**, come ad esempio la temperatura, l’utilizzo della CPU o della memoria. Può avere picchi e fluttuazioni
+>  - Il **Counter**, invece, è un valore che **aumenta solo** nel tempo. Viene utilizzato per misurare eventi cumulativi, come il numero di pacchetti trasmessi su un’interfaccia. Il problema è che, essendo un intero con dimensione fissa, **quando raggiunge il valore massimo, si resetta** a zero: questo fenomeno si chiama <mark>**wrap-around**</mark>
+>
+>Per gestire questo comportamento ci sono due soluzioni comuni:
+
+1. **Utilizzare contatori a 64 bit**, che richiedono molto più tempo per arrivare al massimo e quindi riducono la frequenza del wrap.
+    
+2. **Monitorare intervalli di byte** anziché il valore assoluto, in modo da comprendere l’andamento nel tempo. Tuttavia, se il wrap avviene troppo spesso, si rischia comunque di **perdere il conteggio preciso** degli eventi.
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-08 102201.png" /></p>
 >  
