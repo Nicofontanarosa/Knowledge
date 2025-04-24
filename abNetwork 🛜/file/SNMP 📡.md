@@ -14,27 +14,36 @@
 >
 > Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): **una collezione di oggetti** che possono essere interrogati per ottenere risposte ( _Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto poiché quel dato non esiste nel suo MIB_ )
 > 
-> **==Robustness by a simple, connectionless transport service ( #UDP )==**. *Perché UDP?*
+> <mark>**Robustness by a simple, connectionless transport service ( #UDP )**</mark>. *Perché UDP?*
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 090315.png" /></p>
 > 
 > L'interazione tra **Agent** e **Manager** avviene nel seguente modo -> il **Manager** invia richieste all'Agent quando necessario, ma soprattutto in modo periodico ( **Polling** ), e l’**Agent** risponde con i dati richiesti. Tuttavia, l'Agent può anche inviare messaggi spontanei al Manager quando rileva un cambiamento di stato significativo -> questi messaggi sono chiamati **Traps**
 > 
-> Questa comunicazione avviene tramite **UDP**, perché è veloce e adatto a scambi frequenti. Utilizzare **TCP** sarebbe meno efficiente a causa del tempo richiesto per l'**handshake**, e inoltre, se un Agent dovesse andare offline, TCP manterrebbe la connessione "viva" per ore tramite il meccanismo di **Keep-Alive**, rendendo il sistema poco reattivo e più pesante.
+> Questa comunicazione avviene tramite **UDP**, perché è veloce e adatto a scambi frequenti. Utilizzare **TCP** sarebbe meno efficiente a causa del tempo richiesto per l'**handshake**, e inoltre, se un Agent dovesse andare offline, TCP manterrebbe la connessione "viva" per ore tramite il meccanismo di **Keep-Alive**, rendendo il sistema poco reattivo e più pesante
 > 
-> **==SNMP is a strictly centralized model, where the manager implements the whole functionality and responsibility==**
+> <mark>**SNMP is a strictly centralized model, where the manager implements the whole functionality and responsibility**</mark>
 > 
-> E per ridurre la complessità dell'ASN v.1 hanno ridotto la sintassi, potendo definire ad esempio solo alcuni tipi di dato
+> Per ridurre la complessità dell'ASN.1 ( *Abstract Syntax Notation One* ), nella versione utilizzata da SNMP è stata **semplificata la sintassi**, limitandola a pochi **tipi di dato predefiniti**
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 163857.png" /></p>
 >
 
 > [!TIP]
 > 
-> ***Structure the Management Information SMI v.2***
+> ***Structure of Management Information SMI v.2***
 > 
-> #SMIv2 o #SMI è il modello ridotto di ASN ( *SMIv2 is based on extended subset of ASN.1 ( 1998 )* ). Ci sono solo tipi di variabili primitivi e le variabili sono o **valori scalari** o **colonne / tabelle** e le uniche operazioni possibili sono la **lettura e scrittura**
-> 
+> #SMIv2 o #SMI **SMIv2**, spesso abbreviato semplicemente in **SMI**, è una versione ridotta e semplificata di **ASN.1**.  
+(_SMIv2 is based on an extended subset of ASN.1 – 1998._)
+
+In SMIv2 esistono solo **tipi di variabili primitivi**, e le variabili possono essere:
+
+- **Scalari** (valori singoli)
+    
+- **Colonne** (parte di tabelle, dette anche **tabular objects**)
+    
+
+Le uniche operazioni consentite sono **lettura** e **scrittura**, rendendo il modello semplice, ma sufficiente per la maggior parte delle esigenze di gestione della rete
 > <p align="center"><img src="img/Screenshot 2025-03-08 101425.png" /></p>
 > 
 >  Dove è importante definire la differenza tra **Gauge e Counter**. Il Gauge è un integer normale usato per valori tipo temperatura che variano e hanno dei picchi, mentre il counter è un valore destinato solo a salire. Il problema di questa variabile è che se continua a salire prima o poi arriverà al massimo ( *pacchetti di rete che passano* ) => Si resetta ovvero si **wrappa** => una soluzione è aumentare a 64bit il tipo oppure considero i blocchi di byte ( *rallento il wrap e così capisco cosa è successo, se si wrappa troppo non so quanti pacchetti sono passati* )
