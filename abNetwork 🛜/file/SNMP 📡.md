@@ -12,14 +12,15 @@
 >  - Utilizzare le stesse funzioni su tutti i dispositivi di rete
 >  - Permettere l’aggiunta di nuove funzionalità senza dover riscrivere tutto l’agent
 >
-> Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): una collezione di oggetti che possono essere interrogati per ottenere risposte.  
-(_Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto—quel dato non esiste nella sua MIB._)
+> Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): **una collezione di oggetti** che possono essere interrogati per ottenere risposte ( _Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto poiché quel dato non esiste nel suo MIB_ )
 > 
 > **==Robustness by a simple, connectionless transport service ( #UDP )==**. *Perché UDP?*
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 090315.png" /></p>
 > 
-> L'interazione tra **Agent** e **Manager** avviene in questo modo -> Il Manager invia richieste quando necessarie ma per lo più periodiche ( **Polling** ) e l'Agent risponde. Esistono delle risposte per quanto l'Agent cambia di stato ( **Traps** ). Questo continuo informarsi viene fatto con UDP poiché è veloce è molto frequente. Se si facesse con TCP sarebbe più lento nella fase di handshake, e poi se un agent dovesse andare giù, il protocollo TCP implementa il "controllo del client" ( #Keep_Alive ) dopo ore quindi sarebbe molto inefficiente 
+> L'interazione tra **Agent** e **Manager** avviene nel seguente modo -> il **Manager** invia richieste all'Agent quando necessario, ma soprattutto in modo periodico ( **Polling** ), e l’**Agent** risponde con i dati richiesti. Tuttavia, l'Agent può anche inviare messaggi spontanei al Manager quando rileva un cambiamento di stato significativo -> questi messaggi sono chiamati **Traps**
+> 
+> Questa comunicazione avviene tramite **UDP**, perché è veloce e adatto a scambi frequenti. Utilizzare **TCP** sarebbe meno efficiente a causa del tempo richiesto per l'**handshake**, e inoltre, se un Agent dovesse andare offline, TCP manterrebbe la connessione "viva" per ore tramite il meccanismo di **Keep-Alive**, rendendo il sistema poco reattivo e più pesante.
 > 
 > **==SNMP is a strictly centralized model, where the manager implements the whole functionality and responsibility==**
 > 
