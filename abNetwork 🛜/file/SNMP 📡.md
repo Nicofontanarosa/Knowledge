@@ -359,7 +359,7 @@
 > 
 > ***Definition of NAC***
 > 
->  Un #NAC o <mark>***Network Access Controll==*** è il processo che impedisce a utenti e dispositivi non autorizzati di accedere a una rete aziendale o privata. NAC garantisce che solo gli utenti autenticati e i dispositivi autorizzati e conformi ai criteri di sicurezza possano accedere alla rete
+>  Un #NAC o <mark>***Network Access Controll***</mark> è il processo che impedisce a utenti e dispositivi non autorizzati di accedere a una rete aziendale o privata. NAC garantisce che solo gli utenti autenticati e i dispositivi autorizzati e conformi ai criteri di sicurezza possano accedere alla rete
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-22 092908.png" /></p>
 >  <p align="center"><img src="img/Screenshot 2025-03-22 092946.png" /></p>
@@ -383,7 +383,7 @@
 > 
 > Le novità di SNMPv2 sono l'aggiunta di 2 nuove primitive e il formato di messaggio della trap è cambiato =>
 > 
-> - **GetBulk** -> Migliora la velocità della get e getnext di SNMPv1. Con queste 2 primitive infatti io devo richiedere ogni volta un elemento, aspettare la risposta e successivamente richiedere la get della risposta ( *velendo* ) -> Funzionamento della **snmpwalk**. Con la GetBulk vado a richiedere più elementi dell'albero consecutivi senza aspettare una risposta tra un elemento e l'altro
+> - **GetBulk** -> Migliora la velocità della get e getnext di SNMPv1. Con queste 2 primitive infatti bisogna richiedere ogni volta un elemento, aspettare la risposta e successivamente richiedere la get della risposta ( *velendo* ) -> Funzionamento della **snmpwalk**. Con la GetBulk vado a richiedere più elementi dell'albero consecutivi senza aspettare una risposta tra un elemento e l'altro
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 123024.png" /></p>
 > 
@@ -405,7 +405,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 122414.png" /></p>
 > 
-> Sono stati aggiunti i ***==Counter a 64 bit==***
+> Sono stati aggiunti i <mark>***Counter a 64 bit***</mark>
 > 
 > Altra novità è che SNMPv2 è stato modellato per funzionare su ogni protocollo di trasporto ma oggi viene usato ancora UDP
 > 
@@ -436,7 +436,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 164748.png" /></p>
 > 
-> Dove il Manger e l'Agent hanno il **==Timestamp Sincronizzato==**
+> Dove il Manger e l'Agent hanno il <mark>**Timestamp Sincronizzato**</mark>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 165827.png" /></p>
 > 
@@ -468,7 +468,7 @@
 > 
 > I "**sotto-agent**" vengono avviati dopo che l'Agent principale è stato attivato. Questi comunicano i MIB che supportano e il "**master-agent**" si scrive al suo interno cosa supporta cosa e manda ai vari sotto agent le porzioni di richiesta che riescono a gestire i vari sotto-agent
 > 
-> ***==Agent-X==*** è un protocollo ***==TCP porta 705==*** e non è basato su ASN.1 coding. E' un nuovo standard per implementare un espansione degli agenti SNMP
+> <mark>***Agent-X***</mark> è un protocollo <mark>***TCP porta 705***</mark> e non è basato su ASN.1 coding. E' un nuovo standard per implementare un espansione degli agenti SNMP
 >  
 
 ---
