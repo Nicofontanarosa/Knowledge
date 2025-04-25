@@ -91,7 +91,7 @@
 > 
 > **L'approccio a colonne** utilizzato nei MIB è simile a quello adottato oggi nei **database colonnari**, perché consente di **comprimere più facilmente i dati** dato che tutti i valori di una stessa colonna ( *che hanno lo stesso tipo* ) possono essere gestiti e compressi in modo efficiente rispetto ad una struttura a righe dove i dati sono spesso eterogenei
 > 
-> Tutti questi oggetti sono scritti e descritti in un **==modulo MIB==**. Questo modulo MIB è formato da un nome, una definizione eventuale di altri moduli MIB e un **Module Identifier** e **Object Identifier**
+> Tutti questi oggetti sono scritti e descritti in un <mark>**modulo MIB**</mark>. Questo modulo MIB è formato da un nome, una definizione eventuale di altri moduli MIB, un **Module Identifier** e un **Object Identifier**
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 122455.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-08 122610.png" /></p>
@@ -103,9 +103,9 @@
 > 
 > ...
 > 
-> Un altro esempio sono le notifiche che vengono mandate quando la porta di un dispositivo cambia stato. Se accendo un dispositivo con tante porte attive arriveranno tanti pacchetti. Questa fase si chiama di ***==Trap Storm==*** 
+> Un altro esempio sono le **notifiche ( trap )** inviate quando la **porta di un dispositivo cambia stato**. Se accendo un dispositivo con molte porte attive, riceverò **molti pacchetti trap in poco tempo**: questa situazione è nota come <mark>**_Trap Storm_**</mark>
 > 
-> In SNMP c'è la ***Textual Conventions*** che serve a specificare come formattare i dati 
+> In SNMP esiste anche il concetto di **_Textual Conventions_**, usato per **definire il formato e la rappresentazione dei dati**, in modo coerente tra i vari MIB.
 > 
 
 > [!TIP]
