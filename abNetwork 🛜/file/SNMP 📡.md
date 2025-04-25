@@ -97,6 +97,7 @@
 > <p align="center"><img src="img/Screenshot 2025-03-08 122610.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-08 122723.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-08 122637.png" /></p>
+> 
 > > *Dove il contatto è colui che ha scritto l'RFC, non l'inventore*
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 122846.png" /></p>
