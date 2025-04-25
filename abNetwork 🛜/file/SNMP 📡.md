@@ -153,7 +153,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 175914.png" /></p>
 > 
-> - La risposta ai vari comandi ( **getrequest, next e set** ) , ad eccezione della trap, è sempre una **GetResponse** che specifica le chiavi e i valori. Questa risposta unica è per comodità
+> - La risposta ai vari comandi ( **getrequest, next e set** ) , ad eccezione della trap, è sempre una **GetResponse** che specifica le chiavi e i valori. Questa risposta unica per + messaggi è una scelta per pura semplicità implementativa
 > 
 > La porta in cui l'**Agent** lavora è la **==161==** mentre quella del **Manager** la **==162==**. Le operazioni possibili in SNMPv1 sono 4 =>
 > 
@@ -163,15 +163,15 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 174847.png" /></p>
 > 
-> 2. **GetNext** significa dammi l'object identifier successivo a quello richiesto in ordine lessicografico, infatti questo comando serve per scorrere l'albero. Gli errori possibili sono gli stesis però noSuchName che occorre quando l'albero finisce ( **end of MIB** ) 
+> 2. **GetNext** significa dammi l'object identifier successivo a quello richiesto in ordine lessicografico, infatti questo comando serve per scorrere l'albero. Gli errori possibili sono gli stessi però noSuchName occorre quando l'albero finisce ( **end of MIB** ) 
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 175718.png" /></p>
 > 
-> 3. **Set** scrive valori in 1 o + istanze del MIB, è un operazione atomica. Gli errori sono gli stessi e in più c'è **badValue** ovvero ho sbagliato il tipo del valore inserito. C'è anche l'errore **readOnly** ma non è usato spesso
+> 3. **Set** scrive valori in 1 o + istanze del MIB, è un operazione atomica. Gli errori sono gli stessi e in più c'è **badValue** ovvero ho sbagliato il tipo del valore inserito ( *esiste anche l'errore **readOnly** ma non è usato spesso* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 180022.png" /></p>
 > 
-> 4. **Trap** manda le notifiche sul cambio di stato. Non viene richiesta dal manager ma viene mandata dall'agent. Essendo inviata solo dall'agent, se viene persa non viene richiesta dal manager ( *quella particolare trap* ) però il manager fa il pulling ( *siamo salvi* ). Per non mischiare il traffico il manager è in ascolto sulla ***==port 162==***
+> 4. **Trap** manda le notifiche sul cambio di stato. Non viene richiesta dal manager ma viene mandata dall'agent. Essendo inviata solo dall'agent, se viene persa, non viene richiesta dal manager ( *quella particolare trap* ) però il manager fa il pulling ( *siamo salvi* ). Per non mischiare il traffico il manager è in ascolto sulla ***==port 162==***
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 180446.png" /></p> 
 > 
