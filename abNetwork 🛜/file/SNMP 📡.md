@@ -105,7 +105,7 @@
 > 
 > Un altro esempio sono le **notifiche ( trap )** inviate quando la **porta di un dispositivo cambia stato**. Se accendo un dispositivo con molte porte attive, riceverò **molti pacchetti trap in poco tempo**: questa situazione è nota come <mark>**_Trap Storm_**</mark>
 > 
-> In SNMP esiste anche il concetto di **_Textual Conventions_**, usato per **definire il formato e la rappresentazione dei dati**, in modo coerente tra i vari MIB.
+> In SNMP esiste anche il concetto di **_Textual Conventions_**, usato per **definire il formato e la rappresentazione dei dati**, in modo coerente tra i vari MIB
 > 
 
 > [!TIP]
@@ -114,16 +114,18 @@
 > 
 >  <p align="center"><img src="img/Screenshot 2025-03-08 161940.png" /></p>
 >  
->  Backend-Compiler produce =>
->  - La documentazione
->  - Il una parte di codice sorgente per l'Agent
->  - Test-cases per testare il manager e l'Agent
->  - Input per l'applicazione di management
->  ( *Il MIB deve essere definito in tempo per il run-time* )
+>  Il **Backend Compiler** produce =>
+>  - la **documentazione**
+>  - una **parte del codice sorgente** per l’**Agent**
+>  - dei **test-case** per testare sia il **Manager** che l’**Agent**
+>  - l’**input per l’applicazione di management**
+>
+> >( _Il MIB deve essere definito e disponibile **a run-time**_ )
+> 
+> Questo tipo di compilatore **non è semplicemente** uno strumento che traduce codice in linguaggio macchina, ma un componente fondamentale per **generare strutture, controlli e supporto operativo** legati alla gestione SNMP
 >  
->  Questo compilatore non è solo quindi uno strumento che traduce il codice in linguaggio macchina
->  
->  MIB-II definisce tipi di oggetti per internet IP, ICMP, UDP, TCP, SNMP ( *circa 170* ). L'implementazione del MIB non dovrebbe interferire con le attività di rete normali
+>  **MIB-II** definisce una serie di oggetti standard (circa **170**) relativi ai protocolli **IP, ICMP, UDP, TCP** e **SNMP**.  
+L’implementazione di questo MIB **non dovrebbe interferire** con il normale funzionamento delle attività di rete.
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-08 163224.png" /></p>
 >  <p align="center"><img src="img/Screenshot 2025-03-08 163348.png" /></p>
