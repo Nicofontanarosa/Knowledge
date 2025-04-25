@@ -251,8 +251,9 @@
 > In particolare, l’introduzione della **interface table** ha permesso di recuperare facilmente informazioni come =>
 > 
 > > “Quanti pacchetti stanno passando su una certa interfaccia?”
-> > > Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**.
-> Un insieme di oggetti correlati all'interno dell’albero SNMP è chiamato **gruppo**.. Esempi di questi gruppi sono =>
+> > Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**
+> 
+> Un insieme di oggetti correlati all'interno dell’albero SNMP è chiamato **gruppo**. Esempi di questi gruppi sono =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 203310.png" /></p>
 > 
@@ -260,7 +261,9 @@
 > 
 > If sysUpTime.0 t1 > sysUpTime.0 t2 where t2 > t1 then l'Agent è stato riavviato
 > 
-> Questo valore è molto utile per capire quando i campi dei dati misurati sono validi. Esempio: misuro il sysUpTime 1 ed è 4, dopo 1 secondo lo rimisuro ed è 5 => l'agent non è stato riavviato quindi se leggo anche il numero di pacchetti che sono entrati nell'interfaccia allora i 2 valori presi dopo 1 secondo sono coerenti. Se l'agent viene riavviato invece come faccio a capire se il numero di pacchetti è giusto, perchè tipo ha subito un wrap, o meno? tramite il **sysUpTime** 2 che sarà < del sysUpTime 1 => ***==Counter wrapping check==***
+> Questo valore è molto utile per capire quando i campi dei dati misurati sono validi. Esempio ->
+> 
+> > Misuro il sysUpTime 1 ed è 4, dopo 1 secondo lo rimisuro ed è 5 => l'agent non è stato riavviato quindi se leggo anche il numero di pacchetti che sono entrati nell'interfaccia allora i 2 valori presi dopo 1 secondo sono coerenti. Se l'agent viene riavviato invece come faccio a capire se il numero di pacchetti è giusto, perchè tipo ha subito un wrap, o meno? tramite il **sysUpTime** 2 che sarà < del sysUpTime 1 => ***==Counter wrapping check==***
 > 
 > - ***sysObjectId.0*** has the format enterprises.< manufacturer >.< id > and it is used to identify manufacturer and model. For instance enterprises.9.1.208 identifies a Cisco (.9) 2600 router (.1.208)
 > 
@@ -274,7 +277,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-21 182039.png" /></p>
 > 
-> `ifNumber` è un Object Identifier (OID) definito all'interno della **MIB-II (Management Information Base version 2)**. Il suo scopo è quello di indicare il numero totale di interfacce presenti su un dispositivo di rete
+> `ifNumber` è un Object Identifier ( *OID* ) definito all'interno della **MIB-II ( Management Information Base version 2 )**. Il suo scopo è quello di indicare il numero totale di interfacce presenti su un dispositivo di rete
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-21 183453.png" /></p>
 > 
@@ -286,7 +289,7 @@
 > 
 > **ifLastChange** contiene il **sysUpTime** in cui quell'interfaccia ha cambiato stato per l'ultima volta
 > 
-> ***==ifInOctets / out==*** indica quanti pacchetti entrano ed escono dall'interfaccia. ***ifInUcastPkts / out*** sono i pacchetti ad un indirizzo specifico in entrata mentre ***ifInNUcastPkts / out*** sono i pacchetti ad un indirizzo o multicast o broadcast
+> <***ifInOctets / out***</mark> indica quanti pacchetti entrano ed escono dall'interfaccia. ***ifInUcastPkts / out*** sono i pacchetti ad un indirizzo specifico in entrata mentre ***ifInNUcastPkts / out*** sono i pacchetti ad un indirizzo o multicast o broadcast
 > 
 > **ifOutQLen** indica la lunghezza della coda dei pacchetti in output
 > > *It is useful for knowing more about transmission speeds and throughput*
