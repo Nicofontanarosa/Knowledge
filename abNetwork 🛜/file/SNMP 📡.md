@@ -175,7 +175,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 180446.png" /></p> 
 > 
-> Le trap definite sono 5 =>
+> Le **trap definite** sono 5 =>
 > 
 > 5. **coldStart** -> Il dispositivo si è avviato
 > 6. **warmStart** -> Il dispositivo si è riavviato
@@ -204,7 +204,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200711.png" /></p>
 > 
-> Che analizzato su #whireshark esce in questo modo ( *stoppato* )
+> Che analizzato su #whireshark esce in questo modo
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200906.png" /></p>
 > 
@@ -215,7 +215,7 @@
 > <p align="center"><img src="img/Screenshot 2025-03-14 201708.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 201741.png" /></p>
 > 
-> I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'**==object name e l'object value==**. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
+> I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'**==object name e l'object value==**. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
 > 
 > Dopo l'***==indirizzo IP dell'agent==*** posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
 > 
