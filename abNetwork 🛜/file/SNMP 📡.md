@@ -155,7 +155,7 @@
 > 
 > - La risposta ai vari comandi ( **getrequest, next e set** ) , ad eccezione della trap, è sempre una **GetResponse** che specifica le chiavi e i valori. Questa risposta unica per + messaggi è una scelta per pura semplicità implementativa
 > 
-> La porta in cui l'**Agent** lavora è la **==161==** mentre quella del **Manager** la **==162==**. Le operazioni possibili in SNMPv1 sono 4 =>
+> La porta in cui l'**Agent** lavora è la <mark>**161**</mark> mentre quella del **Manager** la <mark>**162**</mark>. Le operazioni possibili in SNMPv1 sono 4 =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 174201.png" /></p>
 > 
@@ -171,7 +171,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 180022.png" /></p>
 > 
-> 4. **Trap** manda le notifiche sul cambio di stato. Non viene richiesta dal manager ma viene mandata dall'agent. Essendo inviata solo dall'agent, se viene persa, non viene richiesta dal manager ( *quella particolare trap* ) però il manager fa il pulling ( *siamo salvi* ). Per non mischiare il traffico il manager è in ascolto sulla ***==port 162==***
+> 4. **Trap** manda le notifiche sul cambio di stato. Non viene richiesta dal manager ma viene mandata dall'agent. Essendo inviata solo dall'agent, se viene persa, non viene richiesta dal manager ( *quella particolare trap* ) però il manager fa il pulling ( *siamo salvi* ). Per non mischiare il traffico il manager è in ascolto sulla <mark>***port 162***</mark>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 180446.png" /></p> 
 > 
@@ -188,7 +188,7 @@
 > 
 > ***SNMPWalk and Others for SNMPv1***
 > 
->  SNMP walk is ==**an application that runs multiple GETNEXT requests automatically**==. The SNMP walk command allows users to extract useful information without entering the unique commands for each OID or node. SNMP walk simplifies the extraction of information from MIB as it is issued to the root-node of the sub-tree
+>  SNMP walk is <mark>**an application that runs multiple GETNEXT requests automatically**</mark>. The SNMP walk command allows users to extract useful information without entering the unique commands for each OID or node. SNMP walk simplifies the extraction of information from MIB as it is issued to the root-node of the sub-tree
 >  
 >  Le opzioni di SNMPwalk sono le seguenti =>
 >  
@@ -215,9 +215,9 @@
 > <p align="center"><img src="img/Screenshot 2025-03-14 201708.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 201741.png" /></p>
 > 
-> I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'**==object name e l'object value==**. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
+> I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'<mark>**object name e l'object value**</mark>. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
 > 
-> Dopo l'***==indirizzo IP dell'agent==*** posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
+> Dopo l'***==indirizzo IP dell'agent***< posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 202523.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 202621.png" /></p> 
