@@ -289,7 +289,7 @@
 > 
 > **ifLastChange** contiene il **sysUpTime** in cui quell'interfaccia ha cambiato stato per l'ultima volta
 > 
-> <***ifInOctets / out***</mark> indica quanti pacchetti entrano ed escono dall'interfaccia. ***ifInUcastPkts / out*** sono i pacchetti ad un indirizzo specifico in entrata mentre ***ifInNUcastPkts / out*** sono i pacchetti ad un indirizzo o multicast o broadcast
+> <mark>***ifInOctets / out***</mark> indica quanti pacchetti entrano ed escono dall'interfaccia. ***ifInUcastPkts / out*** sono i pacchetti ad un indirizzo specifico in entrata mentre ***ifInNUcastPkts / out*** sono i pacchetti ad un indirizzo o multicast o broadcast
 > 
 > **ifOutQLen** indica la lunghezza della coda dei pacchetti in output
 > > *It is useful for knowing more about transmission speeds and throughput*
@@ -322,13 +322,13 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-21 232550.png" /></p>
 > 
-> Dove quando scriviamo che il MAC fa parte dell'OID significa che il numero che leggiamo dopo il ..0.2. non è un indirizzo IP ma il MAC in decimale ( *brutta implementazione* )
+> Quando scriviamo che il MAC fa parte dell'OID significa che il numero che leggiamo dopo il ..0.2. non è un indirizzo IP ma il MAC in decimale ( *brutta implementazione* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-21 233053.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-21 233128.png" /></p>
 > 
 > - Permette di conoscere l’**indirizzo MAC** di un host collegato alla porta **X/unità Y** dello switch tramite la tabella **dot1dTpFdbTable.dot1dTpFdbAddress**
-> - L’associazione **MAC/porta** è fondamentale per individuare la posizione fisica di un host ( ***==Forwarding Table==*** )
+> - L’associazione **MAC/porta** è fondamentale per individuare la posizione fisica di un host ( <mark>***Forwarding Table***</mark> )
 > - Tiene traccia del **MAC address precedente** ( e del tempo di connessione ) associato a una porta, permettendo di **tracciare gli utenti mentre si spostano da una stanza all’altra**
 > - Può essere utilizzato per **rilevare porte con più MAC address associati** ( trunk ), identificando ->
 > 	- **Utenti con più MAC address** ( *es. un utente usa VMware sul suo PC* )
@@ -359,7 +359,7 @@
 > 
 > ***Definition of NAC***
 > 
->  Un #NAC o ***==Network Access Controll==*** è il processo che impedisce a utenti e dispositivi non autorizzati di accedere a una rete aziendale o privata. NAC garantisce che solo gli utenti autenticati e i dispositivi autorizzati e conformi ai criteri di sicurezza possano accedere alla rete
+>  Un #NAC o <mark>***Network Access Controll==*** è il processo che impedisce a utenti e dispositivi non autorizzati di accedere a una rete aziendale o privata. NAC garantisce che solo gli utenti autenticati e i dispositivi autorizzati e conformi ai criteri di sicurezza possano accedere alla rete
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-22 092908.png" /></p>
 >  <p align="center"><img src="img/Screenshot 2025-03-22 092946.png" /></p>
