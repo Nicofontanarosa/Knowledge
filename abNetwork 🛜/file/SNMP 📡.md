@@ -217,7 +217,7 @@
 > 
 > I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'<mark>**object name e l'object value**</mark>. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
 > 
-> Dopo l'***==indirizzo IP dell'agent***< posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
+> Dopo l'<mark>***indirizzo IP dell'agent***</mark> posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 202523.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 202621.png" /></p> 
@@ -233,18 +233,30 @@
 > 
 >  <p align="center"><img src="img/Screenshot 2025-03-11 132741.png" /></p>
 >  
->  E' stato definito il **MIB-II** che definisce tipi di oggetto per i protocolli internet ( #IP, #ICMP, #UDP, #TCP/IP ... ) aggiungendo 170 tipi di oggetto tra cui molti sono stati aggiunti per la loro comodità tipo **routing table & interface table**. Presenta 4byte per gli indirizzi iPv4 mentre per gli iPv6 si usa SNMPv2 in poi. Gli obiettivi del MIB II erano =>
+>  È stato definito il **MIB-II**, che introduce oggetti per la gestione dei protocolli Internet come **IP, ICMP, UDP, TCP**, ecc., aggiungendo circa **170 nuovi oggetti**. Molti di questi oggetti sono stati inclusi per comodità, ad esempio la **routing table** e la **interface table**.
 >  
-> 1. **Definire la gestione di base degli errori** e della configurazione **per i protocolli Internet**
-> 2. **Pochissimi oggetti di controllo**
-> 3. **Evitare informazioni ridondanti nella MIB**
-> 4. Nessun tipo di oggetto dipendente dall'implementazione
-> 
-> **Devo quindi poter richiedere informazioni ( *tabelle al router* ) che non devono modificare il normale ciclo di vita di un nodo, quindi senza rallentarlo**
-> 
-> In particolare l'introduzione della tabelle delle interfacce ha facilitato il recupero di informazioni del tipo: "quanti pacchetti stanno passando". Prima del MIB II, l'agent doveva inviare delle trap periodiche che riempivano il canale
-> 
-> Un insieme di oggetti comuni all'interno dell'albero è chiamato ***Gruppo***. Esempi di questi gruppi sono =>
+>  Il **MIB-II** utilizza indirizzi a **4 byte** per rappresentare gli indirizzi **IPv4**; per **IPv6**, invece, si utilizza **SNMPv2** o versioni successive
+>  
+>  ### Gli obiettivi principali del MIB-II erano:
+
+1. Definire la **gestione di base degli errori** e della **configurazione** per i protocolli Internet.
+    
+2. Introdurre **pochissimi oggetti di controllo**, mantenendo la semplicità.
+    
+3. **Evitare ridondanze** nelle informazioni.
+    
+4. Non includere **oggetti dipendenti dall'implementazione** specifica di un dispositivo.
+    
+
+---
+
+L’accesso ai dati tramite SNMP deve **avvenire senza impattare il normale funzionamento del nodo**, quindi ad esempio le richieste alle tabelle del router **non devono rallentare il traffico** o influire sulle sue prestazioni.
+
+In particolare, l’introduzione della **interface table** ha permesso di recuperare facilmente informazioni come:
+
+> “Quanti pacchetti stanno passando su una certa interfaccia?”  
+> Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**.
+> Un insieme di oggetti correlati all'interno dell’albero SNMP è chiamato **gruppo**.. Esempi di questi gruppi sono =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 203310.png" /></p>
 > 
