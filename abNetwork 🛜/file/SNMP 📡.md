@@ -237,25 +237,21 @@
 >  
 >  Il **MIB-II** utilizza indirizzi a **4 byte** per rappresentare gli indirizzi **IPv4**; per **IPv6**, invece, si utilizza **SNMPv2** o versioni successive
 >  
->  ### Gli obiettivi principali del MIB-II erano:
-
-1. Definire la **gestione di base degli errori** e della **configurazione** per i protocolli Internet.
-    
-2. Introdurre **pochissimi oggetti di controllo**, mantenendo la semplicità.
-    
-3. **Evitare ridondanze** nelle informazioni.
-    
-4. Non includere **oggetti dipendenti dall'implementazione** specifica di un dispositivo.
-    
-
----
-
-L’accesso ai dati tramite SNMP deve **avvenire senza impattare il normale funzionamento del nodo**, quindi ad esempio le richieste alle tabelle del router **non devono rallentare il traffico** o influire sulle sue prestazioni.
-
-In particolare, l’introduzione della **interface table** ha permesso di recuperare facilmente informazioni come:
-
-> “Quanti pacchetti stanno passando su una certa interfaccia?”  
-> Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**.
+>  Gli obiettivi principali del MIB-II erano =>
+>  
+>  1. Definire la **gestione di base degli errori** e della **configurazione** per i protocolli Internet
+>  2. Introdurre **pochissimi oggetti di controllo**, mantenendo la semplicità
+>  3. **Evitare ridondanze** nelle informazioni
+>  4. Non includere **oggetti dipendenti dall'implementazione** specifica di un dispositivo
+>
+> ---
+> 
+> L’accesso ai dati tramite SNMP deve **avvenire senza impattare il normale funzionamento del nodo**, quindi ad esempio le richieste alle tabelle del router **non devono rallentare il traffico** o influire sulle sue prestazioni
+> 
+> In particolare, l’introduzione della **interface table** ha permesso di recuperare facilmente informazioni come =>
+> 
+> > “Quanti pacchetti stanno passando su una certa interfaccia?”
+> > > Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**.
 > Un insieme di oggetti correlati all'interno dell’albero SNMP è chiamato **gruppo**.. Esempi di questi gruppi sono =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 203310.png" /></p>
