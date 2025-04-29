@@ -19,15 +19,15 @@
 > 
 > ***What is BPF ?***
 > 
-> <mark>**BPF Berkeley Packet Filter**</mark> è un paradigma che veniva usato originariamente per filtrare i pacchetti
+> <mark>**BPF - Berkeley Packet Filter**</mark> è un paradigma originariamente sviluppato per filtrare i pacchetti di rete a livello kernel
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 165733.png" /></p>
 > 
-> Normalmente il traffico internet viaggia sulla pila a destra, passando per l'**ethernet device driver** che consente di far riconoscere la scheda di rete al sistema operativo
+> Normalmente, il traffico Internet segue lo stack a destra, passando attraverso il **driver della scheda di rete (Ethernet device driver)**, che permette al sistema operativo di interagire con l'hardware di rete.
 > 
-> Sappiamo che ogni processo sulla macchina, vede quello che il SO vuole fargli vedere. Possiamo dire che quindi è chiuso nel suo ambiente. *Come faccio adesso a leggere dati che viaggiano sulla scheda di rete da un processo software in spazio utente e non in spazio kernel?* 
+> Sappiamo che ogni processo sulla macchina vede solo ciò che il sistema operativo gli consente di vedere. Possiamo quindi affermare che ogni processo è "chiuso" nel proprio ambiente. **Ma come può un processo in spazio utente leggere i dati che viaggiano sulla scheda di rete, senza accedere direttamente allo spazio kernel ?**
 > 
-> Prima si usavano **chiamate di sistema** però questo è un procedimento **sicuro ma lento**. Si utilizza un'applicazione che legge e scrive direttamente i pacchetti tramite #DMA quindi accedendo direttamente alla memoria senza passare dalla #CPU
+> In passato si usavano **chiamate di sistema**, che però, pur essendo sicure, risultavano lente. Una soluzione più efficiente è usare applicazioni che accedono direttamente alla memoria tramite **DMA (Direct Memory Access)**, permettendo di leggere/scrivere pacchetti bypassando la CPU e riducendo la latenza
 >
 > <p align="center"><img src="img/Screenshot 2025-02-11 171841.png" /></p>   
 > <p align="center"><img src="img/Screenshot 2025-02-11 174853.png" /></p>
