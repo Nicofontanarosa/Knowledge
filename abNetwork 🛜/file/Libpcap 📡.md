@@ -32,9 +32,11 @@
 > <p align="center"><img src="img/Screenshot 2025-02-11 171841.png" /></p>   
 > <p align="center"><img src="img/Screenshot 2025-02-11 174853.png" /></p>
 > 
-> Questa memoria circolare viene creata nel kernel e al suo interno c'è la copia del pacchetto. Questa memoria è condivisa o **mappata** con lo spazio utente e in questo modo l'applicazione di monitoraggio potrà accedere a questi pacchetti. Per una maggiore velocità **non si usa sincronizzazione** con variabili poiché ho un solo produttore ( *kernel* ) e un solo consumatore ( *sniffer* ). In particolare questo buffer usa un indice di testa e un indice di coda che non devono mai essere allineati ma sempre differenti di una cella. In questo mod lo sniffer potrà leggere i pacchetti fino al penultimo inserito dal kernel ( *in realtà è l'ultimo e poi c'è una cella vuota* ) 
+> Questa **memoria circolare** viene creata nel **kernel** e contiene la copia dei pacchetti catturati. Essa è **condivisa** (o mappata) con lo **spazio utente**, permettendo così all'applicazione di monitoraggio di accedervi direttamente
 > 
-> Questo buffer circolare è una possibilità di guadagnare tempo nel prendere i pacchetti. Infatti c'è la voce pacchetti kernel persi
+> Per migliorare la velocità di accesso, **non viene usata sincronizzazione con variabili di controllo**, poiché esiste **un solo produttore** ( kernel ) e **un solo consumatore** ( sniffer ). Il buffer è gestito con un **indice di testa** ( _write index_ ) e un **indice di coda** ( *read index* ) che **non devono mai coincidere**: devono sempre essere distanziati almeno di una cella. Questo consente allo sniffer di leggere in sicurezza tutti i pacchetti **fino al penultimo inserito**, lasciando sempre una cella vuota per distinguere il buffer pieno da quello vuoto
+> 
+> Questo tipo di **buffer circolare** consente un accesso molto efficiente ai pacchetti, ma in situazioni di traffico intenso può comunque verificarsi la perdita di pacchetti ( _kernel packet drops_ )
 > 
 > Un'ottimizzazione possibile del buffer è la seguente: Se ho più thread / core che si dedicano all'applicazione sniffer, ci saranno + entità che proveranno ad accedere ad un unico buffer di destinazione ( *nic -> buffer condiviso -> buffer applicazione* ). Per ovviare a ciò, l'applicazione non utilizza più un buffer di destinazione ma n, ognuno gestito da un thread, e prima di questi c'è un #thread che li smista, ovvero li prende dal buffer condiviso e li sistema dei buffer gestiti dai vari core
 > 
