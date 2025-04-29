@@ -50,15 +50,22 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
 > 
-> Il BPF driver contiene le applicazioni registrate per catturare pacchetti e per ogni applicazione mantiene una coda contenente i pacchetti filtrati per quell'applicazione. Quindi per sniffare i pacchetti consumo una parte di memoria 
+> Il **driver BPF** mantiene l’elenco delle **applicazioni registrate** per catturare pacchetti e, per ognuna, gestisce una **coda dedicata** contenente i pacchetti filtrati. Questo significa che sniffare i pacchetti **consuma memoria**, poiché ogni applicazione ha il proprio spazio di buffering
 > 
-> Il filtraggio viene fatto a livello kernel e non a livello utente perché così non devo spostare i pacchetti nel buffer circolare inutilemente e non leggo pacchetti inutili
+> Il filtraggio viene eseguito **a livello kernel**, anziché a livello utente, per **evitare spostamenti inutili** di pacchetti nel buffer circolare e **ridurre il numero di pacchetti processati inutilmente**
 > 
- > Questo filtro definito dall'utente decide se un pacchetto deve essere accettato e quanti byte di ciascun pacchetto devono essere salvati. Per ogni filtro che accetta il pacchetto, BPF copia la quantità di dati richiesta nel buffer associato a tale filtro. Prima del filtro viene usato un puntatore ovvero il pacchetto dovrebbe essere filtrato "*sul posto*" ( *ad esempio, dove il motore DMA dell'interfaccia di rete lo ha inserito* ) piuttosto che copiato in un altro buffer del kernel prima di filtrarlo aggiornando un numero di reference per quel pacchetto. Dopo di che lo sniffer prende i pacchetti dal buffer condiviso e li mette nel suo personale
+> Il **filtro definito dall’utente** determina ->
+> 
+> - **Se un pacchetto deve essere accettato**
+> - **Quanti byte del pacchetto devono essere salvati**
 >
-> Un filtro di pacchetti è semplicemente una funzione a valori booleani su un pacchetto
->
-> Più il pacchetto è grande più la size di una cella del buffer circolare è grande
+> Per ogni filtro che accetta il pacchetto, **BPF copia nel buffer associato** solo la quantità di dati richiesta. Prima dell’applicazione del filtro, viene utilizzato un **puntatore**: il pacchetto viene **filtrato "sul posto"** (ad esempio, **direttamente nella memoria dove il motore DMA della scheda di rete lo ha scritto**), evitando di copiarlo in un altro buffer prima di applicare il filtro. Il numero di **reference** del pacchetto viene aggiornato per gestire l’accesso ai dati
+> 
+> Successivamente, lo **sniffer** legge i pacchetti dal **buffer condiviso** e li trasferisce nel proprio **buffer locale** per l’elaborazione
+> 
+> Un **filtro di pacchetti** è semplicemente una **funzione booleana** applicata a ogni pacchetto
+> 
+> Più il pacchetto è grande, **maggiore sarà la dimensione della cella** nel buffer circolare.
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 185937.png" /></p>
 > 
