@@ -46,7 +46,7 @@
 > 
 > Questa tecnica prende il nome di <mark>**Receive Side Scaling (RSS)**</mark> ->
 > 
-> **RSS** distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso: un core particolarmente veloce può gestire **più buffer**, evitando così la sincronizzazione su un unico punto critico ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
+> **RSS** distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
 > 
