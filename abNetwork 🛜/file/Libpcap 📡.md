@@ -80,9 +80,9 @@
 > 
 > ***What is TcpDump ?***
 >
->  Tcpdump è composto da tre parti logiche =>
+> **Tcpdump** è uno strumento di analisi del traffico di rete basato su riga di comando, composto da tre parti logiche principali =>
 >  
->  1. Parser di espressioni -> Tcpdump analizza prima un'espressione di filtro leggibile come `ip e udp e la porta 53`. Il risultato è un breve programma in uno speciale bytecode minimo, il bytecode BPF. Il modo più semplice per vedere il parser in azione è passare un flag `-d`, che produrrà un programma leggibile simile a un assembly ->
+> 1. **Parser di espressioni** -> Tcpdump analizza prima un'espressione di filtro leggibile come `ip e udp e la porta 53`. Il risultato è un breve programma in uno speciale bytecode minimo, il bytecode BPF. Il modo più semplice per vedere il parser in azione è passare un flag `-d`, che produrrà un programma leggibile simile a un assembly ->
 >
 > <p align="center"><img src="img/Screenshot 2025-02-13 183429.png" /></p>
 > 
