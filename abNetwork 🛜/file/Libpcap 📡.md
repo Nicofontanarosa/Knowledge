@@ -69,7 +69,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 185937.png" /></p>
 > 
-> Il **BPF** (e la sua evoluzione **eBPF**) è una vera e propria **macchina virtuale** che accetta **programmi (filtri)** scritti in uno specifico **bytecode**, provenienti dallo **spazio utente**. Questi programmi vengono caricati nel kernel tramite una **chiamata di sistema** – che avviene **una sola volta** – e da quel momento in poi vengono eseguiti direttamente nel kernel, senza ulteriori interventi dallo spazio utente.
+> Il **BPF** ( e la sua evoluzione **eBPF** ) è una vera e propria **macchina virtuale** che accetta **programmi (filtri)** scritti in uno specifico **bytecode**, provenienti dallo **spazio utente**. Questi programmi vengono caricati nel kernel tramite una **chiamata di sistema** – che avviene **una sola volta** – e da quel momento in poi vengono eseguiti direttamente nel kernel, senza ulteriori interventi dallo spazio utente.
 > 
 > <mark>_**eXpress Data Path (XDP)**_</mark> è un framework che consente l'elaborazione dei pacchetti **ad altissima velocità**, integrando programmi BPF direttamente **all'ingresso dell'interfaccia di rete**. In pratica, un programma BPF può essere eseguito **appena il pacchetto viene ricevuto**, _prima ancora che venga processato dallo stack TCP/IP del kernel_, permettendo così azioni immediate come il **drop**, il **redirect** o la **modifica del pacchetto**.
 > 
