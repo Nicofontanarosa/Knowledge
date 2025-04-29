@@ -9,9 +9,8 @@
 > I sistemi operativi hanno sviluppato delle **API** per lo sniffing dei pacchetti. Tuttavia, poiché non esisteva un vero e proprio standard, ogni sistema operativo dovette inventare una propria API: [Ultrix Packet Filter di DEC](AA-PBM2A-TE_Ultrix_4.0_The_Packet_Filter_-_An_Efficient_Mechanism_for_User-Level_Network_Code_Jun1990.pdf), [Snoop di Solaris](AB_Snoop) e altre ancora
 > 
 > Questo ha portato a numerose complicazioni: le API più semplici copiavano tutti i pacchetti nello sniffer nello spazio utente, causando un'enorme quantità di lavoro inutile su sistemi molto attivi. Le API più complesse, invece, permettevano di filtrare i pacchetti prima di trasferirli allo spazio utente, ma spesso erano macchinose e lente
-> I sistemi operativi hanno sviluppato #API per lo sniffing dei pacchetti. Ma, poiché non esisteva un vero e proprio standard per questo, ogni sistema operativo dovette inventare un'API diversa: [Ultrix Packet Filter di DEC](AA-PBM2A-TE_Ultrix_4.0_The_Packet_Filter_-_An_Efficient_Mechanism_for_User-Level_Network_Code_Jun1990.pdf), [Snoop di Solaris](AB_Snoop) e altre ancora. Ciò ha portato a molte complicazioni. Le API più semplici copiavano semplicemente tutti i pacchetti nello sniffer dello spazio utente, il che su un sistema occupato comportava una marea di lavoro inutile. Le API più complesse erano in grado di filtrare i pacchetti prima di passarli allo spazio utente, ma spesso era macchinoso e lento
-> 
-> Tutto questo cambiò nel 1993 quando Steven McCanne e Van Jacobson pubblicarono l'articolo che introduceva un modo migliore di filtrare i pacchetti nel kernel, lo chiamarono ["The BSD Packet Filter" (BPF)](BPF.pdf)
+>  
+> Tutto cambiò nel 1993, quando Steven McCanne e Van Jacobson pubblicarono un articolo che introduceva un metodo più efficiente per filtrare i pacchetti direttamente nel kernel. Lo chiamarono ["The BSD Packet Filter" (BPF)](BPF.pdf).
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 180844.png" /></p>
 >
