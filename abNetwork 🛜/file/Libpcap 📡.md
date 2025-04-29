@@ -75,12 +75,6 @@
 > 
 > Un interessante approfondimento sull'ottimizzazione della macchina virtuale BPF per architetture **x86** è disponibile in [questo articolo](https://lwn.net/Articles/437981/)
 > 
-> Questo **BPF o eBPF** è una vera e propria macchina virtuale che accetta dei programmi ( *filtri* ) scritti in una sintassi appropiata ( *bytecode corretto* ) provenienti dallo spazio utente ( *tramite chiamate di sistema ma questo avviene solo una volta* )
-> 
-> <mark>***eXpress Data Path***</mark> ( #XDP ) è un framework che consente di eseguire l'elaborazione di pacchetti ad alta velocità all'interno di applicazioni BPF. Per consentire una risposta più rapida alle operazioni di rete, XDP esegue un programma BPF il prima possibile, di solito non appena un pacchetto viene ricevuto dall'interfaccia di rete
-> 
-> In questo [articolo](https://lwn.net/Articles/437981/) vi è un ottimizzazione della macchina virtuale che implementa eBPF però che funziona per CPU x86
-> 
 
 > [!IMPORTANT]
 > 
