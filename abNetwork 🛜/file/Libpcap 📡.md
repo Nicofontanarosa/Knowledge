@@ -38,11 +38,12 @@
 > 
 > Questo tipo di **buffer circolare** consente un accesso molto efficiente ai pacchetti, ma in situazioni di traffico intenso può comunque verificarsi la perdita di pacchetti ( _kernel packet drops_ )
 > 
-> Un'ottimizzazione possibile del buffer è la seguente: Se ho più thread / core che si dedicano all'applicazione sniffer, ci saranno + entità che proveranno ad accedere ad un unico buffer di destinazione ( *nic -> buffer condiviso -> buffer applicazione* ). Per ovviare a ciò, l'applicazione non utilizza più un buffer di destinazione ma n, ognuno gestito da un thread, e prima di questi c'è un #thread che li smista, ovvero li prende dal buffer condiviso e li sistema dei buffer gestiti dai vari core
+> Se l'applicazione sniffer è **multi-thread**, si presentano nuove sfide -> **più thread** proveranno ad accedere a **un unico buffer** condiviso, causando **contenzione** ( *nic -> buffer condiviso -> buffer applicazione* ). Una prima ottimizzazione consiste nell'introdurre **n buffer separati**, ognuno gestito da un #thread diverso. Un **thread smistatore** si occupa di leggere dal buffer condiviso ( kernel-user ) e distribuire i pacchetti nei buffer locali dei thread sniffer
 > 
-> Se volessimo ottimizzare ancora di più questa procedura, il thread che funziona da "smistatore" possiamo tranquillamente rimuoverlo se spostiamo i buffer gestiti dai vari thread a livello kernel. Quindi non mappo un buffer condiviso con lo spazio utente ma n buffer condivisi con i vari thread dello spazio utente e il kernel, ricevuti i pacchetti dalla NIC, li smista direttamente nei buffer condivisi con una politica del caso ( #round_robin  )
-> 
-> Tutte queste ottimizzazioni vanno bene poiché io ho un produttore e un consumatore ( *1:1* ). Cn 1:n queste ottimizzazioni già non funzionano più
+> Per migliorare ulteriormente, è possibile **eliminare il thread smistatore** spostando la logica di smistamento **nel kernel stesso**.  
+In questo caso, il kernel **mappa direttamente n buffer**, uno per ogni thread dell'applicazione utente. Così, il kernel smista i pacchetti ricevuti dalla NIC **direttamente nei buffer corrispondenti** usando una politica (ad esempio, #round_robin ).
+
+Queste ottimizzazioni funzionano bene in scenari **1:1 (un produttore e un consumatore)**. In configurazioni **1:n** (un produttore, più consumatori) diventano più complesse da gestire
 > 
 > Questa ottimizzazione è chiamata<mark>***Receive Side Scaling***</mark> ( #RSS ) ovvero distribuisce la ricezione dei pacchetti di rete tra i vari core della CPUs. Viene usato per risolvere il **bottleneck** che si forma andando a lavorare con + core su un unica struttura dati, riducendo la latenza della rete. Di default il kernel assegna un numero di buffer per sniffer quanti sono i core ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
 > 
