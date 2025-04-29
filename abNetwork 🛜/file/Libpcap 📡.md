@@ -23,11 +23,11 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 165733.png" /></p>
 > 
-> Normalmente, il traffico Internet segue lo stack a destra, passando attraverso il **driver della scheda di rete (Ethernet device driver)**, che permette al sistema operativo di interagire con l'hardware di rete.
+> Normalmente, il traffico Internet segue lo stack a destra, passando attraverso il **driver della scheda di rete ( Ethernet device driver )**, che permette al sistema operativo di interagire con l'hardware di rete.
 > 
 > Sappiamo che ogni processo sulla macchina vede solo ciò che il sistema operativo gli consente di vedere. Possiamo quindi affermare che ogni processo è "chiuso" nel proprio ambiente. **Ma come può un processo in spazio utente leggere i dati che viaggiano sulla scheda di rete, senza accedere direttamente allo spazio kernel ?**
 > 
-> In passato si usavano **chiamate di sistema**, che però, pur essendo sicure, risultavano lente. Una soluzione più efficiente è usare applicazioni che accedono direttamente alla memoria tramite **DMA (Direct Memory Access)**, permettendo di leggere/scrivere pacchetti bypassando la CPU e riducendo la latenza
+> In passato si usavano **chiamate di sistema**, che però, pur essendo sicure, risultavano lente. Una soluzione più efficiente è usare applicazioni che accedono direttamente alla memoria tramite #DMA ( _Direct Memory Access_ ), permettendo di leggere/scrivere pacchetti bypassando la #CPU e riducendo la latenza
 >
 > <p align="center"><img src="img/Screenshot 2025-02-11 171841.png" /></p>   
 > <p align="center"><img src="img/Screenshot 2025-02-11 174853.png" /></p>
