@@ -32,7 +32,7 @@
 > <p align="center"><img src="img/Screenshot 2025-02-11 171841.png" /></p>   
 > <p align="center"><img src="img/Screenshot 2025-02-11 174853.png" /></p>
 > 
-> Questa **memoria circolare** viene creata nel **kernel** e contiene la copia dei pacchetti catturati. Essa è **condivisa** (o mappata) con lo **spazio utente**, permettendo così all'applicazione di monitoraggio di accedervi direttamente
+> Questa **memoria circolare** viene creata nel **kernel** e contiene la copia dei pacchetti catturati. Essa è **condivisa** ( o mappata ) con lo **spazio utente**, permettendo così all'applicazione di monitoraggio di accedervi direttamente
 > 
 > Per migliorare la velocità di accesso, **non viene usata sincronizzazione con variabili di controllo**, poiché esiste **un solo produttore** ( kernel ) e **un solo consumatore** ( sniffer ). Il buffer è gestito con un **indice di testa** ( _write index_ ) e un **indice di coda** ( *read index* ) che **non devono mai coincidere**: devono sempre essere distanziati almeno di una cella. Questo consente allo sniffer di leggere in sicurezza tutti i pacchetti **fino al penultimo inserito**, lasciando sempre una cella vuota per distinguere il buffer pieno da quello vuoto
 > 
