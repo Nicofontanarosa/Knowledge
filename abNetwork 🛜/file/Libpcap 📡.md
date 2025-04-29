@@ -50,7 +50,9 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
 > 
-> Il **driver BPF** mantiene l’elenco delle **applicazioni registrate** per catturare pacchetti e, per ognuna, gestisce una **coda dedicata** contenente i pacchetti filtrati. Questo significa che sniffare i pacchetti **consuma memoria**, poiché ogni applicazione ha il proprio spazio di buffering
+> ---
+> 
+> A livello concettuale, troviamo il **driver BPF** mantiene l’elenco delle **applicazioni registrate** per catturare pacchetti e, per ognuna, gestisce una **coda dedicata** contenente i pacchetti filtrati. Questo significa che sniffare i pacchetti **consuma memoria**, poiché ogni applicazione ha il proprio spazio di buffering
 > 
 > Il filtraggio viene eseguito **a livello kernel**, anziché a livello utente, per **evitare spostamenti inutili** di pacchetti nel buffer circolare e **ridurre il numero di pacchetti processati inutilmente**
 > 
