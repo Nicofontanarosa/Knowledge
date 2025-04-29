@@ -10,7 +10,7 @@
 > 
 > Questo ha portato a numerose complicazioni: le API più semplici copiavano tutti i pacchetti nello sniffer nello spazio utente, causando un'enorme quantità di lavoro inutile su sistemi molto attivi. Le API più complesse, invece, permettevano di filtrare i pacchetti prima di trasferirli allo spazio utente, ma spesso erano macchinose e lente
 >  
-> Tutto cambiò nel 1993, quando Steven McCanne e Van Jacobson pubblicarono un articolo che introduceva un metodo più efficiente per filtrare i pacchetti direttamente nel kernel. Lo chiamarono ["The BSD Packet Filter" (BPF)](BPF.pdf).
+> Tutto cambiò nel 1993, quando Steven #McCanne e Van #Jacobson pubblicarono un articolo che introduceva un metodo più efficiente per filtrare i pacchetti direttamente nel kernel. Lo chiamarono ["The BSD Packet Filter" (BPF)](BPF.pdf).
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 180844.png" /></p>
 >
