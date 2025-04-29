@@ -44,9 +44,9 @@
 > 
 > Queste ottimizzazioni funzionano bene in scenari **1:1 ( un produttore e un consumatore )**. In configurazioni **1:n** diventano più complesse da gestire
 > 
-> Questa tecnica prende il nome di <mark>**Receive Side Scaling (RSS)**</mark> ->
+> Questa tecnica prende il nome di <mark>**Receive Side Scaling ( RSS )**</mark> ->
 > 
-> **RSS** distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
+> #RSS distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
 > 
@@ -59,7 +59,7 @@
 > - **Se un pacchetto deve essere accettato**
 > - **Quanti byte del pacchetto devono essere salvati**
 >
-> Per ogni filtro che accetta il pacchetto, **BPF copia nel buffer associato** solo la quantità di dati richiesta. Prima dell’applicazione del filtro, viene utilizzato un **puntatore**: il pacchetto viene **filtrato "sul posto"** (ad esempio, **direttamente nella memoria dove il motore DMA della scheda di rete lo ha scritto**), evitando di copiarlo in un altro buffer prima di applicare il filtro. Il numero di **reference** del pacchetto viene aggiornato per gestire l’accesso ai dati
+> Per ogni filtro che accetta il pacchetto, **BPF copia nel buffer associato** solo la quantità di dati richiesta. Prima dell’applicazione del filtro, viene utilizzato un **puntatore**: il pacchetto viene **filtrato "sul posto"** ( **direttamente nella memoria dove il motore DMA della scheda di rete lo ha scritto** ), evitando di copiarlo in un altro buffer prima di applicare il filtro. Il numero di **reference** del pacchetto viene aggiornato per gestire l’accesso ai dati
 > 
 > Successivamente, lo **sniffer** legge i pacchetti dal **buffer condiviso** e li trasferisce nel proprio **buffer locale** per l’elaborazione
 > 
