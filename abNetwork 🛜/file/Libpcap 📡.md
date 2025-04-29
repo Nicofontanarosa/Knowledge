@@ -40,12 +40,13 @@
 > 
 > Se l'applicazione sniffer è **multi-thread**, si presentano nuove sfide -> **più thread** proveranno ad accedere a **un unico buffer** condiviso, causando **contenzione** ( *nic -> buffer condiviso -> buffer applicazione* ). Una prima ottimizzazione consiste nell'introdurre **n buffer separati**, ognuno gestito da un #thread diverso. Un **thread smistatore** si occupa di leggere dal buffer condiviso ( kernel-user ) e distribuire i pacchetti nei buffer locali dei thread sniffer
 > 
-> Per migliorare ulteriormente, è possibile **eliminare il thread smistatore** spostando la logica di smistamento **nel kernel stesso**.  
-In questo caso, il kernel **mappa direttamente n buffer**, uno per ogni thread dell'applicazione utente. Così, il kernel smista i pacchetti ricevuti dalla NIC **direttamente nei buffer corrispondenti** usando una politica (ad esempio, #round_robin ).
-
-Queste ottimizzazioni funzionano bene in scenari **1:1 (un produttore e un consumatore)**. In configurazioni **1:n** (un produttore, più consumatori) diventano più complesse da gestire
+> Per migliorare ulteriormente, è possibile **eliminare il thread smistatore** spostando la logica di smistamento **nel kernel stesso**. In questo caso, il kernel **mappa direttamente n buffer**, uno per ogni thread dell'applicazione utente. Così, il kernel smista i pacchetti ricevuti dalla NIC **direttamente nei buffer corrispondenti** usando una politica ( #round_robin )
 > 
-> Questa ottimizzazione è chiamata<mark>***Receive Side Scaling***</mark> ( #RSS ) ovvero distribuisce la ricezione dei pacchetti di rete tra i vari core della CPUs. Viene usato per risolvere il **bottleneck** che si forma andando a lavorare con + core su un unica struttura dati, riducendo la latenza della rete. Di default il kernel assegna un numero di buffer per sniffer quanti sono i core ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
+> Queste ottimizzazioni funzionano bene in scenari **1:1 ( un produttore e un consumatore )**. In configurazioni **1:n** diventano più complesse da gestire
+> 
+> Questa tecnica prende il nome di <mark>**Receive Side Scaling (RSS)**</mark> ->
+> 
+> **RSS** distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso: un core particolarmente veloce può gestire **più buffer**, evitando così la sincronizzazione su un unico punto critico ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
 > 
