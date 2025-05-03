@@ -6,7 +6,7 @@
 > 
 > Sappiamo che un #IDS **Intrusion Detection System** è un sistema per identificare le minacce pre - post attack. Un problema dei IDS tradizionali è quando i dati sono **cifrati**. I classici IDS sono descritti in [[Intrusion Detection 🦠]]
 > 
-> ![[Screenshot 2025-04-11 120804.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-11 120804.png" /></p>
 > 
 > Questo Signature IDS è facile da implementare ma difficile da leggere e la seconda regola che dice la stessa cosa della prima, è facilmente passabile poiché non guarda il flusso TLS ma dei byte di un pacchetto, che posso modificare nei pacchetti che genero
 > 
@@ -21,7 +21,7 @@
 >
 >  E' un tool che permette di identificare il traffico di rete =>
 >
-> ![[Screenshot 2025-04-11 123237.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-11 123237.png" /></p>
 > 
 > Permettendo di andare a capire se qualcuno sta generando del traffico indesiderato in un determinato contesto. Quindi riesco a capire se un determinato **protocollo** è consentito o meno in un contesto. In nDPI un protocollo non è uno standard dell'RFC ... ma è creato partendo da un protocollo precedentemente creato e rappresentato tramite =>
 > 
@@ -36,7 +36,7 @@
 > 
 > Queste parti che nDPI prende dai **==primi pacchetti di un flusso==** per ricavare informazioni sono parti **non cifrate** ma **offuscate** ( *sulla parte cifrata non si può fare nulla* )
 > 
-> ![[Screenshot 2025-04-11 161449.png]]
+> <p align="center"><img src="img/Screenshot 2025-02-04 193444.png" /></p>![[Screenshot 2025-04-11 161449.png]]
 > ![[Screenshot 2025-04-11 161554.png]]
 > *prestazioni nDPI*
 > 
