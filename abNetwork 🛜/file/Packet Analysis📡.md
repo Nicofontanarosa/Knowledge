@@ -103,7 +103,7 @@
 > Normalmente il traffico rivolto ad un host è protetto da vari algoritmi di encryption che lo proteggono da analizzatori esterni. Se però catturo il traffico a livello ethernet, sorvolo in qualche modo tutti questi meccanismi di protezione  
 > 
 
-> [!book]
+> [!IMPORTANT]
 > 
 > ***Flow Measurement***
 > 
@@ -150,7 +150,9 @@
 > <p align="center"><img src="img/Screenshot 2025-03-29 192115.png" /></p>
 > 
 
-> [!network]+ Cisco NetFlow & IPFIX
+> [!IMPORTANT]
+> 
+> ***Cisco NetFlow & IPFIX***
 >
 >  Protocollo standard sviluppato da CISCO per il **trasporto dei flussi** unidirezionali fino alla versione 8 e bidirezionali dalla 9. La versione NetFlow 9 trasporta i flussi **in maniera flessibile** poiché al contrario delle versioni precedenti, dove un pacchetto aveva un formato standard e fixed, qui nasce il concetto di **template**. Prima viene inviato questo template e poi arrivano i dati => Posso aggiungere tutti i campi che voglio aggiungendoli nel template che invio
 >
@@ -190,7 +192,9 @@
 > *Immagina che **Palo Alto Networks** voglia esportare un campo custom come `"app_id"` ( che rappresenta un'applicazione identificata da loro ). Con **IPFIX**, Palo Alto può usare il proprio PEN (es. `25461`) e definire quel campo in modo univoco, senza conflitti con altri vendor. NetFlow v9 invece non ha un meccanismo formale per includere questi campi proprietari in modo _portabile_ tra strumenti diversi*
 > 
 
-> [!note]+ NetFlow Packet Format
+> [!NOTE]
+> 
+> ***NetFlow Packet Format***
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 105519.png" /></p>
 > 
@@ -210,7 +214,7 @@
 > <p align="center"><img src="img/Screenshot 2025-04-15 122542.png" /></p>
 >
 
-> [!danger]+ Attention
+> [!CAUTION]
 > 
 > I **flussi grezzi** sono utili, ma a volte è necessario rispondere a varie domande, come ad esempio ->
 > 
@@ -232,7 +236,9 @@
 > - 1 ip contact more destination -> Host Scanning
 > 
 
-> [!network]+ sFlow
+> [!IMPORTANT]
+> 
+> ***sFlow***
 >
 >  Netflow e IPFIX presentano dei problemi =>
 >  
