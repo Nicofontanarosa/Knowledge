@@ -6,7 +6,7 @@
 >
 >  Sappiamo che con il passare del tempo il numero di dispositivi in internet cresce sempre di + e la diversità e complessità continua a crescere. Quello che si cerca allora è una **disponibilità permanente dei servizi di rete con qualità ottimale** e una **riduzione dei costi per l'infrastruttura di rete**. Questo può avvenire tramite la <mark>**Gestione di rete**</mark>
 >  
->  ![[Screenshot 2025-03-05 090852.png]]
+>  <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 090852.png]]
 >  
 >  Ci sono tante prospettive per affrontare i problemi che risolve la gestione di reti =>
 >  
@@ -21,7 +21,7 @@
 > 
 > > *Gli oggetti gestiti non corrispondono necessariamente agli oggetti della programmazione orientata agli oggetti. Nel contesto della gestione delle reti Internet, anche semplici variabili possono corrispondere agli oggetti gestiti*
 > 
-> ![[Screenshot 2025-03-05 112419.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 112419.png]]
 > 
 > Questi oggetti presentano **attributi, operazioni, un comportamento ovvero l'interazione con il mondo reale e le notifiche ovvero messaggi generati in determinate situazioni dal managed object**. Il **Manager o Management System** non deve dipendere dall'implementazione fisica del managed object ( *macchinetta caffè* )
 > 
@@ -29,7 +29,7 @@
 > 
 > l' **agent** ( *responsabile* ) è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
 > 
-> ![[Screenshot 2025-03-05 132503.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 132503.png]]
 >  *spesso il manager e agent girano sullo stesso host*
 >  
 >  Un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
@@ -44,14 +44,14 @@
 > 
 > Per comunicare manager e agent a livello internet si utilizza lo stack TCP / IP che è l'evoluzione dello stack ISO/OSI poiché molto più semplice da implementare ( #TCP/IP #ISO/OSI  )->
 > 
-> ![[Screenshot 2025-03-05 151234.png]]
-> ![[Screenshot 2025-03-05 154929.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 151234.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 154929.png]]
 > 
 > E' importante notare lo stacco tra le 2 implementazioni soprattutto il livello di **presentation** che trasforma e adatta la presentazione dei dati
 > 
 > *Ma come fanno effettivamente a comunicarsi i dati?* cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
 > 
-> ![[Screenshot 2025-03-05 154232.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 154232.png]]
 > 
 > Mentre i dati che noi comunichiamo tramite queste interfacce usano una sintassi chiamata <mark>**ASN Abstract Syntax Notation**</mark> ( #ASN ). Questa sintassi unica è nata come soluzione al problema citato prima, *Come faccio a far capire macchine con SO diversi e anche per tutti i dispositivi che continuano a svilupparsi?* Prima si inviava semplice testo che però bisognava interpretare se si cambiava macchina e quindi è nata questa sintassi che aveva come obiettivo quello di cambiare l'informazione su macchine diverse ( *8/16/32/64 bit che interpretavano i bit o tramite #little-endian o #big-endian* ) e che fosse anche indipendente dai linguaggi di programmazione e trattabile tramite handshake 
 > 
@@ -116,17 +116,17 @@
 > 
 > ***Abstract Syntax and Transfer Syntax***
 > 
-> ![[Screenshot 2025-03-06 164815.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-06 164815.png]]
 > 
 > **ASN.1** consente diverse regole di codifica che trasformano la sintassi astratta in un flusso di byte adatto al trasferimento. Definiamo quindi la <mark>**BER**</mark> ( _Basic Encoding Rules_ #BER ) definisce la mappatura tra la sintassi astratta e quella di trasferimento quindi codifica i tipi di dato ASN in stream di byte ( *nei browser è* #DER )
 > > - Le applicazioni normalmente utilizzano una sintassi locale a seconda del linguaggio di programmazione utilizzato
 > 
-> ![[Screenshot 2025-03-07 183139.png]]
-> ![[Screenshot 2025-03-07 183242.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183139.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183242.png]]
 > 
 > > *l'object identifier da un significato a degli oggetti: se voglio dire che una stringa è un nome di persona userò l'oi che dice che quella stringa rappresenta un nome*
 > 
-> ![[Screenshot 2025-03-07 184203.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184203.png]]
 > 
 > - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito della sintassi di trasferimento che verrà usata
 > 
@@ -134,32 +134,32 @@
 > 
 > Il percorso dal nodo radice al nodo foglia è l'**Object identifier**. La struttura è un albero proprio perché con il tempo aggiungo livelli ai protocolli, certificati, standard etc .... che non devono cambiare tutta la sintassi ( *le curve ellittiche nei certificati prima non cerano* )
 > 
-> ![[Screenshot 2025-03-07 183915.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183915.png]]
 > > *1.3.6.1 = internet*
 > 
-> ![[Screenshot 2025-03-07 184417.png]]
-> ![[Screenshot 2025-03-07 184514.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184417.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184514.png]]
 > 
 > Il protocollo #SNMP utilizza proprio questa sintassi per definire i suoi dati =>
 > 
-> ![[Screenshot 2025-03-07 184558.png]]
-> ![[Screenshot 2025-03-07 184628.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184558.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184628.png]]
 > 
 > Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere
 > 
-> ![[Screenshot 2025-03-07 190102.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 190102.png]]
 > 
 > ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
 > 
 > Per rispondere alla domanda fatta all'inizio di questo file =>
 > - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
 > 
-> ![[Screenshot 2025-03-07 194742.png]]
-> ![[Screenshot 2025-03-14 181844.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 194742.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-14 181844.png]]
 > 
 > E per trasformare la struttura dati scritta in ASN per comunicare tra programmi in una struttura dati del mio linguaggio ci sarà un compilatore che 
 > 
-> ![[Screenshot 2025-03-07 195012.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 195012.png]]
 > 
 
 ---
