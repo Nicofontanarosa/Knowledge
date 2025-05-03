@@ -1,6 +1,8 @@
 #nDPI #packet #monitor #monitoring 
 
-> [!note]+ What is Deep Packet Inspection
+> [!NOTE]
+> 
+> ***What is Deep Packet Inspection***
 > 
 > Sappiamo che un #IDS **Intrusion Detection System** è un sistema per identificare le minacce pre - post attack. Un problema dei IDS tradizionali è quando i dati sono **cifrati**. I classici IDS sono descritti in [[Intrusion Detection 🦠]]
 > 
@@ -13,7 +15,9 @@
 > Il problema di oggi è andare a proteggere l'**edge-network** ovvero la periferia della rete che non devono propagare i problemi nel **Core** poiché nodi lenti e infetti possono rallentare a cascata tutti i vicini. Oggi giorno non basta vedere quanto traffico stai facendo poiché il traffico che creiamo è parecchio, quindi dobbiamo **monitorare i pacchetti in una maniera non abusiva, leggera, passiva e scalabile** tenendo traccia del cambiamento di comportamento di un dispositivo
 >
 
-> [!network]+ nDPI
+> [!IMPORTANT]
+> 
+> ***nDPI***
 >
 >  E' un tool che permette di identificare il traffico di rete =>
 >
@@ -43,7 +47,9 @@
 > Inoltre nDPI non riconosce solo i pacchetti ma anche il tipo di traffico ( *VPN, HTTPS etc ...* ), se i pacchetti sono dei malware e tutto questo tramite **==Fingerprinting==** 
 > 
 
-> [!book]+ JA3
+> [!TIP]
+> 
+> ***JA3***
 > 
 > E' stato disegnato per fare **malware detection** infatti crea un'impronta digitale del modo in cui un'applicazione client comunica tramite TLS e così facendo è possibile ricavare informazioni tipo il sistema operativo usato, oppure se un host sta usando una macchina virtuale
 > 
