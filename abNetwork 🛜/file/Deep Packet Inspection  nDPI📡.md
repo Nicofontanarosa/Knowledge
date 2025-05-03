@@ -110,7 +110,7 @@
 > 
 > Con 1KB posso stimare la grandezza di un qualsiasi dataset con errore del 3%
 > 
-> - **==Leaky Bucket==** -> Un modo per identificare eventi problematici. *How do I detect a port or network scan ? How can I detect trafﬁc bursts?*
+> - <mark>**Leaky Bucket**</mark> -> Un modo per identificare eventi problematici. *How do I detect a port or network scan ? How can I detect trafﬁc bursts?*
 > 
 > - Hai un **secchio** con una **capacità massima** (es: 100 eventi)
 > - Ogni volta che arriva un evento (es: una richiesta di connessione), **togli una goccia dal secchio**
@@ -120,18 +120,18 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 125941.png" /></p>
 > 
-> - **==Entropia==** -> L'entropia, nel contesto delle reti, è una misura di **casualità o disordine** nei dati. L’entropia dei dati grezzi prima e dopo la cifratura **cambia**, ma **rimane entro certi limiti** se i dati sono **omogenei** e grazie a questi limiti è possibile classificare il traffico anche se cifrato
+> - <mark>**Entropia**</mark> -> L'entropia, nel contesto delle reti, è una misura di **casualità o disordine** nei dati. L’entropia dei dati grezzi prima e dopo la cifratura **cambia**, ma **rimane entro certi limiti** se i dati sono **omogenei** e grazie a questi limiti è possibile classificare il traffico anche se cifrato
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 130400.png" /></p>
 > 
-> - **==Data Binning==** -> I bin permettono di classificare i dati usando un **piccolo insieme di intervalli**, invece di considerare **ogni valore singolarmente**. Questo non mi da i dati precisi però mi permette di rispondere a delle domande quali: *Due host stanno usando protocolli simili?* 
+> - <mark>**Data Binning**</mark> -> I bin permettono di classificare i dati usando un **piccolo insieme di intervalli**, invece di considerare **ogni valore singolarmente**. Questo non mi da i dati precisi però mi permette di rispondere a delle domande quali: *Due host stanno usando protocolli simili?* 
 > 
 > I **bin** sono un modo efficiente per memorizzare osservazioni, ma abbiamo bisogno di un modo per **confrontarli** e trovare **somiglianze**. Due **valori singoli** possono essere confrontati con gli operatori `<`, `>`, `=`,  ma *come si confronta un vettore di dati ?* => bisogna ->
 >
 > 1. **Normalizzare i dati** -> Per evitare che bin con più osservazioni “pesino” di più
 > 2. **Confrontare** ogni elemento del bin con un **algoritmo di similarità**
 >
-> Ci sono vari metodi per confrontare gli elementi ( *distanza del coseno, distanza euclidea etc ...* ). Un criterio oggi usato è il **==Coefficiente di Similarità di Jaccard==** ->Jaccard(A, B) = ( numero di elementi comuni ) / ( numero totale di elementi unici ) e produce un valore tra 0 e 1 dove 0 = completamente diversi mentre 1 = identici
+> Ci sono vari metodi per confrontare gli elementi ( *distanza del coseno, distanza euclidea etc ...* ). Un criterio oggi usato è il <mark>**Coefficiente di Similarità di Jaccard**</mark> ->Jaccard(A, B) = ( numero di elementi comuni ) / ( numero totale di elementi unici ) e produce un valore tra 0 e 1 dove 0 = completamente diversi mentre 1 = identici
 > 
 
 ---
