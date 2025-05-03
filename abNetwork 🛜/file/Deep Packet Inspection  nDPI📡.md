@@ -4,7 +4,7 @@
 > 
 > ***What is Deep Packet Inspection***
 > 
-> Sappiamo che un #IDS **Intrusion Detection System** è un sistema per identificare le minacce pre - post attack. Un problema dei IDS tradizionali è quando i dati sono **cifrati**. I classici IDS sono descritti in [[Intrusion Detection 🦠]]
+> Sappiamo che un #IDS **Intrusion Detection System** è un sistema per identificare le minacce pre - post attack. Un problema dei IDS tradizionali è quando i dati sono **cifrati**
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-11 120804.png" /></p>
 > 
@@ -29,7 +29,7 @@
 > 
 > Molti applicativi infatti usano + protocolli in base alla funzione richiesta ( *Skype or Facebook are application protocols in the nDPI world but not for IETF* ) e nDPI riconosce + di 300 protocolli
 > 
-> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i ***==dissector==*** vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
+> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i <mark>***dissector***</mark> vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
 > 
 > - Ogni flusso mantiene lo stato dei dissector che non hanno corrisposto, in modo da saltarli nelle iterazioni successive
 > - L'analisi continua fino a quando non viene trovata una corrispondenza o dopo troppi tentativi
@@ -64,13 +64,13 @@
 > 
 > - ==**Compressed Bitmap**== -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...** Una delle + usate è la [[https://roaringbitmap.org/]]
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-15 210746.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-15 210746.png" /></p>
 > 
 > La cosa importante di queste bitmap compresse è che si possono fare operazioni del tipo **AND, OR e NOT** senza decomprimerle. In questo modo è possibile confrontare le colonne tramite AND
 > 
 > - ==**Bloom Filter**== -> Struttura probabilistica che risponde alla domanda: un elemento fa parte di un set? L'idea è quella di fare un confronto veloce per capire se un dato input matcha o meno un filtro. Nel caso matcha allora possiamo fare un operazione + costosa a livello di prestazioni per recuperare il dato interessato, altrimenti nulla
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 113003.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 113003.png" /></p>
 > 
 > Un filtro non è altro che un vettore di bit di lunghezza m che ha gli 1 corrispondenti all'hash di un elemento che vogliamo che sia filtrato % m. Per ogni elemento faccio + volte l'hash ( *nell'esempio 3* ) che appunto funzioni hash indipendenti e le inserisco nel filtro
 > 
@@ -78,13 +78,13 @@
 >  
 > - ==**Tries**== -> E' una struttura ad albero che ha ogni nodo associato ad una lettera. Se la lettera è una finale di una parola viene marcata in un modo, altrimenti in un altro se è una lettera in mezzo alla parola
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 115830.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 115830.png" /></p>
 > 
 > Se ci sono stringhe quindi con un prefisso comune si riesci a risparmiare spazio accumunando delle stringhe
 > 
 > - ==**Radix**== -> Una triade dove i nodi però possono contenere un set di caratteri. Molto utile per i domini scritti al contrario, perché molti finiscono con .com o .it etc ...
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 120036.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 120036.png" /></p>
 > 
 > Il **Patricia Tree** è un Radix molto efficiente per fare il **subnet matching per IPv4 / IPv6**
 > 
@@ -106,7 +106,7 @@
 > 
 > **Alla fine** → si combinano i valori di tutti i bucket per **stimare la cardinalità complessiva**
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 125324.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 125324.png" /></p>
 > 
 > Con 1KB posso stimare la grandezza di un qualsiasi dataset con errore del 3%
 > 
@@ -118,7 +118,7 @@
 > - Se **arrivano troppi eventi troppo in fretta**, il secchio si svuota velocemente
 > - Quando il secchio è **vuoto** e arriva un altro evento → **allarme**: è un comportamento eccessivo
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 125941.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 125941.png" /></p>
 > 
 > - **==Entropia==** -> L'entropia, nel contesto delle reti, è una misura di **casualità o disordine** nei dati. L’entropia dei dati grezzi prima e dopo la cifratura **cambia**, ma **rimane entro certi limiti** se i dati sono **omogenei** e grazie a questi limiti è possibile classificare il traffico anche se cifrato
 > 
