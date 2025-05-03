@@ -34,17 +34,17 @@
 > - Ogni flusso mantiene lo stato dei dissector che non hanno corrisposto, in modo da saltarli nelle iterazioni successive
 > - L'analisi continua fino a quando non viene trovata una corrispondenza o dopo troppi tentativi
 > 
-> Queste parti che nDPI prende dai **==primi pacchetti di un flusso==** per ricavare informazioni sono parti **non cifrate** ma **offuscate** ( *sulla parte cifrata non si può fare nulla* )
+> Queste parti che nDPI prende dai <mark>**primi pacchetti di un flusso**</mark> per ricavare informazioni sono parti **non cifrate** ma **offuscate** ( *sulla parte cifrata non si può fare nulla* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-11 161449.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-04-11 161554.png" /></p>
 > *prestazioni nDPI*
 > 
-> nDPI è utile anche in sicurezza poiché posso capire, anche se il traffico è criptato, delle informazioni ovvero dei ***==metadati==*** e per ogni flusso si associa un **flow risk**
+> nDPI è utile anche in sicurezza poiché posso capire, anche se il traffico è criptato, delle informazioni ovvero dei <mark>***metadati***</mark> e per ogni flusso si associa un **flow risk**
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-11 173720.png" /></p>
 > 
-> Inoltre nDPI non riconosce solo i pacchetti ma anche il tipo di traffico ( *VPN, HTTPS etc ...* ), se i pacchetti sono dei malware e tutto questo tramite **==Fingerprinting==** 
+> Inoltre nDPI non riconosce solo i pacchetti ma anche il tipo di traffico ( *VPN, HTTPS etc ...* ), se i pacchetti sono dei malware e tutto questo tramite <mark>**Fingerprinting**</mark> 
 > 
 
 > [!TIP]
@@ -60,15 +60,15 @@
 > 
 > ***Advanced Data Structured used by nDPI and not***
 > 
-> - ==**Bitmap**== -> Vettore di bit di lunghezza variabile. Molto spesso però queste bitmap sono sparse e se dovessi tenermi un bitmap di milioni di elementi *cosa dovrei fare?* tipo avrei solo gli elementi [ 0, 12, 23, 60, 140, 1556, 50000 ] però questa bitmap mi richiede 2^16 bit di spazio almeno
+> - <mark>**Bitmap**</mark> -> Vettore di bit di lunghezza variabile. Molto spesso però queste bitmap sono sparse e se dovessi tenermi un bitmap di milioni di elementi *cosa dovrei fare?* tipo avrei solo gli elementi [ 0, 12, 23, 60, 140, 1556, 50000 ] però questa bitmap mi richiede 2^16 bit di spazio almeno
 > 
-> - ==**Compressed Bitmap**== -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...** Una delle + usate è la [[https://roaringbitmap.org/]]
+> - <mark>**Compressed Bitmap**</mark> -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...** Una delle + usate è la [[https://roaringbitmap.org/]]
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 210746.png" /></p>
 > 
 > La cosa importante di queste bitmap compresse è che si possono fare operazioni del tipo **AND, OR e NOT** senza decomprimerle. In questo modo è possibile confrontare le colonne tramite AND
 > 
-> - ==**Bloom Filter**== -> Struttura probabilistica che risponde alla domanda: un elemento fa parte di un set? L'idea è quella di fare un confronto veloce per capire se un dato input matcha o meno un filtro. Nel caso matcha allora possiamo fare un operazione + costosa a livello di prestazioni per recuperare il dato interessato, altrimenti nulla
+> - <mark>**Bloom Filter**</mark> -> Struttura probabilistica che risponde alla domanda: un elemento fa parte di un set? L'idea è quella di fare un confronto veloce per capire se un dato input matcha o meno un filtro. Nel caso matcha allora possiamo fare un operazione + costosa a livello di prestazioni per recuperare il dato interessato, altrimenti nulla
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 113003.png" /></p>
 > 
@@ -76,23 +76,23 @@
 > 
 > Il problema è che una volta creato il filtro non posso eliminare elementi inseriti e quindi lo devo ricrearlo e sostituirlo
 >  
-> - ==**Tries**== -> E' una struttura ad albero che ha ogni nodo associato ad una lettera. Se la lettera è una finale di una parola viene marcata in un modo, altrimenti in un altro se è una lettera in mezzo alla parola
+> - <mark>**Tries**</mark> -> E' una struttura ad albero che ha ogni nodo associato ad una lettera. Se la lettera è una finale di una parola viene marcata in un modo, altrimenti in un altro se è una lettera in mezzo alla parola
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 115830.png" /></p>
 > 
 > Se ci sono stringhe quindi con un prefisso comune si riesci a risparmiare spazio accumunando delle stringhe
 > 
-> - ==**Radix**== -> Una triade dove i nodi però possono contenere un set di caratteri. Molto utile per i domini scritti al contrario, perché molti finiscono con .com o .it etc ...
+> - <mark>**Radix**</mark> -> Una triade dove i nodi però possono contenere un set di caratteri. Molto utile per i domini scritti al contrario, perché molti finiscono con .com o .it etc ...
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 120036.png" /></p>
 > 
 > Il **Patricia Tree** è un Radix molto efficiente per fare il **subnet matching per IPv4 / IPv6**
 > 
-> Supponendo di avere una lista di domini, *come faccio a capire a quale categoria appartiene quel dominio?* Si usano i Radix ma l'algoritmo è l'==**Aho-Corasick**== è un algoritmo che ci consente di confrontare le stringhe
+> Supponendo di avere una lista di domini, *come faccio a capire a quale categoria appartiene quel dominio?* Si usano i Radix ma l'algoritmo è l'<mark>**Aho-Corasick**</mark> è un algoritmo che ci consente di confrontare le stringhe
 > 
-> - ==**Binary Fuse Filter**== -> Un alternativa meno costosa al Radix e Aho-Corasick algorithm che usano delle bitmap compresse che migliorano i filtri di bloom e riducono del 13% lo spazio rispetto agli alberi
+> - <mark>**Binary Fuse Filter**</mark> -> Un alternativa meno costosa al Radix e Aho-Corasick algorithm che usano delle bitmap compresse che migliorano i filtri di bloom e riducono del 13% lo spazio rispetto agli alberi
 > 
-> - **==Probabilistic Counting==** -> *Come faccio a capire con quianti indirizzi IP diversi ho parlato?* Devo avere un contatore che conta ogni volta che parlo con un indirizzo IP ma l'indirizzo IP, per vedere se ci ho già parlato, lo devo confrontare con qualche altro tenuto in memoria -> Dispendioso
+> - <mark>**Probabilistic Counting**</mark> -> *Come faccio a capire con quianti indirizzi IP diversi ho parlato?* Devo avere un contatore che conta ogni volta che parlo con un indirizzo IP ma l'indirizzo IP, per vedere se ci ho già parlato, lo devo confrontare con qualche altro tenuto in memoria -> Dispendioso
 >
 > Una possibile soluzione è usare un bloom filter che controlla se un indirizzo è stato contattato "probabilmente"; se non corrisponde con il filtro lo conto e lo aggiungo al filtro
 > 
@@ -102,7 +102,7 @@
 > 
 > I **metodi di conteggio probabilistico** ( *HyperLogLog o Flajolet-Martin* ) sono usati per stimare **quanti elementi distinti** ci sono in un dataset **senza memorizzare tutto**
 > 
-> L'algoritmo di **==HyperLogLog==** prende un elemento, ci calcola l'hash, lo divide in 2, la prima parte serve per indirizzare l'elemento dell'hash table, la seconda serve per contare quanti 0 si sono visti nella seconda parte => Ogni **==bucket==** ,ovvero entry dell'hash table, tiene traccia del **massimo numero di zeri consecutivi** visti finora per quel prefisso preso in considerazione. **Più zeri = più "raro" = più grande dovrebbe essere l’insieme**
+> L'algoritmo di <mark>**HyperLogLog**</mark> prende un elemento, ci calcola l'hash, lo divide in 2, la prima parte serve per indirizzare l'elemento dell'hash table, la seconda serve per contare quanti 0 si sono visti nella seconda parte => Ogni <mark>**bucket**</mark> ,ovvero entry dell'hash table, tiene traccia del **massimo numero di zeri consecutivi** visti finora per quel prefisso preso in considerazione. **Più zeri = più "raro" = più grande dovrebbe essere l’insieme**
 > 
 > **Alla fine** → si combinano i valori di tutti i bucket per **stimare la cardinalità complessiva**
 > 
