@@ -36,13 +36,13 @@
 > 
 > Queste parti che nDPI prende dai **==primi pacchetti di un flusso==** per ricavare informazioni sono parti **non cifrate** ma **offuscate** ( *sulla parte cifrata non si può fare nulla* )
 > 
-> <p align="center"><img src="img/Screenshot 2025-02-04 193444.png" /></p>![[Screenshot 2025-04-11 161449.png]]
-> ![[Screenshot 2025-04-11 161554.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-11 161449.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-04-11 161554.png" /></p>
 > *prestazioni nDPI*
 > 
 > nDPI è utile anche in sicurezza poiché posso capire, anche se il traffico è criptato, delle informazioni ovvero dei ***==metadati==*** e per ogni flusso si associa un **flow risk**
 > 
-> ![[Screenshot 2025-04-11 173720.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-11 173720.png" /></p>
 > 
 > Inoltre nDPI non riconosce solo i pacchetti ma anche il tipo di traffico ( *VPN, HTTPS etc ...* ), se i pacchetti sono dei malware e tutto questo tramite **==Fingerprinting==** 
 > 
@@ -53,7 +53,7 @@
 > 
 > E' stato disegnato per fare **malware detection** infatti crea un'impronta digitale del modo in cui un'applicazione client comunica tramite TLS e così facendo è possibile ricavare informazioni tipo il sistema operativo usato, oppure se un host sta usando una macchina virtuale
 > 
-> ![[Screenshot 2025-04-13 120307.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>
 > 
 
 > [!CAUTION]
@@ -64,13 +64,13 @@
 > 
 > - ==**Compressed Bitmap**== -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...** Una delle + usate è la [[https://roaringbitmap.org/]]
 > 
-> ![[Screenshot 2025-04-15 210746.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-15 210746.png]]
 > 
 > La cosa importante di queste bitmap compresse è che si possono fare operazioni del tipo **AND, OR e NOT** senza decomprimerle. In questo modo è possibile confrontare le colonne tramite AND
 > 
 > - ==**Bloom Filter**== -> Struttura probabilistica che risponde alla domanda: un elemento fa parte di un set? L'idea è quella di fare un confronto veloce per capire se un dato input matcha o meno un filtro. Nel caso matcha allora possiamo fare un operazione + costosa a livello di prestazioni per recuperare il dato interessato, altrimenti nulla
 > 
-> ![[Screenshot 2025-04-16 113003.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 113003.png]]
 > 
 > Un filtro non è altro che un vettore di bit di lunghezza m che ha gli 1 corrispondenti all'hash di un elemento che vogliamo che sia filtrato % m. Per ogni elemento faccio + volte l'hash ( *nell'esempio 3* ) che appunto funzioni hash indipendenti e le inserisco nel filtro
 > 
@@ -78,13 +78,13 @@
 >  
 > - ==**Tries**== -> E' una struttura ad albero che ha ogni nodo associato ad una lettera. Se la lettera è una finale di una parola viene marcata in un modo, altrimenti in un altro se è una lettera in mezzo alla parola
 > 
-> ![[Screenshot 2025-04-16 115830.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 115830.png]]
 > 
 > Se ci sono stringhe quindi con un prefisso comune si riesci a risparmiare spazio accumunando delle stringhe
 > 
 > - ==**Radix**== -> Una triade dove i nodi però possono contenere un set di caratteri. Molto utile per i domini scritti al contrario, perché molti finiscono con .com o .it etc ...
 > 
-> ![[Screenshot 2025-04-16 120036.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 120036.png]]
 > 
 > Il **Patricia Tree** è un Radix molto efficiente per fare il **subnet matching per IPv4 / IPv6**
 > 
@@ -106,7 +106,7 @@
 > 
 > **Alla fine** → si combinano i valori di tutti i bucket per **stimare la cardinalità complessiva**
 > 
-> ![[Screenshot 2025-04-16 125324.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 125324.png]]
 > 
 > Con 1KB posso stimare la grandezza di un qualsiasi dataset con errore del 3%
 > 
@@ -118,11 +118,11 @@
 > - Se **arrivano troppi eventi troppo in fretta**, il secchio si svuota velocemente
 > - Quando il secchio è **vuoto** e arriva un altro evento → **allarme**: è un comportamento eccessivo
 > 
-> ![[Screenshot 2025-04-16 125941.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-13 120307.png" /></p>![[Screenshot 2025-04-16 125941.png]]
 > 
 > - **==Entropia==** -> L'entropia, nel contesto delle reti, è una misura di **casualità o disordine** nei dati. L’entropia dei dati grezzi prima e dopo la cifratura **cambia**, ma **rimane entro certi limiti** se i dati sono **omogenei** e grazie a questi limiti è possibile classificare il traffico anche se cifrato
 > 
-> ![[Screenshot 2025-04-16 130400.png]]
+> <p align="center"><img src="img/Screenshot 2025-04-16 130400.png" /></p>
 > 
 > - **==Data Binning==** -> I bin permettono di classificare i dati usando un **piccolo insieme di intervalli**, invece di considerare **ogni valore singolarmente**. Questo non mi da i dati precisi però mi permette di rispondere a delle domande quali: *Due host stanno usando protocolli simili?* 
 > 
