@@ -8,7 +8,7 @@
 > 
 > Per **misurare** le **prestazioni** della **rete** usiamo delle metriche quali =>
 > 
-> - **Availability** -> La **Disponibilità** indica la **percentuale di tempo** in cui un sistema di rete, un componente o un'applicazione è **disponibile per l'utente**. Dipende dall'affidabilità dei singoli componenti della rete. La disponibilità si calcola con la formula ->
+> - **Availability** -> La **Disponibilità** indica la **percentuale di tempo** in cui un sistema di rete, un componente o un'applicazione, è **disponibile per l'utente**. Dipende dall'affidabilità dei singoli componenti della rete. La disponibilità si calcola con la formula ->
 > 
 > *Disponibilita* = *MTBF / ( MTBF + MTTR )​*
 > 
