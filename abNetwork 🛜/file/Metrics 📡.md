@@ -74,6 +74,14 @@
 > 
 > - **Outlier** -> Un **outlier** è un dato che si discosta significativamente dal resto dei dati in un insieme. In un contesto di RTT, un outlier rappresenta un valore di latenza che è notevolmente più alto o più basso rispetto alla maggior parte degli altri valori raccolti. Gli outlier possono essere causati da vari fattori, come errori di rete, congestione o malfunzionamenti di qualche nodo della rete. È importante identificare e trattare questi valori, in quanto possono influire negativamente sulle analisi statistiche, portando a conclusioni errate
 > 
+> Per trovare gli outlier, una formula tipica è la seguente ->
+> 
+> – Lower-bound = Q1 - 1.5 * IQR
+–
+upper fence: Q
+3
+ + 1.5 * IQR
+> 
 > - **Percentile** -> **Percentile**: è il valore sotto il quale cade una certa percentuale di osservazioni in un insieme di dati ( _il **95° percentile** indica il valore sotto cui ricadono il 95% delle osservazioni_ )
 > 
 > Nelle reti Il 95° percentile è importante perché rappresenta il consumo massimo "tipico" ->
@@ -82,7 +90,9 @@
 > 
 > Gli operatori lo usano per limitare i costi. Se si supera solo raramente quel valore, forniscono meno banda in media, risparmiando risorse
 > 
-> - **Quartiles** -> 
+> - **Quartiles** -> Divido la mia serie in percentili noti
+> 
+> <p align="center"><img src="img/Screenshot 2025-05-04 104245.png" /></p>
 > 
 > - **Z-Score** -> Lo **z-score**, noto anche come **punteggio standardizzato**, è una misura statistica che indica di quante deviazioni standard un dato valore si discosta dalla media di un set di dati. È definito come ->
 > 
