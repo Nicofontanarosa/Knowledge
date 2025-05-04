@@ -44,8 +44,8 @@
 > 
 > Per comunicare manager e agent a livello internet si utilizza lo stack TCP / IP che è l'evoluzione dello stack ISO/OSI poiché molto più semplice da implementare ( #TCP/IP #ISO/OSI  )->
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 151234.png]]
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 154929.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-05 151234.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-03-05 154929.png" /></p>
 > 
 > E' importante notare lo stacco tra le 2 implementazioni soprattutto il livello di **presentation** che trasforma e adatta la presentazione dei dati
 > 
