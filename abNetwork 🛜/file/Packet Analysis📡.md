@@ -254,5 +254,19 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 165222.png" /></p> 
 > 
+> L’architettura su cui si basa sFlow è composta da un 
+probe che 
+cattura 
+il traffico, da un 
+collector che riceve i pacchetti esportati 
+ed 
+un’applicazione che riceverà i report. Il 
+probe 
+sFlow opera secondo principi diversi da quelli del probe NetFlow, poiché prende un pacchetto da 
+ciascuna porta dello switch su cui si trova in base al sampling rate che si sta applicando. Una 
+volta presi i pacchetti, 
+li incapsula e li invia al collector, quindi il probe non analizza il 
+pacchetto ma si limita ad inviarlo al collector
+> 
 
 ---
