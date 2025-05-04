@@ -152,5 +152,7 @@
 > - **Post-dissector** -> Usato quando si vogliono analizzare i pacchetti dopo che tutti i dissector standard hanno terminato la loro analisi, per aggiungere informazioni extra o confrontare dati tra più protocolli. Non analizza direttamente il payload, ma legge i campi già estratti da altri dissector
 > - **Tap** -> Utile per raccogliere statistiche, dati temporali o esportare flussi di pacchetti
 > 
+> Wireshark mostra dei **metadati** racchiusi tra parentesi **quadre \[\]**
+> 
 
 ---
