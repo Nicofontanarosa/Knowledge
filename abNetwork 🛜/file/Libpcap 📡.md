@@ -154,5 +154,7 @@
 > 
 > Wireshark mostra dei **metadati** racchiusi tra parentesi **quadre \[\]**
 > 
+> <p align="center"><img src="img/Screenshot 2025-05-04 185857.png" /></p>
+> 
 
 ---
