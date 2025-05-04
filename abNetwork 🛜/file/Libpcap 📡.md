@@ -146,5 +146,20 @@
 > 
 > La versione di Wireshark su terminal è chiamata <mark>**tshark**</mark>
 > 
+> In Wireshark, utilizzando il linguaggio Lua, esistono tre meccanismi principali per ispezionare ed elaborare i pacchetti =>
+> 
+> - **Dissector** -> utilizzato quando si vuole modificare il modo in cui Wireshark
+mostra il pacchetto, analizzando il payload grezzo di un protocollo.
+1.3. BACKGROUND TEORICO 3
+– Viene chiamato durante la fase di dissezione, ovvero appena Wireshark
+identifica il protocollo.
+• Post-dissector: usato quando si vogliono analizzare i pacchetti dopo che tutti
+i dissector standard hanno terminato la loro analisi, per aggiungere informazioni
+extra o confrontare dati tra più protocolli.
+– Non analizza direttamente il payload, ma legge i campi già estratti da altri
+dissector.
+• Tap: utile per raccogliere statistiche, dati temporali o esportare flussi di pac-
+chetti.
+> 
 
 ---
