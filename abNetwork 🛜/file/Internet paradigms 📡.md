@@ -6,7 +6,7 @@
 >
 >  Sappiamo che con il passare del tempo il numero di dispositivi in internet cresce sempre di + e la diversità e complessità continua a crescere. Quello che si cerca allora è una **disponibilità permanente dei servizi di rete con qualità ottimale** e una **riduzione dei costi per l'infrastruttura di rete**. Questo può avvenire tramite la <mark>**Gestione di rete**</mark>
 >  
->  <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 090852.png]]
+>  <p align="center"><img src="img/Screenshot 2025-03-05 090852.png" /></p>
 >  
 >  Ci sono tante prospettive per affrontare i problemi che risolve la gestione di reti =>
 >  
@@ -21,7 +21,7 @@
 > 
 > > *Gli oggetti gestiti non corrispondono necessariamente agli oggetti della programmazione orientata agli oggetti. Nel contesto della gestione delle reti Internet, anche semplici variabili possono corrispondere agli oggetti gestiti*
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 112419.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-05 112419.png" /></p>
 > 
 > Questi oggetti presentano **attributi, operazioni, un comportamento ovvero l'interazione con il mondo reale e le notifiche ovvero messaggi generati in determinate situazioni dal managed object**. Il **Manager o Management System** non deve dipendere dall'implementazione fisica del managed object ( *macchinetta caffè* )
 > 
@@ -29,7 +29,7 @@
 > 
 > l' **agent** ( *responsabile* ) è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 132503.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-05 132503.png" /></p>
 >  *spesso il manager e agent girano sullo stesso host*
 >  
 >  Un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
@@ -51,7 +51,7 @@
 > 
 > *Ma come fanno effettivamente a comunicarsi i dati?* cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-05 154232.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-05 154232.png" /></p>
 > 
 > Mentre i dati che noi comunichiamo tramite queste interfacce usano una sintassi chiamata <mark>**ASN Abstract Syntax Notation**</mark> ( #ASN ). Questa sintassi unica è nata come soluzione al problema citato prima, *Come faccio a far capire macchine con SO diversi e anche per tutti i dispositivi che continuano a svilupparsi?* Prima si inviava semplice testo che però bisognava interpretare se si cambiava macchina e quindi è nata questa sintassi che aveva come obiettivo quello di cambiare l'informazione su macchine diverse ( *8/16/32/64 bit che interpretavano i bit o tramite #little-endian o #big-endian* ) e che fosse anche indipendente dai linguaggi di programmazione e trattabile tramite handshake 
 > 
@@ -155,12 +155,12 @@
 > Per rispondere alla domanda fatta all'inizio di questo file =>
 > - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 194742.png]]
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-14 181844.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 194742.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-03-14 181844.png" /></p>
 > 
 > E per trasformare la struttura dati scritta in ASN per comunicare tra programmi in una struttura dati del mio linguaggio ci sarà un compilatore che 
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 195012.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 195012.png" /></p>
 > 
 
 ---
