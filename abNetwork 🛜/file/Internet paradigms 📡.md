@@ -30,6 +30,7 @@
 > l' **agent** ( *responsabile* ) è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 132503.png" /></p>
+> 
 >  *spesso il manager e agent girano sullo stesso host*
 >  
 >  Un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
