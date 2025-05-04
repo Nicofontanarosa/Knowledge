@@ -144,7 +144,9 @@
 > 
 > Sono disponibili due versioni Windows di libpcap. Il più vecchio si chiama [WinPcap](https://wiki.wireshark.org/WinPcap); Non viene più mantenuto attivamente ed è basato su una versione precedente di libpcap. Il più recente si chiama [Npcap](https://nmap.org/npcap/); è attivamente mantenuto ed è basato su una versione relativamente recente di libpcap ed è disponibile solo per Windows 7 e versioni successive di Windows
 > 
-> La versione di Wireshark su terminal è chiamata <mark>**tshark**</mark>
+> La versione di Wireshark su terminal è chiamata <mark>**tshark**</mark>. Altre opzioni sono =>
+> 
+> <p align="center"><img src="img/Screenshot 2025-05-04 191432.png" /></p>
 > 
 > In Wireshark, utilizzando il linguaggio Lua, esistono tre meccanismi principali per ispezionare ed elaborare i pacchetti =>
 > 
