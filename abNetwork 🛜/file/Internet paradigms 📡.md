@@ -19,7 +19,7 @@
 > Oggi si parla di #MOS =>
 > > The Mean Opinion Score (MOS) is **a measurement of the voice quality of an interaction**. The calculation of MOS uses an industry standard measurement methodology to rank audio quality from 1 (unacceptable) to 5 (excellent)
 > 
-> Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su questi *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
+> Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
 > 
 > > *Gli oggetti gestiti non corrispondono necessariamente agli oggetti della programmazione orientata agli oggetti. Nel contesto della gestione delle reti Internet, anche semplici variabili possono corrispondere agli oggetti gestiti*
 > 
