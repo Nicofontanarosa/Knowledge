@@ -31,7 +31,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 132503.png" /></p>
 > 
->  *spesso il manager e agent girano sullo stesso host*
+> > *spesso il manager e agent girano sullo stesso host*
 >  
 >  Un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
 >  
