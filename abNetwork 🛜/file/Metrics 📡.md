@@ -104,7 +104,7 @@
 > 
 > #mind
 > 
-> Praticamente per capire la **latenza** possiamo usare il comando <mark>**tracert**</mark> che manda dei pacchetti verso la destinazione e ci mostra quanto tempo serve per raggiungere tutti i nodi
+> Praticamente per capire la **latenza** possiamo usare il comando <mark>**tracert**</mark> che invia dei pacchetti verso la destinazione e ci mostra quanto tempo serve per raggiungere tutti i nodi
 > 
 > <p align="center"><img src="img/Screenshot 2024-01-21 195854.png" /></p>
 > 
