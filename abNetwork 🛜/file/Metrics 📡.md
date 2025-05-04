@@ -21,8 +21,8 @@
 > -  **Goodput** -> Quantità di dati utili che vengono effettivamente trasmessi con successo -> **Velocità utile**. Viene usato per scoprire connessioni TCP sospette. Viene considerato solo il payload del pacchetto di livello 7
 > - **Bit-rate** -> Quantità di bit trasmessi nell'unità di tempo ( *bits / secondo oppure bps* ) 
 >
-> <p align="center"><img src="img/Screenshot 2025-05-04 102746.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-05-04 102746.png" /></p>![[Screenshot 2024-01-21 191029.png]]
+> <p align="center"><img src="img/Screenshot 2024-01-21 190400.png" /></p>
+> <p align="center"><img src="img/Screenshot 2024-01-21 191029.png" /></p>
 >
 > Minimo per l'effetto ***Bottleneck Link*** => *link sul path end-to-end che limita il throughput end-to-end*
 > 
@@ -37,15 +37,15 @@
 > 
 > Trascurando il ritardo di elaborazione e di accodamento, un **Ritardo end-to-end** =>
 > 
-> <p align="center"><img src="img/Screenshot 2025-05-04 102746.png" /></p>![[Screenshot 2024-01-21 194748.png]]
+> <p align="center"><img src="img/Screenshot 2024-01-21 194748.png" /></p>
 >
 > - Prodotto **Rate \* Ritardo** -> Numero massimo di bit che il link può contenere ad un certo istante
 > 
-> <p align="center"><img src="img/Screenshot 2025-05-04 102746.png" /></p>![[Screenshot 2024-01-22 115159.png]]
+> <p align="center"><img src="img/Screenshot 2024-01-22 115159.png" /></p>
 > 
 > *Se ho un link con un rate di 1bps e un ritardo di 5 secondi* => volume = 5 => 5 è il massimo numero di bit che possono riempire il collegamento e non possono esserci + di 5 contemporaneamente
 > 
-> <p align="center"><img src="img/Screenshot 2025-05-04 102746.png" /></p>![[Screenshot 2024-01-22 115443.png]]
+> <p align="center"><img src="img/Screenshot 2024-01-22 115443.png" /></p>
 > 
 > - **RTT ( Round-Trip Time )** -> L’RTT è il tempo che un pacchetto impiega per viaggiare dalla sorgente alla destinazione e poi ritornare alla sorgente. È una misura comune utilizzata per valutare la latenza di una rete e può essere influenzato da vari fattori, come la distanza fisica tra i nodi, la congestione della rete, e la qualità della connessione. Sappiamo inoltre che in base alla distanza e all' RTT, viene regolata la windows possibile per trasmettere i dati
 > 
