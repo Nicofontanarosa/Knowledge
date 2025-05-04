@@ -134,20 +134,21 @@
 > 
 > Il percorso dal nodo radice al nodo foglia è l'**Object identifier**. La struttura è un albero proprio perché con il tempo aggiungo livelli ai protocolli, certificati, standard etc .... che non devono cambiare tutta la sintassi ( *le curve ellittiche nei certificati prima non cerano* )
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183915.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 183915.png" /></p>
+> 
 > > *1.3.6.1 = internet*
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184417.png]]
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184514.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 184417.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-03-07 184514.png" /></p>
 > 
 > Il protocollo #SNMP utilizza proprio questa sintassi per definire i suoi dati =>
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184558.png]]
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184628.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 184558.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-03-07 184628.png" /></p>
 > 
 > Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 190102.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 190102.png" /></p>
 > 
 > ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
 > 
