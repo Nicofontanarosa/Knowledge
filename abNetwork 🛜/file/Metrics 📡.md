@@ -74,13 +74,10 @@
 > 
 > - **Outlier** -> Un **outlier** è un dato che si discosta significativamente dal resto dei dati in un insieme. In un contesto di RTT, un outlier rappresenta un valore di latenza che è notevolmente più alto o più basso rispetto alla maggior parte degli altri valori raccolti. Gli outlier possono essere causati da vari fattori, come errori di rete, congestione o malfunzionamenti di qualche nodo della rete. È importante identificare e trattare questi valori, in quanto possono influire negativamente sulle analisi statistiche, portando a conclusioni errate
 > 
-> Per trovare gli outlier, una formula tipica è la seguente ->
+> Per trovare gli outlier, una formula tipica è la seguente ( **IQR** = Q3 - Q1 ) ->
 > 
-> – Lower-bound = Q1 - 1.5 * IQR
-–
-upper fence: Q
-3
- + 1.5 * IQR
+> - **Lower-bound** = Q1 - 1.5 \* IQR
+> - **Upper-bound** = Q3 + 1.5 \* IQR
 > 
 > - **Percentile** -> **Percentile**: è il valore sotto il quale cade una certa percentuale di osservazioni in un insieme di dati ( _il **95° percentile** indica il valore sotto cui ricadono il 95% delle osservazioni_ )
 > 
