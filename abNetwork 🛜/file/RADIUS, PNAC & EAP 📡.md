@@ -40,13 +40,13 @@
 
 > [!IMPORTANT]
 > 
-> ***
+> ***Definition of EAP***
 >
 >  **EAP ( Extensible Authentication Protocol )** → Il protocollo utilizzato per scambiare le credenziali tra client e server
  > 
 > 🔹 **Obiettivo** -> Scambiare credenziali tra il dispositivo e il server RADIUS
 > 
-> ==**Flusso di una richiesta EAP in una rete 802.1X**==
+> <mark>**Flusso di una richiesta EAP in una rete 802.1X**</mark>
 > 
 > 1️⃣ Il client si connette alla rete, lo switch/AP invia una richiesta **EAP-Request/Identity**
 > 
@@ -58,14 +58,16 @@
 >   
 > 5️⃣ Se l'autenticazione va a buon fine, il client riceve l’**EAP-Success** e può navigare
 > 
-> ==**Tipologie di EAP più usate**==
+> <mark>**Tipologie di EAP più usate**</mark>
 >   
 > - **EAP-TLS** → Usa certificati digitali ( *molto sicuro* )
 > - **EAP-PEAP** → Incapsula le credenziali in una connessione sicura TLS
 > - **EAP-MSCHAPv2** → Usato spesso con Windows ( *meno sicuro* )
 > - **EAP-TTLS** → Simile a PEAP, ma più flessibile
 
-> [!network]+ Definition of PNAC
+> [!IMPORTANT]
+> 
+> ***Definition of PNAC***
 >
 >  **PNAC ( Port-Based Network Access Control ) – Controllo di Accesso Basato sulle Porte** è un meccanismo che controlla l'accesso alla rete **a livello di porta Ethernet o Wi-Fi**, assicurandosi che solo dispositivi autorizzati possano connettersi
 >   
