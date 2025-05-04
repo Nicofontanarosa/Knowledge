@@ -1,3 +1,4 @@
+# Metrics 📡
 
 #metrics #router #switch #switching #throughput #bit-rate #bandwidth #goodput #latenza
 
@@ -69,6 +70,17 @@
 > - **Variance** -> Media dei quadrati degli scarti dalla media. Ovvero la media delle somme delle differenze al quadrato tra valore misurato e media 
 > - **Standard Deviation** -> La radice della varianza. La **deviazione standard** è una misura che indica quanto i valori di un insieme di dati si discostano dalla media. Una bassa deviazione standard indica che i valori sono vicini alla media, mentre una deviazione standard elevata implica che i valori sono sparsi su un ampio intervallo. Nel caso dell'RTT, una deviazione standard bassa indica che la latenza è consistente e stabile, mentre una deviazione standard alta potrebbe suggerire variabilità nella connessione o la presenza di problemi di rete
 > - **Outlier** -> Un **outlier** è un dato che si discosta significativamente dal resto dei dati in un insieme. In un contesto di RTT, un outlier rappresenta un valore di latenza che è notevolmente più alto o più basso rispetto alla maggior parte degli altri valori raccolti. Gli outlier possono essere causati da vari fattori, come errori di rete, congestione o malfunzionamenti di qualche nodo della rete. È importante identificare e trattare questi valori, in quanto possono influire negativamente sulle analisi statistiche, portando a conclusioni errate
+> - **Percentile** -> **Percentile**: è il valore sotto il quale cade una certa percentuale di osservazioni in un insieme di dati.
+
+🔹 Ad esempio, il **95° percentile** indica il valore sotto cui ricadono il 95% delle osservazioni.
+
+### Nelle reti:
+
+Il 95° percentile è importante perché rappresenta il consumo massimo "tipico":
+
+> Per il 95% del tempo, l'utilizzo rimane al di sotto di quel valore.
+
+💡 Gli operatori lo usano per limitare i costi: se si supera solo raramente quel valore, forniscono meno banda in media, risparmiando risorse. Vuoi un esempio numerico pratico?
 > - **Z-Score** -> Lo **z-score**, noto anche come **punteggio standardizzato**, è una misura statistica che indica di quante deviazioni standard un dato valore si discosta dalla media di un set di dati. È definito come ->
 > 
 > z = *( x - media ) / deviazione*

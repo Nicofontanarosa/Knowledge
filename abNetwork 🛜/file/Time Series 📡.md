@@ -1,3 +1,5 @@
+# Time Series 📡
+
 #packet #analysis #time_series #RRD
 
 > [!IMPORTANT]
