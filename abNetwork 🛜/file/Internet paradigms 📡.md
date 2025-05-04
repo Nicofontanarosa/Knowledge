@@ -116,17 +116,17 @@
 > 
 > ***Abstract Syntax and Transfer Syntax***
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-06 164815.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-06 164815.png" /></p>
 > 
 > **ASN.1** consente diverse regole di codifica che trasformano la sintassi astratta in un flusso di byte adatto al trasferimento. Definiamo quindi la <mark>**BER**</mark> ( _Basic Encoding Rules_ #BER ) definisce la mappatura tra la sintassi astratta e quella di trasferimento quindi codifica i tipi di dato ASN in stream di byte ( *nei browser è* #DER )
 > > - Le applicazioni normalmente utilizzano una sintassi locale a seconda del linguaggio di programmazione utilizzato
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183139.png]]
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 183242.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 183139.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-03-07 183242.png" /></p>
 > 
 > > *l'object identifier da un significato a degli oggetti: se voglio dire che una stringa è un nome di persona userò l'oi che dice che quella stringa rappresenta un nome*
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 130447.png" /></p>![[Screenshot 2025-03-07 184203.png]]
+> <p align="center"><img src="img/Screenshot 2025-03-07 184203.png" /></p>
 > 
 > - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito della sintassi di trasferimento che verrà usata
 > 
