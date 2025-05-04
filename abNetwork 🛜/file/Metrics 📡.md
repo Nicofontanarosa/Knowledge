@@ -79,6 +79,8 @@
 > - **Lower-bound** = Q1 - 1.5 \* IQR
 > - **Upper-bound** = Q3 + 1.5 \* IQR
 > 
+> ---
+> 
 > - **Percentile** -> **Percentile**: è il valore sotto il quale cade una certa percentuale di osservazioni in un insieme di dati ( _il **95° percentile** indica il valore sotto cui ricadono il 95% delle osservazioni_ )
 > 
 > Nelle reti Il 95° percentile è importante perché rappresenta il consumo massimo "tipico" ->
