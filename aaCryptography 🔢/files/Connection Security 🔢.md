@@ -533,7 +533,7 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > 
 > **I certificati TLS sono emessi per i domini, non per gli IP** =>
 > 
-> - Quando un sito web usa TLS (HTTPS), il browser controlla che il certificato fornito dal server corrisponda esattamente al nome del dominio richiesto (es. `www.unipi.it`)
+> - Quando un sito web usa TLS ( _HTTPS_ ), il browser controlla che il certificato fornito dal server corrisponda esattamente al nome del dominio richiesto (es. `www.unipi.it`)
 > - Il certificato di `www.unipi.it` è registrato per quel dominio specifico e **non per l'IP** (`131.114.21.42`)
 > - Se accedi direttamente con l’IP, il certificato non può essere verificato e il browser mostra un errore di sicurezza
 > 
@@ -543,7 +543,7 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > 
 > *Come faccio a scegliere a quale macchina andare?*
 > 
-> Semplicemente non la scegli tu ma la sceglie il "cash" che dice ai protocolli di routing dove instradare chi ( [[Routing 🎛️]] )
+> Semplicemente non la scegli tu ma la sceglie il "cash" che dice ai protocolli di routing dove instradare chi ( _Scritto nel file Routing 🎛️_ )
 > 
 > Per maggiori chiarimenti [qui](https://www.quora.com/Why-does-Google-give-us-one-IP-while-it-has-4-servers)
 > 
