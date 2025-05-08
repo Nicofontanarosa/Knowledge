@@ -56,7 +56,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 154232.png" /></p>
 > 
-> Mentre i dati che noi comunichiamo tramite queste interfacce usano una sintassi chiamata <mark>**ASN Abstract Syntax Notation**</mark> ( #ASN ). Questa sintassi unica è nata come soluzione al problema citato prima, *Come faccio a far capire macchine con SO diversi e anche per tutti i dispositivi che continuano a svilupparsi?* Prima si inviava semplice testo che però bisognava interpretare se si cambiava macchina e quindi è nata questa sintassi che aveva come obiettivo quello di cambiare l'informazione su macchine diverse ( *8/16/32/64 bit che interpretavano i bit o tramite #little-endian o #big-endian* ) e che fosse anche indipendente dai linguaggi di programmazione e trattabile tramite handshake 
+> Mentre i dati che noi comunichiamo tramite queste interfacce usano una sintassi chiamata <mark>**ASN Abstract Syntax Notation**</mark> ( #ASN ). Questa sintassi unica è nata come soluzione al problema citato prima, *Come faccio a far capire macchine con SO diversi e anche per tutti i dispositivi che continuano a svilupparsi ?* Prima si inviava semplice testo che però bisognava interpretare se si cambiava macchina e quindi è nata questa sintassi che aveva come obiettivo quello di cambiare l'informazione su macchine diverse ( *8/16/32/64 bit che interpretavano i bit o tramite #little-endian o #big-endian* ) e che fosse anche indipendente dai linguaggi di programmazione e trattabile tramite handshake 
 > 
 > > *Big endian sono processori tipo Motorola 68k e PowerPC mentre Little endian Intel x64 e Apple Silicon*
 > 
