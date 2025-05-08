@@ -25,7 +25,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 175544.png" /></p>
 > 
-> Tra un frame ethernet e un altro bisogna aspettare questo <mark>l'**Interpacket Gap** ( #IPG )</mark> ovvero il **tempo minimo di attesa tra due frame Ethernet consecutivi** per permettere ai dispositivi di rete di elaborare il pacchetto ricevuto prima di trasmetterne un altro
+> Tra un frame ethernet e un altro bisogna aspettare un <mark>l'**Interpacket Gap** ( #IPG )</mark> ovvero il **tempo minimo di attesa tra due frame Ethernet consecutivi** per permettere ai dispositivi di rete di elaborare il pacchetto ricevuto prima di trasmetterne un altro
 >
 > - **Valore tipico**: **96 bit-time** ( *che equivale a 12 byte di "vuoto" sulla linea* )
 > - Questo intervallo è **obbligatorio** per garantire che il sistema possa sincronizzarsi e prevenire la congestione nei dispositivi di rete
