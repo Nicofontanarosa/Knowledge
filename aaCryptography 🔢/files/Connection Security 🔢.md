@@ -525,7 +525,9 @@ La fattura commerciale in formato digitale prende il nome di **fatturazione elet
 > 
 > 
 
-> [!danger]- Problem TLS & CDN
+> [!CAUTION]
+> 
+> ***Problem TLS & CDN***
 >
 > *Perché, se inserisco l'IP di una pagina web invece del suo URL, il browser mi segnala che la connessione non è sicura, mentre utilizzando l'URL non ricevo alcun avviso? Ad esempio, accedendo a `https://131.114.21.42` ottengo un errore di certificato non valido, mentre con `https://www.unipi.it` il certificato risulta valido?*
 > 
