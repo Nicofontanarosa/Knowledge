@@ -17,7 +17,7 @@
 >  - Dal punto di vista delle **performance** bisogna garantire delle prestazioni che non vanno a degradarsi e queste performance devo andarle a **dedurre** dai dati che raccolgo ( *prima si origliava la conversazione per capire la qualità della trasmissione* ) 
 >
 > Oggi si parla di #MOS =>
-> > The Mean Opinion Score (MOS) is **a measurement of the voice quality of an interaction**. The calculation of MOS uses an industry standard measurement methodology to rank audio quality from 1 (unacceptable) to 5 (excellent)
+> > The Mean Opinion Score ( **MOS** ) is **a measurement of the voice quality of an interaction**. The calculation of MOS uses an industry standard measurement methodology to rank audio quality from 1 (unacceptable) to 5 (excellent)
 > 
 > Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
 > 
