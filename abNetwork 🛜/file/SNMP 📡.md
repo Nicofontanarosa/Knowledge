@@ -128,7 +128,7 @@
 > 
 > Questo tipo di compilatore **non è semplicemente** uno strumento che traduce codice in linguaggio macchina, ma un componente fondamentale per **generare strutture, controlli e supporto operativo** legati alla gestione SNMP
 >  
->  **MIB-II** definisce una serie di oggetti standard (circa **170**) relativi ai protocolli **IP, ICMP, UDP, TCP** e **SNMP**. L’implementazione di questo MIB **non dovrebbe interferire** con il normale funzionamento delle attività di rete
+>  **MIB-II** definisce una serie di oggetti standard ( circa **170** ) relativi ai protocolli **IP, ICMP, UDP, TCP** e **SNMP**. L’implementazione di questo MIB **non dovrebbe interferire** con il normale funzionamento delle attività di rete
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-08 163224.png" /></p>
 >  <p align="center"><img src="img/Screenshot 2025-03-08 163348.png" /></p>
