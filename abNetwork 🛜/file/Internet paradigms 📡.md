@@ -52,7 +52,7 @@
 > 
 > E' importante notare lo stacco tra le 2 implementazioni soprattutto il livello di **presentation** che trasforma e adatta la presentazione dei dati
 > 
-> *Ma come fanno effettivamente a comunicarsi i dati?* cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
+> *Ma come fanno effettivamente a comunicarsi i dati ?* Cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 154232.png" /></p>
 > 
