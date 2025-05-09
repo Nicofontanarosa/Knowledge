@@ -95,7 +95,7 @@
 > 
 > - <mark>**Binary Fuse Filter**</mark> -> Un alternativa meno costosa al Radix e Aho-Corasick algorithm che usano delle bitmap compresse che migliorano i filtri di bloom e riducono del 13% lo spazio rispetto agli alberi
 > 
-> - <mark>**Probabilistic Counting**</mark> -> *Come faccio a capire con quianti indirizzi IP diversi ho parlato?* Devo avere un contatore che conta ogni volta che parlo con un indirizzo IP ma l'indirizzo IP, per vedere se ci ho già parlato, lo devo confrontare con qualche altro tenuto in memoria -> Dispendioso
+> - <mark>**Probabilistic Counting**</mark> -> *Come faccio a capire con quanti indirizzi IP diversi ho parlato?* Devo avere un contatore che conta ogni volta che parlo con un indirizzo IP ma l'indirizzo IP, per vedere se ci ho già parlato, lo devo confrontare con qualche altro tenuto in memoria -> Dispendioso
 >
 > Una possibile soluzione è usare un bloom filter che controlla se un indirizzo è stato contattato "probabilmente"; se non corrisponde con il filtro lo conto e lo aggiungo al filtro
 > 
