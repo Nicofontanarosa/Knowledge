@@ -12,7 +12,7 @@
 >  - su tutti i dispositivi di rete
 >  - Permettere l’aggiunta di nuove funzionalità senza dover riscrivere tutto l’agent
 >
-> Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): **una collezione di oggetti** che possono essere interrogati per ottenere risposte ( _Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto poiché quel dato non esiste nel suo MIB_ )
+> Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): **una collezione di oggetti** che possono essere interrogati per ottenere risposte
 > 
 > <mark>**Robustness by a simple, connectionless transport service ( #UDP )**</mark>. *Perché UDP?*
 > 
