@@ -23,8 +23,6 @@
 > <mark>**SNMP is a strictly centralized model, where the manager implements the whole functionality and responsibility**</mark>
 > 
 > Per ridurre la complessità dell'ASN.1 ( *Abstract Syntax Notation One* ), nella versione utilizzata da SNMP è stata **semplificata la sintassi**, limitandola a pochi **tipi di dato predefiniti**
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-08 163857.png" /></p>
 >
 
 > [!TIP]
@@ -53,10 +51,6 @@
 >  
 >  Ogni oggetto è identificato dall' **Object identifier** nell'albero di registrazione
 >  
->  <p align="center"><img src="img/Screenshot 2025-03-08 114132.png" /></p>
->  
->  > *I nomi dei nodi sono rilevanti solo per l'uomo*
->
 > <p align="center"><img src="img/Screenshot 2025-03-08 114320.png" /></p>
 > 
 > Gli **oggetti scalari** hanno **una sola istanza**, identificata aggiungendo **`.0`** alla fine dell’**Object Identifier ( OID )**. Per gli **oggetti tabellari**, invece, l’istanza viene determinata leggendo la **tabella** tramite **indici** =>
@@ -91,20 +85,11 @@
 > 
 > Tutti questi oggetti sono scritti e descritti in un <mark>**modulo MIB**</mark>. Questo modulo MIB è formato da un nome, una definizione eventuale di altri moduli MIB, un **Module Identifier** e un **Object Identifier**
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-08 122455.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-08 122610.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-08 122723.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-08 122637.png" /></p>
-> 
-> > *Dove il contatto è colui che ha scritto l'RFC, non l'inventore*
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-08 122846.png" /></p>
+> <p align="center"><img src="img/Screenshot 2025-05-11 215953.png" /></p>
 > 
 > ...
 > 
 > Un altro esempio sono le **notifiche ( trap )** inviate quando la **porta di un dispositivo cambia stato**. Se accendo un dispositivo con molte porte attive, riceverò **molti pacchetti trap in poco tempo**: questa situazione è nota come <mark>**_Trap Storm_**</mark>
-> 
-> In SNMP esiste anche il concetto di **_Textual Conventions_**, usato per **definire il formato e la rappresentazione dei dati**, in modo coerente tra i vari MIB
 > 
 
 > [!TIP]
