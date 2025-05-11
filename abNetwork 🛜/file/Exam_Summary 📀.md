@@ -241,13 +241,6 @@
 > 
 > Utile per controllare lo stato degli **switch**. È in qualche modo complementare alla **MIB-II**, poiché fornisce informazioni sugli **host collegati** alle porte dello switch
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-21 232550.png" /></p>
-> 
-> Quando scriviamo che il MAC fa parte dell'OID significa che il numero che leggiamo dopo il ..0.2. non è un indirizzo IP ma il MAC in decimale ( *brutta implementazione* )
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-21 233053.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-21 233128.png" /></p>
-> 
 > - Permette di conoscere l’**indirizzo MAC** di un host collegato alla porta **X/unità Y** dello switch tramite la tabella **dot1dTpFdbTable.dot1dTpFdbAddress**
 > - L’associazione **MAC/porta** è fondamentale per individuare la posizione fisica di un host ( <mark>***Forwarding Table***</mark> )
 > - Tiene traccia del **MAC address precedente** ( e del tempo di connessione ) associato a una porta, permettendo di **tracciare gli utenti mentre si spostano da una stanza all’altra**
