@@ -318,14 +318,6 @@
 > 
 > - **Inform** -> E' una specie di trap confermata dal manager. Nella pratica si è rivelata un disastro poiché un dispositivo che invia la inform e non riceve risposta si deve tenere una tabella per capire se sta ancora ricevendo risposta o meno ( *idea giusta ma dettagli difficili da implemetare e gestire* )
 > 
-> Sono cambiate anche alcuni errori / eccezioni =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 121721.png" /></p>
-> 
-> Queste eccezioni permettono di restituire un errore specifico per la singola istanza che ha dato errore e non per l'intera operazone ( *SNMPv1* )
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 122414.png" /></p>
-> 
 > Sono stati aggiunti i <mark>***Counter a 64 bit***</mark>
 > 
 > Altra novità è che SNMPv2 è stato modellato per funzionare su ogni protocollo di trasporto ma oggi viene usato ancora UDP
@@ -337,36 +329,8 @@
 > 
 > Molto **più complesso** ma anche molto **più sicuro**
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-22 133437.png" /></p>
-> 
-> La novità principale di SNMPv3 è l'aggiunta di un contesto ovvero una quantità di informazioni di gestione a cui un'**entità SNMP** può accedere
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 160524.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-22 160607.png" /></p>
-> 
-> Come si evince dall'architettura, non ci basiamo + sulla community ma sull'user. Questo modo di autenticazione risponde alle domande =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 163258.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-22 163417.png" /></p>
-> 
-> Si usa il #MAC per autenticare il messaggio ovvero l'unione tra **Chiave utente e dati**. La funzione di hash e di cifratura è cambiata nel tempo =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 163610.png" /></p>
-> 
-> Il problema adesso, oltre all'autenticazione del messaggio, è che se una attaccante conserva un pacchetto con permessi che ha intercettato nel passato, quando vuole può rinviare questi pacchetti
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 164748.png" /></p>
-> 
-> Dove il Manger e l'Agent hanno il <mark>**Timestamp Sincronizzato**</mark>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 165827.png" /></p>
-> 
-> semplicemente cifro ogni blocco di dati
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 185149.png" /></p>
-> 
-> Dove si definiscono anche i permessi di **read view, write view and notify view**
-> 
+> La novità principale di SNMPv3 è l'aggiunta di un contesto ovvero una quantità di informazioni di gestione a cui un'**entità SNMP** può accedere. Non ci basiamo + sulla community ma sull'user
+>  
 
 > [!TIP]
 > 
