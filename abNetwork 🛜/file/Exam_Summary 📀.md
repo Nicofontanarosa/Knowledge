@@ -191,7 +191,7 @@
 > > “Quanti pacchetti stanno passando su una certa interfaccia?”
 > > Prima del MIB-II, questo tipo di informazione veniva fornita solo tramite **trap periodiche**, che rischiavano di **saturare il canale**
 > 
-> Un insieme di oggetti correlati all'interno dell’albero SNMP è chiamato **gruppo**. Esempi di questi gruppi sono =>
+> Un insieme di oggetti correlati all'interno dell’albero SNMP ( _ISO Registration Tree_ ) è chiamato **gruppo**. Esempi di questi gruppi sono =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 203310.png" /></p>
 > 
@@ -247,10 +247,6 @@
 > 
 > *Quando si dovrebbe popolare la tabella ARP?* un router genera un pacchetto ARP quando non sa dove mandare un pacchetto per poi generare un associazione #IP = #MAC . Esempio tipico è quello di un host che vuole comunicare fuori dalla rete. *In uno switch che funziona a livello IP, quale sarà l'ARP table?* dato che lo switch non genera nulla di ARP, non ha bisogno di cambiare indirizzo MAC, la sua tabella sarà vuota. *E allora perché questo switch ha la tabbella ARP con un valore?* Si può facilmente verificare che il MAC di quella tabella non è di un interfaccia SNMP di quello switch => Probabilmente l'amministratore di rete avrà collegato la porta di management ad internet per configurare il dispositivo da remoto e quindi l'unico valore che vediamo è il **MAC = IP** del router precedente collegato a questo 
 > 
-> Infatti anche noi possiamo accedere al pannello di configurazione dello switch ip =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-21 211901.png" /></p>
->
 
 > [!NOTE]
 > 
