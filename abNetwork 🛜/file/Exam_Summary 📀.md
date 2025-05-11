@@ -146,11 +146,7 @@
 > ***SNMPWalk and Others for SNMPv1***
 > 
 >  SNMP walk is <mark>**an application that runs multiple GETNEXT requests automatically**</mark>. The SNMP walk command allows users to extract useful information without entering the unique commands for each OID or node. SNMP walk simplifies the extraction of information from MIB as it is issued to the root-node of the sub-tree
->  
->  Le opzioni di SNMPwalk sono le seguenti =>
->  
->  <p align="center"><img src="img/Screenshot 2025-03-14 200050.png" /></p>
-> 
+>   
 > ***snmpwalk -v 1 -c public 46.37.227.66*** che ci genererà il seguente traffico ( *stoppato* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200711.png" /></p>
@@ -159,14 +155,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200906.png" /></p>
 > 
-> Analizziamo ora i pacchetti di **Getnext** e **GetResponse** =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-14 201134.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-14 201218.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-14 201708.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-14 201741.png" /></p>
-> 
-> I campi che vediamo sono **version, comunity, id, ErrorStatus e ErrorIndex** e i più importanti sono l'<mark>**object name e l'object value**</mark>. Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
+> Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
 > 
 > Dopo l'<mark>***indirizzo IP dell'agent***</mark> posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
 > 
