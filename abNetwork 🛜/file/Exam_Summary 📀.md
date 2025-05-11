@@ -282,9 +282,7 @@
 > 
 > Il time sarebbe il timestamp in cui si è ricevuto il pacchetto LLDP quindi potrei avere più righe per porta con tempo diverso
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-22 085709.png" /></p>
-> 
-> **Ricordiamo che tutti questi dati sono presenti nei CLI Counters** ( *if config* )
+> > **Ricordiamo che tutti questi dati sono presenti nei CLI Counters** ( *if config* )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 092008.png" /></p>
 >
@@ -294,9 +292,6 @@
 > ***Definition of NAC***
 > 
 >  Un #NAC o <mark>***Network Access Controll***</mark> è il processo che impedisce a utenti e dispositivi non autorizzati di accedere a una rete aziendale o privata. NAC garantisce che solo gli utenti autenticati e i dispositivi autorizzati e conformi ai criteri di sicurezza possano accedere alla rete
->  
->  <p align="center"><img src="img/Screenshot 2025-03-22 092908.png" /></p>
->  <p align="center"><img src="img/Screenshot 2025-03-22 092946.png" /></p>
 >  
 
 > [!IMPORTANT]
