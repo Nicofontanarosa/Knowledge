@@ -150,12 +150,6 @@
 >  Le opzioni di SNMPwalk sono le seguenti =>
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-14 200050.png" /></p>
-> > *SNMPv3 per adesso censurato perché non ci interessa*
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-14 200352.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-14 200541.png" /></p>
-> 
-> Per semplicità digitiamo il seguente comando =>
 > 
 > ***snmpwalk -v 1 -c public 46.37.227.66*** che ci genererà il seguente traffico ( *stoppato* )
 > 

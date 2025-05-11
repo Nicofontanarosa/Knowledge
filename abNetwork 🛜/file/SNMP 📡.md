@@ -196,6 +196,7 @@
 >  Le opzioni di SNMPwalk sono le seguenti =>
 >  
 >  <p align="center"><img src="img/Screenshot 2025-03-14 200050.png" /></p>
+>  
 > > *SNMPv3 per adesso censurato perché non ci interessa*
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200352.png" /></p>
