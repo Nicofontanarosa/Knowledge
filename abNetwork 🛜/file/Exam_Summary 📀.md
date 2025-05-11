@@ -1,3 +1,4 @@
+
 > [!IMPORTANT]
 > 
 > ***Simple Network Management Protocol***
@@ -7,7 +8,8 @@
 >  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, ecc., per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
 >  
 >  - Minimizzare la complessità delle funzioni di gestione implementate dagli agent
->  - Utilizzare le stesse funzioni su tutti i dispositivi di rete
+>  - Utilizzare le stesse funzioni
+>  - su tutti i dispositivi di rete
 >  - Permettere l’aggiunta di nuove funzionalità senza dover riscrivere tutto l’agent
 >
 > Tutto questo è stato reso possibile attraverso la definizione di una **MIB** ( *Management Information Base* ): **una collezione di oggetti** che possono essere interrogati per ottenere risposte ( _Ad esempio, non ha senso chiedere a una stampante quanti caffè ha fatto poiché quel dato non esiste nel suo MIB_ )
@@ -35,9 +37,7 @@
 > 
 > Le uniche operazioni consentite sono **lettura** e **scrittura**, rendendo il modello semplice, ma sufficiente per la maggior parte delle esigenze di gestione della rete
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-08 101425.png" /></p>
-> 
->  Dove è fondamentale distinguere tra **Gauge** e **Counter** =>
+> E' fondamentale distinguere tra tipo Gauge e Counter =>
 >  
 >  - Il **Gauge** è un intero che rappresenta valori che **possono salire o scendere**, come ad esempio la temperatura, l’utilizzo della CPU o della memoria. Può avere picchi e fluttuazioni
 >  - Il **Counter**, invece, è un valore che **aumenta solo** nel tempo. Viene utilizzato per misurare eventi cumulativi, come il numero di pacchetti trasmessi su un’interfaccia. Il problema è che, essendo un intero con dimensione fissa, **quando raggiunge il valore massimo, si resetta** a zero: questo fenomeno si chiama <mark>**wrap-around**</mark>
@@ -75,11 +75,6 @@
 >    ifType      INTEGER
 > }   
 > IfTable ::= SEQUENCE OF IfEntry
-> 
-> ```
->  
-> <p align="center"><img src="img/Screenshot 2025-03-08 115428.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-08 115957.png" /></p>
 > 
 > **L'approccio a colonne** utilizzato nei MIB è simile a quello adottato oggi nei **database colonnari**, perché consente di **comprimere più facilmente i dati** dato che tutti i valori di una stessa colonna ( *che hanno lo stesso tipo* ) possono essere gestiti e compressi in modo efficiente rispetto ad una struttura a righe dove i dati sono spesso eterogenei
 > 
