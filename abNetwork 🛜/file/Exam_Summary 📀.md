@@ -110,11 +110,7 @@
 > 
 > ***SNMPv1***
 > 
-> In SNMPv1 le istanze del MIB sono ordinate in ordine lessicografico
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-08 170745.png" /></p>
-> 
-> Il formato del messaggio SNMP è il seguente =>
+> In SNMPv1 le istanze del MIB sono ordinate in ordine lessicografico. Il formato del messaggio SNMP è il seguente =>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-08 181014.png" /></p>
 > 
@@ -130,20 +126,12 @@
 > 
 > 1. **Get** significa leggo esattamente una variabile specificata. Posso ottenere errori del tipo **noSuchName** ovvero l'istanza richiesta non esiste o non appartiene all'albero, **ToBig** significa che non entra nel pacchetto UDP e **genErr** errore generale. In caso di + errori viene segnalato solo uno come **error-index**
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-08 174847.png" /></p>
-> 
 > 2. **GetNext** significa dammi l'object identifier successivo a quello richiesto in ordine lessicografico, infatti questo comando serve per scorrere l'albero. Gli errori possibili sono gli stessi però noSuchName occorre quando l'albero finisce ( **end of MIB** ) 
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-08 175718.png" /></p>
-> 
 > 3. **Set** scrive valori in 1 o + istanze del MIB, è un operazione atomica. Gli errori sono gli stessi e in più c'è **badValue** ovvero ho sbagliato il tipo del valore inserito ( *esiste anche l'errore **readOnly** ma non è usato spesso* )
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-08 180022.png" /></p>
-> 
+>  
 > 4. **Trap** manda le notifiche sul cambio di stato. Non viene richiesta dal manager ma viene mandata dall'agent. Essendo inviata solo dall'agent, se viene persa, non viene richiesta dal manager ( *quella particolare trap* ) però il manager fa il pulling ( *siamo salvi* ). Per non mischiare il traffico il manager è in ascolto sulla <mark>***port 162***</mark>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-08 180446.png" /></p> 
-> 
+>  
 > Le **trap definite** sono 5 =>
 > 
 > 5. **coldStart** -> Il dispositivo si è avviato
