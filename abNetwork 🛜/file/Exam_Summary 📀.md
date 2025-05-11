@@ -75,6 +75,7 @@
 >    ifType      INTEGER
 > }   
 > IfTable ::= SEQUENCE OF IfEntry
+> ```
 > 
 > **L'approccio a colonne** utilizzato nei MIB è simile a quello adottato oggi nei **database colonnari**, perché consente di **comprimere più facilmente i dati** dato che tutti i valori di una stessa colonna ( *che hanno lo stesso tipo* ) possono essere gestiti e compressi in modo efficiente rispetto ad una struttura a righe dove i dati sono spesso eterogenei
 > 
@@ -211,10 +212,6 @@
 > <p align="center"><img src="img/Screenshot 2025-03-21 182039.png" /></p>
 > 
 > `ifNumber` è un Object Identifier ( *OID* ) definito all'interno della **MIB-II ( Management Information Base version 2 )**. Il suo scopo è quello di indicare il numero totale di interfacce presenti su un dispositivo di rete
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-21 183453.png" /></p>
-> 
-> #MTU **Maximum Trasmission Unit** e **speed** ovvero velocità scheda di rete
 > 
 > **If Admin Status** può assumere 3 valori => **Up(1), Down(2), Testing(3)** è ci indica lo stato di un interfaccia fisicamente. Se l'interfaccia è down significa che non è presente fisicamente li. **ifOperStatus** può assumere valori simili  ad admin status ma riguarda lo stato operativo dell'interfaccia
 > 
