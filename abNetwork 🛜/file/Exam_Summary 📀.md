@@ -1,7 +1,3 @@
-# SNMP 📡
-
-#SNMP  #ASN #DER 
-
 > [!IMPORTANT]
 > 
 > ***Simple Network Management Protocol***
