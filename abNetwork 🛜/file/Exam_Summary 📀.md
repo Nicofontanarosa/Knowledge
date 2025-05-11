@@ -171,8 +171,6 @@
 > 
 > ***MIB Implementation***
 > 
->  <p align="center"><img src="img/Screenshot 2025-03-11 132741.png" /></p>
->  
 >  È stato definito il **MIB-II**, che introduce oggetti per la gestione dei protocolli Internet come **IP, ICMP, UDP, TCP**, ecc., aggiungendo circa **170 nuovi oggetti**. Molti di questi oggetti sono stati inclusi per comodità, ad esempio la **routing table** e la **interface table**.
 >  
 >  Il **MIB-II** utilizza indirizzi a **4 byte** per rappresentare gli indirizzi **IPv4**; per **IPv6**, invece, si utilizza **SNMPv2** o versioni successive
