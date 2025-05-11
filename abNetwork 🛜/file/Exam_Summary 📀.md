@@ -156,7 +156,6 @@
 > Dopo l'<mark>***indirizzo IP dell'agent***</mark> posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 202523.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-14 202621.png" /></p> 
 > 
 > Nella ***set*** devo specificare invece il tipo ed il valore del dato =>
 > 
@@ -198,10 +197,6 @@
 > Questo valore è molto utile per capire quando i campi dei dati misurati sono validi. Esempio ->
 > 
 > > Misuro il sysUpTime 1 ed è 4, dopo 1 secondo lo rimisuro ed è 5 => l'agent non è stato riavviato quindi se leggo anche il numero di pacchetti che sono entrati nell'interfaccia allora i 2 valori presi dopo 1 secondo sono coerenti. Se l'agent viene riavviato invece come faccio a capire se il numero di pacchetti è giusto, perchè tipo ha subito un wrap, o meno? tramite il **sysUpTime** 2 che sarà < del sysUpTime 1 => <mark>***Counter wrapping check***</mark>
-> 
-> - ***sysObjectId.0*** has the format enterprises.< manufacturer >.< id > and it is used to identify manufacturer and model. For instance enterprises.9.1.208 identifies a Cisco (.9) 2600 router (.1.208)
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-14 224640.png" /></p>
 > 
 > Altro esempio di un gruppo è =>
 >
