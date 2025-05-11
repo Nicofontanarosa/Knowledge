@@ -42,12 +42,7 @@
 >
 > <mark>***FCAPS***</mark> ( #FCAPS ) è il termine con il quale si riassumono queste 5 proprietà o **aree funzionali** che non sono indipendenti tra di loro ma si influenzano a vicenda
 > 
-> Per comunicare manager e agent a livello internet si utilizza lo stack TCP / IP che è l'evoluzione dello stack ISO/OSI poiché molto più semplice da implementare ( #TCP/IP #ISO/OSI  )->
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-05 151234.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-05 154929.png" /></p>
-> 
-> E' importante notare lo stacco tra le 2 implementazioni soprattutto il livello di **presentation** che trasforma e adatta la presentazione dei dati
+> Per comunicare manager e agent a livello internet si utilizza lo stack TCP / IP che è l'evoluzione dello stack ISO/OSI poiché molto più semplice da implementare
 > 
 > *Ma come fanno effettivamente a comunicarsi i dati ?* Cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
 > 
@@ -121,7 +116,6 @@
 > **ASN.1** consente diverse regole di codifica che trasformano la sintassi astratta in un flusso di byte adatto al trasferimento. Definiamo quindi la <mark>**BER**</mark> ( _Basic Encoding Rules_ #BER ) definisce la mappatura tra la sintassi astratta e quella di trasferimento quindi codifica i tipi di dato ASN in stream di byte ( *nei browser è* #DER )
 > > - Le applicazioni normalmente utilizzano una sintassi locale a seconda del linguaggio di programmazione utilizzato
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-07 183139.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-07 183242.png" /></p>
 > 
 > > *l'object identifier da un significato a degli oggetti: se voglio dire che una stringa è un nome di persona userò l'oi che dice che quella stringa rappresenta un nome*
