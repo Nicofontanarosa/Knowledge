@@ -1238,9 +1238,7 @@
 > 
 > ***Introduction of Packet Capture***
 > 
-> Da quando le workstation sono diventate interconnesse, gli amministratori di rete hanno sentito l’esigenza di “vedere” cosa scorre sui cavi. Abbiamo già visto, nel file _Packet Analysis📡_, come sia possibile catturare i pacchetti, ma _come funziona davvero questo meccanismo ?_
-> 
-> I sistemi operativi hanno sviluppato delle **API** per lo sniffing dei pacchetti. Tuttavia, poiché non esisteva un vero e proprio standard, ogni sistema operativo dovette inventare una propria API: [Ultrix Packet Filter di DEC](AA-PBM2A-TE_Ultrix_4.0_The_Packet_Filter_-_An_Efficient_Mechanism_for_User-Level_Network_Code_Jun1990.pdf), [Snoop di Solaris](AB_Snoop) e altre ancora
+> Da quando le workstation sono diventate interconnesse, gli amministratori di rete hanno sentito l’esigenza di “vedere” cosa scorre sui cavi. I sistemi operativi hanno sviluppato delle **API** per lo sniffing dei pacchetti. Tuttavia, poiché non esisteva un vero e proprio standard, ogni sistema operativo dovette inventare una propria API: [Ultrix Packet Filter di DEC](AA-PBM2A-TE_Ultrix_4.0_The_Packet_Filter_-_An_Efficient_Mechanism_for_User-Level_Network_Code_Jun1990.pdf), [Snoop di Solaris](AB_Snoop) etc ...
 > 
 > Questo ha portato a numerose complicazioni: le API più semplici copiavano tutti i pacchetti nello sniffer nello spazio utente, causando un'enorme quantità di lavoro inutile su sistemi molto attivi. Le API più complesse, invece, permettevano di filtrare i pacchetti prima di trasferirli allo spazio utente, ma spesso erano macchinose e lente
 >  
