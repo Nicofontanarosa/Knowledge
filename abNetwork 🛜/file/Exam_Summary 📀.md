@@ -480,13 +480,7 @@
 > 2. A livello hardware, utilizzare:
 > 	- Un **hub** che inoltra tutto il traffico verso tutte le porte
 > 	- Un **TAP** (Test Access Point) o un **optical splitter** che duplicano il traffico in modo passivo, permettendomi di osservarlo senza alterarlo
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-04 193444.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-02-04 193535.png" /></p>
-> 
 > 3. Utilizzare uno **switch con funzionalità di port mirroring**, configurando una porta di mirroraggio tramite tecnologie come **SPAN**, **RSPAN** o **ERSPAN**
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-04 190528.png" /></p>
 > 
 > Ovviamente, o la porta che esegue il mirror supporta una velocità maggiore, oppure devo stare attento a non superare la sua capacità. Infatti, normalmente una porta genera traffico in modalità **full duplex** (es. 1 Gbps in upload + 1 Gbps in download), mentre sulla porta mirror tutto il traffico viene **inviato** verso il sistema di analisi. Quindi, se non ho abbastanza banda disponibile sulla porta di destinazione (es. 2 Gbps in totale), rischio di perdere pacchetti. In pratica, il traffico viene visto **in modalità half duplex** (solo una direzione per volta nella pratica del mirroring).
 > 
@@ -499,38 +493,7 @@
 > 
 > 4. A livello software, usare una **VLAN di mirroring** oppure funzioni come **Switch Traffic Filter / Mirroring** ( *es. su dispositivi Juniper* )
 > 5. Eseguire un attacco di **MAC Spoofing**, fingendosi un altro host. In questo modo posso intercettare il traffico **da fuori verso dentro** ( *non il traffico interno all' host* ), poiché lo switch inoltrerà i pacchetti destinati sia all' host legittimo sia a me
-> 
-> ---
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-04 193107.png" /></p>
-> 
-> In questo modo vedo tutti i pacchetti che devono "*uscire*" dalla rete però non vedo le comunicazioni locali da host a host dato che quelle si fermano allo switch / acces point precedenti
-> 
-
-> [!TIP]
-> 
-> **Tap Modes**
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 101744.png" /></p>
-> 
-> Questa modalità ci consente di monitorare il traffico distinguendo le due direzioni garantendo che nessun pacchetto venga perso
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 101910.png" /></p>
-> 
-> La modalità di filtraggio normale
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 111210.png" /></p>
-> 
-> Consente di non far bloccare tutto il sistema se va già un apparecchio interposto tra il router e lo switch ( #firewall  ). Questa modalità fa prevalere la disponibilità piuttosto che la sicurezza
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 111445.png" /></p>
-> 
-> Crea multiple copie del flusso dati che arriva ad uno switch ( #hub )
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 111540.png" /></p>
-> 
-> Consente di filtrare il traffico che passa e viene inviato a strumenti di monitoraggio
-> 
+>   
 > I <mark>**vantaggi**</mark> dei tap quindi sono =>
 > 6. **Eliminazione del rischio di perdita pacchetti**
 > 7. **Monitoring dei pacchetti**
