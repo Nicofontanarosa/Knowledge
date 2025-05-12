@@ -586,10 +586,6 @@
 > 
 > <mark>***IPFIX***</mark> è un protocollo che implementa una tecnologia per l'IP Trafﬁc Flow measurement che fa le stesse cose di NetFlow v9 però non dipende da CISCO. Si basa sul protocollo di trasporto SCTP ( *non funziona su windows* ) che però non usa nessuno e infatti si può usare anche sopra il protocollo TPC/UDP
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-15 124423.png" /></p>
-> 
-> > *La differenze è che il probe l'hanno chiamato meter*
-> 
 > La differenze + grande è che non si manda un template ma un PEN prima di inviare i dati, ovvero un ***identificativo univoco assegnato da IANA*** ad un'organizzazione. Serve a definire **template personalizzati** nei protocolli come IPFIX
 > 
 > *Immagina che **Palo Alto Networks** voglia esportare un campo custom come `"app_id"` ( che rappresenta un'applicazione identificata da loro ). Con **IPFIX**, Palo Alto può usare il proprio PEN (es. `25461`) e definire quel campo in modo univoco, senza conflitti con altri vendor. NetFlow v9 invece non ha un meccanismo formale per includere questi campi proprietari in modo _portabile_ tra strumenti diversi*
