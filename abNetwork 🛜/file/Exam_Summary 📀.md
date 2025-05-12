@@ -983,7 +983,7 @@
 > 
 > - <mark>**Bitmap**</mark> -> Vettore di bit di lunghezza variabile. Molto spesso però queste bitmap sono sparse e se dovessi tenermi un bitmap di milioni di elementi *cosa dovrei fare?* tipo avrei solo gli elementi [ 0, 12, 23, 60, 140, 1556, 50000 ] però questa bitmap mi richiede 2^16 bit di spazio almeno
 > 
-> - <mark>**Compressed Bitmap**</mark> -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...** Una delle + usate è la https://roaringbitmap.org/
+> - <mark>**Compressed Bitmap**</mark> -> Una bitmap compressa dove **conto le ripetizioni** con algoritmi del tipo **WAH, EWAH, COMPAX etc ...**
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 210746.png" /></p>
 > 
