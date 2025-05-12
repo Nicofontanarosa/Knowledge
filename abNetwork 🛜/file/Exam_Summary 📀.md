@@ -44,59 +44,14 @@
 > 
 > ***Apache Avron vs Protobuf vs Json vs ASN***
 > 
-> - Apache Avro™ è un **formato di serializzazione dei dati**. Serve quindi per rappresentare e scambiare dati strutturati in modo efficiente, specialmente in contesti distribuiti come **Big Data** e **streaming**
-> 
-> ```json
-> {
->   "type": "record",
->   "name": "Persona",
->   "fields": [
->     {"name": "nome", "type": "string"},
->     {"name": "eta", "type": "int"}
->    ]
-> }
-> 
-> ```
-> 
-> - Google Protocol Buffers ( **Protocol Buffers**, o **Protobuf** ) è un **formato di serializzazione binario** sviluppato da Google. È progettato per essere **più efficiente, veloce e compatto di JSON e XML**, ed è spesso usato per comunicazioni tra servizi in sistemi distribuiti
-> 
-> ```json
-> syntax = "proto3";
-> message Persona {
->   string nome = 1;
->   int32 eta = 2;
-> }
-> ```
-> 
-> - JSON è un formato di **scambio dati leggero** e **testuale**. JSON è principalmente utilizzato per scambiare dati tra client e server, specialmente nelle **API web**, ed è **indipendente dal linguaggio di programmazione**. È un formato molto popolare per la comunicazione su **HTTP/HTTPS**, in particolare nelle **API REST**
-> 
-> ```json
-> {
->   "nome": "Mario",
->   "eta": 25
-> }
-> ```
+> - Apache Avro™, Google Protocol Buffers ( **Protocol Buffers**, o **Protobuf** ) e JSON è un **formato di serializzazione dei dati**. Serve quindi per rappresentare e scambiare dati strutturati in modo efficiente
 > 
 > - ASN.1 ( Abstract Syntax Notation One ) è un **linguaggio di descrizione dei dati** standardizzato usato in telecomunicazioni, crittografia e nelle reti
-> 
-> ```json
-> Persona ::= SEQUENCE {
->    nome UTF8String,
->    eta INTEGER
-> }
-> ```
-> 
-> I vari protocolli **trasmettono i dati serializzati**, ma **non impongono** un formato specifico. Ad esempio =>
-> 1. Un'API REST può usare **JSON su HTTP**
-> 2. Un servizio Kafka può usare **Avro su TCP**
-> 3. Un sistema di autenticazione può usare **ASN.1 nei certificati X.509 su TLS**
 >
 
 > [!TIP]
 > 
 > ***Abstract Syntax and Transfer Syntax***
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-06 164815.png" /></p>
 > 
 > **ASN.1** consente diverse regole di codifica che trasformano la sintassi astratta in un flusso di byte adatto al trasferimento. Definiamo quindi la <mark>**BER**</mark> ( _Basic Encoding Rules_ #BER ) definisce la mappatura tra la sintassi astratta e quella di trasferimento quindi codifica i tipi di dato ASN in stream di byte ( *nei browser è* #DER )
 > > - Le applicazioni normalmente utilizzano una sintassi locale a seconda del linguaggio di programmazione utilizzato
