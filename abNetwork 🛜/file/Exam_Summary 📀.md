@@ -913,3 +913,44 @@
 > 
 
 ---
+
+> [!TIP]
+> 
+> ***Ethernet Flow Control***
+> 
+> Se provassi a fare un attacco #dos ad una macchina, proverei a mandare dei pacchetti UDP poiché **non essendo connection-oriented**, non prevedono un meccanismo di risposta diretto come avviene con il protocollo TCP. La **Scheda di rete** però, a livello ethernet, genera dei pacchetti di <mark>***PAUSE***</mark> che permettono di arrestare la ricezione dei pacchetti da parte della scheda di rete. Sappiamo che =>
+> 
+> *Quando uno switch o un router riceve un pacchetto, generalmente opera in modalità store-and-forward, ciò significa che il dispositivo riceve l’intero pacchetto, lo memorizza temporaneamente e ne verifica l’integrità. Una volta verificato, il dispositivo non “mantiene” fisicamente il segnale ricevuto così com’è, ma lo riconverte e lo ritrasmette attraverso la sua interfaccia di uscita anche per adattarsi al segmento di rete che può utilizzare tecnologie o standard fisici differenti, oppure cambia il TTL etc...*
+> 
+> Proprio per questo, la NIC genera questi pacchetti di #PAUSE che valgono solo nel tratto da una #NIC ad un altra, per arrestare la ricezione dei messaggi per quella NIC. L'**indirizzo destinazione MAC è fisso a 01:80:C2:00:00:01** ovvero un indirizzo multicast riservato per questo tipo di pacchetto e che non viene inoltrato oltre il dominio locale
+> 
+> <p align="center"><img src="img/Screenshot 2025-02-01 113325.png" /></p>
+>
+> **Pause_time** => 16 bit che indicano gli slot di tempo per cui la NIC non deve più inoltrare pacchetti ma scartarli solamente ( *ad esempio se si riempiono i buffer di ricezione questo permette di farli svuotare* )
+>
+> **EtherType** => **0x8808** ( #MAC_Control_Frame )
+>
+> **Opcode** => 
+> - 1 ( *0x0001* ) è per PAUSE
+> - 2 ( *0x0002* ) **Priority-based Flow Control** ( #PFC ) è un' estensione del frame PAUSE per supportare il controllo di flusso **per classi di traffico**. Invece di bloccare completamente la trasmissione, permette di fermare solo alcuni tipi di traffico specifici
+> - 3 ( *0x0003* ) - **Congestion Notification Message** ( #CNM ) serve per gestire la congestione della rete. Se un dispositivo rileva congestione su un link, può inviare un **CNM frame** a monte per segnalare il problema e adattare la trasmissione
+> - 4 ( *0x0004* ) - **Ethernet Bandwidth Allocation** ( #EBA ) è un frame di controllo utilizzato per **allocare dinamicamente la larghezza di banda** tra più dispositivi
+> - **Opcodes per Link Aggregation ( #LACP )** **Link Aggregation Control Protocol** utilizza pacchetti speciali per negoziare la formazione di link aggregati. Questi non usano direttamente MAC Control Frames ma sono importanti nel controllo della rete
+> 
+> Questi pacchetti quindi non arrivano al software dell' host e quindi non vengono mostrati in tool quali Wireshark. Per visualizzare dei dati che includo questi pacchetti si può usare il comando <mark>**ethtool -S "interfaccia"**</mark>
+> 
+> Nelle reti seriali vengono usati XON e XOFF, ovvero segnali di controllo utilizzati per **fermare** ( #XOFF ) e **riprendere** ( #XON ) la trasmissione dei dati tra due dispositivi
+> 
+
+> [!TIP]
+> 
+> ***Ethernet HandShake***
+> 
+> - <mark>**Fast Link Pulses ( #FLP )**</mark> => Invece di scambiarsi veri e propri “pacchetti” Ethernet nel senso tradizionale, l’auto-negotiation utilizza dei **brevi impulsi** chiamati Fast Link Pulses
+> 
+> FLP Non sono frame standard ma impulsi inviati in burst e non hanno la struttura tipica di un frame Ethernet; sono implementati a livello hardware e operano in modo trasparente per il livello di rete
+> 
+> Per visualizzare questi segnali usare il comando <mark>**ethtool "interfaccia"**</mark>
+> 
+
+---
