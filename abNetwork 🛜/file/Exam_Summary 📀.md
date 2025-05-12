@@ -447,6 +447,7 @@
 >  
 
 ---
+# Packet Analysis 📡
 
 > [!NOTE]
 > 
@@ -687,6 +688,7 @@
 > 
 
 ---
+# Time Series 📡
 
 > [!IMPORTANT]
 > 
@@ -789,6 +791,7 @@
 > 
 
 ---
+# Data Clustering 📡
 
 > [!NOTE]
 > 
@@ -811,6 +814,7 @@
 >
 
 ---
+# RADIUS 📡
 
 > [!IMPORTANT]
 > 
@@ -869,6 +873,7 @@
 > 
 
 ---
+# Data Layer 🔢
 
 > [!TIP]
 > 
@@ -891,6 +896,7 @@
 >  
 
 ---
+# nDPI 📡
 
 > [!NOTE]
 > 
@@ -1012,6 +1018,7 @@
 > 
 
 ---
+# Physical Layer 
 
 > [!IMPORTANT]
 > 
