@@ -942,13 +942,7 @@
 > 
 > Sappiamo che un #IDS **Intrusion Detection System** è un sistema per identificare le minacce pre - post attack. Un problema dei IDS tradizionali è quando i dati sono **cifrati**
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-11 120804.png" /></p>
-> 
-> Questo Signature IDS è facile da implementare ma difficile da leggere e la seconda regola che dice la stessa cosa della prima, è facilmente passabile poiché non guarda il flusso TLS ma dei byte di un pacchetto, che posso modificare nei pacchetti che genero
-> 
 > Qui entra in gioco il **Machine Learning** che riesce a capire se un dato cifrato è effettivamente una minaccia, ma per fare questo ha bisogno di essere allenato, ovvero ha bisogno di **dati certi** ( *se non ho questi dati rischio di produrre delle allucinazioni* )
-> 
-> Il problema di oggi è andare a proteggere l'**edge-network** ovvero la periferia della rete che non devono propagare i problemi nel **Core** poiché nodi lenti e infetti possono rallentare a cascata tutti i vicini. Oggi giorno non basta vedere quanto traffico stai facendo poiché il traffico che creiamo è parecchio, quindi dobbiamo **monitorare i pacchetti in una maniera non abusiva, leggera, passiva e scalabile** tenendo traccia del cambiamento di comportamento di un dispositivo
 >
 
 > [!IMPORTANT]
@@ -956,8 +950,6 @@
 > ***nDPI***
 >
 >  E' un tool che permette di identificare il traffico di rete =>
->
-> <p align="center"><img src="img/Screenshot 2025-04-11 123237.png" /></p>
 > 
 > Permettendo di andare a capire se qualcuno sta generando del traffico indesiderato in un determinato contesto. Quindi riesco a capire se un determinato **protocollo** è consentito o meno in un contesto. In nDPI un protocollo non è uno standard dell'RFC ... ma è creato partendo da un protocollo precedentemente creato e rappresentato tramite =>
 > 
