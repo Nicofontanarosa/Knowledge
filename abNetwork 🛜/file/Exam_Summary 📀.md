@@ -1497,3 +1497,38 @@
 > 
 
 ---
+
+> [!CAUTION]
+> 
+> ***Problem TLS & CDN***
+>
+> *Perché, se inserisco l'IP di una pagina web invece del suo URL, il browser mi segnala che la connessione non è sicura, mentre utilizzando l'URL non ricevo alcun avviso? Ad esempio, accedendo a `https://131.114.21.42` ottengo un errore di certificato non valido, mentre con `https://www.unipi.it` il certificato risulta valido?*
+> 
+> **I certificati TLS sono emessi per i domini, non per gli IP** =>
+> 
+> - Quando un sito web usa TLS ( _HTTPS_ ), il browser controlla che il certificato fornito dal server corrisponda esattamente al nome del dominio richiesto (es. `www.unipi.it`)
+> - Il certificato di `www.unipi.it` è registrato per quel dominio specifico e **non per l'IP** (`131.114.21.42`)
+> - Se accedi direttamente con l’IP, il certificato non può essere verificato e il browser mostra un errore di sicurezza
+> 
+> *Ma perché non creo certificati per indirizzi IP?*
+> 
+> Semplicemente perché in internet ho molti indirizzi IP uguali / questi indirizzi IP cambiano facilmente
+> 
+> *Come faccio a scegliere a quale macchina andare?*
+> 
+> Semplicemente non la scegli tu ma la sceglie il "cash" che dice ai protocolli di routing dove instradare chi ( _Scritto nel file Routing 🎛️_ )
+> 
+> Per maggiori chiarimenti [qui](https://www.quora.com/Why-does-Google-give-us-one-IP-while-it-has-4-servers)
+> 
+> Parlando di soldi abbiamo anche gli #ISP che comprano le cache dei grandi fornitori di contenuti online per avvantaggiarsi. I grandi fornitori di contenuti come Youtube e Netflix installano i propri sistemi proprietari di cache dei contenuti presso gli ISP. È a loro vantaggio reciproco perché migliora le prestazioni per i clienti, riduce notevolmente il traffico che lascia l'ISP in peering con altri ISP e riduce notevolmente il traffico in arrivo dalle connessioni Internet primarie ai data center dei provider di contenuti. Non è necessario che l'ISP rompa HTTPS perché la richiesta di contenuto sta andando in una scatola appartenente a quel provider. L'ISP ha una scatola nera nei suoi rack di server. Non possono toccarli e non hanno idea di come funzionino, né se ne preoccupano. I fornitori di contenuti più piccoli collaborano con servizi di caching come #Akamai per ottenere lo stesso effetto
+> 
+> Se così non fosse allora gli ISP dovrebbero inviare le richieste del client fino al server del fornitore ( *o generare traffico inutile* ) che poi è in grado di risolvere
+> 
+> Per maggiori chiarimenti cliccare [qui](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjStMzBsfCLAxWqh_0HHSjtJ4EQFnoECCYQAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fexplainlikeimfive%2Fcomments%2Fw1on1c%2Feli5_how_do_isps_know_what_youtube_videos_to%2F&usg=AOvVaw39ZoI1Q0hpncBXd0LvHla2&opi=89978449), [qui](https://www.quora.com/How-does-YouTube-distribute-uploaded-videos-across-data-centers-and-cache-locations-Are-videos-pushed-to-regional-data-centers-prior-to-users-explicitly-requesting-them-or-when-the-first-user-requests-content-in-a-region) o [qui](https://aws.amazon.com/what-is/cdn/#:~:text=A%20content%20delivery%20network%20(CDN,network%20or%20content%20distribution%20network)
+> 
+> Le grandi aziende tipo Amazon, Google etc ... hanno i propri **Content Delivery Network** ovvero una rete di distribuzione di contenuti ( #CDN ) cioè una **rete di server interconnessi che velocizza il caricamento di pagine Web** per applicazioni ad alto contenuto di dati -> ***==Cache==***
+> 
+> ***IMPORTANTE: L'indirizzo della cache è dell'operatore locale e non dell'azienda per cui abbiamo acquistato le informazioni in cache***
+> 
+
+---
