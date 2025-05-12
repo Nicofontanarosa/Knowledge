@@ -494,14 +494,16 @@
 > 4. A livello software, usare una **VLAN di mirroring** oppure funzioni come **Switch Traffic Filter / Mirroring** ( *es. su dispositivi Juniper* )
 > 5. Eseguire un attacco di **MAC Spoofing**, fingendosi un altro host. In questo modo posso intercettare il traffico **da fuori verso dentro** ( *non il traffico interno all' host* ), poiché lo switch inoltrerà i pacchetti destinati sia all' host legittimo sia a me
 >   
-> I <mark>**vantaggi**</mark> dei tap quindi sono =>
-> 6. **Eliminazione del rischio di perdita pacchetti**
-> 7. **Monitoring dei pacchetti**
+> I <mark>**vantaggi**</mark> dei **tap** sono =>
+> 
+> - **Eliminazione del rischio di perdita pacchetti**
+> - **Monitoring dei pacchetti**
 > 
 > Gli <mark>**svantaggi**</mark> dei tap sono =>
-> 8. **Ho bisogno di due interfacce per catturare il traffico**
-> 9. **Costi aggiuntivi per i tappi**
-> 10. **Non si può leggere il traffico prima dello switch** ( *host to host* )
+> 
+> - **Ho bisogno di due interfacce per catturare il traffico**
+> - **Costi aggiuntivi per i tappi**
+> - **Non si può leggere il traffico prima dello switch** ( *host to host* )
 > 
 
 > [!IMPORTANT]
