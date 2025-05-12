@@ -1009,3 +1009,38 @@
 > 
 
 ---
+> [!TIP]
+> 
+> ***Ethernet***
+> 
+> <p align="center"><img src="img/Screenshot 2025-01-28 101147.png" /></p>
+> 
+> Inizialmente ethernet era un progetto creato in questo modo -> 
+> 
+> *Un cavo coassiale ( giallo ) collegava i vari nodi e alle estremità vi erano 2 tappi che permettevano al segnale che si propagava nel filo di non rimbalzare, quindi portandolo a massa. I computer si attaccavano fisicamente al filo tramite **vampire tap** ovvero si bucava il cavo e si attaccava un altro filo. Il transceiver era invece un adattatore che trasformava il segnale elettrico in bit che poi andavano nell'interfaccia di rete, gestita poi da un controller*
+> 
+> **Problemi** => 
+> 1. Frequenti problemi di **collisioni** e scomodità per portare il filo
+> 2. Una persona che si collegava al filo poteva sentire tutte le conversazioni
+> 
+> <p align="center"><img src="img/Screenshot 2025-01-28 101220.png" /></p>
+> 
+> Questa tipologia a bus, ulteriormente migliorata nel 1988, si è trasformata nella **tipologia a stella** nel 1990. Questa tipologia operava originariamente in **half duplex** quindi aveva gli stessi problemi delle altre tipologie, ovvero che tutti spedivano a tutti e gli altri computer non potevano rispondere fin quando il canale non era libero. Successivamente è nata la tipologia **full duplex**
+> 
+> <p align="center"><img src="img/Screenshot 2025-01-28 102513.png" /></p>
+> 
+> In questo modo si può **ricevere e trasmettere contemporaneamente**
+> 
+> <p align="center"><img src="img/Screenshot 2025-01-28 102630.png" /></p>
+> 
+> Per unire alimentazione e flusso di dati è nato il protocollo <mark>***Power over Ethernet PoE***</mark>
+>
+> <p align="center"><img src="img/Screenshot 2025-01-28 103234.png" /></p>
+> 
+> La **40 Gb Ethernet** è implementata unendo 4 lane, ognuna con capacità di 10Gb/s. Queste implementazioni dello standard moltiplicato per 4 sono dei modi per non aspettare troppo per l'uscita del prossimo standard
+> 
+> <p align="center"><img src="img/Screenshot 2025-02-01 100514.png" /></p>
+> 
+> Notiamo che la velocità del flusso dei dati cresce molto + velocemente rispetto alla velocità del processore che ha per catturare ed elaborare i pacchetti 
+
+---
