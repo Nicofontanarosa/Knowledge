@@ -1189,52 +1189,6 @@
 > - ***Router*** => Opera sia a livello fisico rigenerando il segnale che a livello link verificando il MAC che a livello network verificando l'indirizzo IP. I router però hanno un proprio indirizzo MAC e un indirizzo IP. Operano a livello link e fisico solo per l'interfaccia in cui arriva il frame e poi cambiano l'indirizzo MAC dei frame che inoltrano 
 > 
 
-> [!TIP]
->
-> ***VLAN Virtual Local Area Network*** 
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 185219.png" /></p>
-> 
-> In questa rete se un utente invia un messaggio in broadcast viene inviato a tutti. Per evitare che un host possa fare ciò sono state introdotte le VLAN. L'idea è quella di creare **+ LAN logiche** chiamato <mark>**broadcast domain**</mark> ovvero l'insieme di + host in cui arrivano i messaggi di broadcast
-> 
-> Tutto questo senza separare i dispositivi e gli switch ma configurando uno stesso dispositivo per renderlo **+ dispositivi logici**
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 190257.png" /></p>
-> <p align="center"><img src="img/Screenshot 2024-08-30 194411.png" /></p>
-> 
-> I dispositivi della stessa VLAN quindi, comunicano e leggono i messaggi in broadcast della propria VLAN. Se un dispositivo vuole comunicare con un altra VLAN non possiamo più usare gli switch ma dobbiamo salire di livello usando i Router. *In che modo?*
-> 
-> Lo switch determina se il frame MAC in arrivo fa parte della stessa VLAN, in caso contrario inoltra il pacchetto al router 
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 190821.png" /></p>
-> 
-> Possiamo realizzare le VLAN con questo metodo chiamato **port-based VLAN** oppure in base all'indirizzo **MAC VLAN** ovvero il gestore della rete specifica un insieme di indirizzi MAC; quando un dispositivo viene collegato ad una porta questo viene associato alla VLAN in base al MAC, oppure un altro modo per definire le VLAN è tramite il **network layer VLAN**. Il primo metodo è anche dinamico perché siamo in grado di modificare altre porte 
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 191107.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-01-02 084211.png" /></p>
-> 
-> Per unire più switch per renderli come un unico dispositivo di livello 2 si può utilizzare una ***trunk port*** =>
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 191725.png" /></p>
-> 
-> Le VLAN vengono gestite dallo switch, e per permettere la separazione del traffico tra VLAN diverse, viene utilizzato un **tag VLAN** ( *IEEE 802.1Q* ). Questo **tag viene aggiunto ai frame Ethernet** quando attraversano una porta **trunk**, ovvero una porta che trasporta traffico di più VLAN
-> 
-> Quando il pacchetto arriva alla **porta di destinazione ( access port )**, che collega un host o esce verso Internet, **il tag VLAN viene rimosso**
-> 
-> Se due host di VLAN diverse devono comunicare tra loro, la comunicazione avviene tramite un **router** o un **layer 3 switch**, che instrada i pacchetti da una VLAN all'altra ( **inter-VLAN routing** )
->
-> <p align="center"><img src="img/Screenshot 2025-01-02 084445.png" /></p>
-> <p align="center"><img src="img/Screenshot 2024-08-30 194813.png" /></p>
-> 
-> ll **VTP** ( **V**irtual **T**runking **P**rotocol ) è un protocollo di livello 2 realizzato da Cisco, il cui scopo è quello di mantenere allineato il database in cui sono contenute le VLAN comuni a più switch. Affinché la propagazione delle informazioni avvenga correttamente, è necessario che tutti gli switch facciano parte dello stesso dominio VTP
-> 
-> Uno switch può operare in ***tre modalità*** VTP →
->
-> 1. **Server** → Crea, modifica e cancella le VLAN per l’intero dominio VTP e salva le informazioni relative alle LAN virtuali all’interno dell’NVRAM. E’ la modalità di default per gli switch su cui viene abilitato il VTP 
-> 2. **Client** → Non può effettuare operazioni dirette sulle VLAN di dominio e non salva nell’NVRAM le informazioni inviate dal server, occupandosi esclusivamente di propagarle ai vicini
-> 3. **Transparent** -> Può eseguire il forwarding delle informazioni inviate dal server ma è caratterizzato dalla presenza di un database locale di VLAN, il quale non influenza il database di dominio
->
-
 ---
 # Metrics 📡
 
