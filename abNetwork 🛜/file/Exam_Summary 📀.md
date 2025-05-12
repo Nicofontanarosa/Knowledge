@@ -1349,8 +1349,6 @@
 >
 >  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento ( *livello 2 nel modello OSI* ) su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
 >  
->  Per maggiori informazioni attenersi all'API [libpcap di alto livello](http://www.tcpdump.org/manpages/pcap.3pcap.html)
->
 > Questa libreria è usata frequentemente negli strumenti di sicurezza di rete per una varietà di scopi, inclusi scanner di rete e software di monitoraggio di rete. Mentre molte piattaforme UNIX sono fornite di default con _libpcap_ , **la piattaforma Windows** non lo è ma è fornita di un driver di pacchetti <mark>**WinPcap**</mark>  
 >  
 >  Il programma **TCPDump** ha fatto proprio questo. **Uno sniffer multipiattaforma**, originariamente scritto da #Van_Jacobson, #Craig_Leres e #Steven_McCanne presso i #Lawrence #Berkeley Labs per **analizzare i problemi di prestazioni TCP**, TCPDump ha permesso di catturare pacchetti e quindi decodificarli e visualizzarli. Un giorno, frustrato dalle limitazioni e dai formati di output di TCPDump, #Marty_Roesch ha scritto <mark>**Snort**</mark> come sostituto di TCPDump ( *era semplicemente un TCPDump migliore* )
@@ -1394,15 +1392,11 @@
 > 
 > *Come faccio a scegliere a quale macchina andare?*
 > 
-> Semplicemente non la scegli tu ma la sceglie il "cash" che dice ai protocolli di routing dove instradare chi ( _Scritto nel file Routing 🎛️_ )
-> 
-> Per maggiori chiarimenti [qui](https://www.quora.com/Why-does-Google-give-us-one-IP-while-it-has-4-servers)
+> Semplicemente non la scegli tu ma la sceglie il "cash" che dice ai protocolli di routing dove instradare chi
 > 
 > Parlando di soldi abbiamo anche gli #ISP che comprano le cache dei grandi fornitori di contenuti online per avvantaggiarsi. I grandi fornitori di contenuti come Youtube e Netflix installano i propri sistemi proprietari di cache dei contenuti presso gli ISP. È a loro vantaggio reciproco perché migliora le prestazioni per i clienti, riduce notevolmente il traffico che lascia l'ISP in peering con altri ISP e riduce notevolmente il traffico in arrivo dalle connessioni Internet primarie ai data center dei provider di contenuti. Non è necessario che l'ISP rompa HTTPS perché la richiesta di contenuto sta andando in una scatola appartenente a quel provider. L'ISP ha una scatola nera nei suoi rack di server. Non possono toccarli e non hanno idea di come funzionino, né se ne preoccupano. I fornitori di contenuti più piccoli collaborano con servizi di caching come #Akamai per ottenere lo stesso effetto
 > 
 > Se così non fosse allora gli ISP dovrebbero inviare le richieste del client fino al server del fornitore ( *o generare traffico inutile* ) che poi è in grado di risolvere
-> 
-> Per maggiori chiarimenti cliccare [qui](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjStMzBsfCLAxWqh_0HHSjtJ4EQFnoECCYQAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fexplainlikeimfive%2Fcomments%2Fw1on1c%2Feli5_how_do_isps_know_what_youtube_videos_to%2F&usg=AOvVaw39ZoI1Q0hpncBXd0LvHla2&opi=89978449), [qui](https://www.quora.com/How-does-YouTube-distribute-uploaded-videos-across-data-centers-and-cache-locations-Are-videos-pushed-to-regional-data-centers-prior-to-users-explicitly-requesting-them-or-when-the-first-user-requests-content-in-a-region) o [qui](https://aws.amazon.com/what-is/cdn/#:~:text=A%20content%20delivery%20network%20(CDN,network%20or%20content%20distribution%20network)
 > 
 > Le grandi aziende tipo Amazon, Google etc ... hanno i propri **Content Delivery Network** ovvero una rete di distribuzione di contenuti ( #CDN ) cioè una **rete di server interconnessi che velocizza il caricamento di pagine Web** per applicazioni ad alto contenuto di dati -> ***==Cache==***
 > 
