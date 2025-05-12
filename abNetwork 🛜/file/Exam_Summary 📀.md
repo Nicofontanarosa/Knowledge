@@ -866,11 +866,7 @@
 > 
 > 🔹 **Funziona su UDP** ( *porta **1812** per autenticazione, **1813** per accounting* ) 
 > 
-> 1️⃣ **Client RADIUS** → Lo switch, router o access point che vuole autenticare un utente
-> 
-> 2️⃣ **Server RADIUS** → Il server che verifica le credenziali
-> 
-> 3️⃣ **Database utenti** → Può essere un **Active Directory, LDAP, MySQL, ecc**
+> Gli attori principali sono -> **Client RADIUS**, **Server RADIUS** e **Database utenti**
 > 
 > <mark>**Come Funziona un'Autenticazione con RADIUS?**</mark>
 > 
@@ -912,10 +908,8 @@
 >
 >  **PNAC ( Port-Based Network Access Control ) – Controllo di Accesso Basato sulle Porte** è un meccanismo che controlla l'accesso alla rete **a livello di porta Ethernet o Wi-Fi**, assicurandosi che solo dispositivi autorizzati possano connettersi
 >   
-> - Quando colleghi un dispositivo a una porta di rete o a un Wi-Fi aziendale, la rete **non ti permette subito di comunicare**.  
-> - **802.1X + RADIUS** verificano le tue credenziali prima di concederti l'accesso.  
+> - Quando colleghi un dispositivo a una porta di rete o a un Wi-Fi aziendale, la rete **non ti permette subito di comunicare**
+> - **802.1X + RADIUS** verificano le tue credenziali prima di concederti l'accesso
 > 
-> **Come Funziona PNAC?**
-> PNAC si basa su **802.1X** e usa **EAP e RADIUS** per autenticare i dispositivi connessi a una rete cablata o wireless.  
 
 ---

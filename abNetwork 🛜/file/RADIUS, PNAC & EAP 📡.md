@@ -71,10 +71,10 @@
 >
 >  **PNAC ( Port-Based Network Access Control ) – Controllo di Accesso Basato sulle Porte** è un meccanismo che controlla l'accesso alla rete **a livello di porta Ethernet o Wi-Fi**, assicurandosi che solo dispositivi autorizzati possano connettersi
 >   
-> - Quando colleghi un dispositivo a una porta di rete o a un Wi-Fi aziendale, la rete **non ti permette subito di comunicare**.  
-> - **802.1X + RADIUS** verificano le tue credenziali prima di concederti l'accesso.  
+> - Quando colleghi un dispositivo a una porta di rete o a un Wi-Fi aziendale, la rete **non ti permette subito di comunicare**
+> - **802.1X + RADIUS** verificano le tue credenziali prima di concederti l'accesso
 > 
 > **Come Funziona PNAC?**
-> PNAC si basa su **802.1X** e usa **EAP e RADIUS** per autenticare i dispositivi connessi a una rete cablata o wireless.  
+> PNAC si basa su **802.1X** e usa **EAP e RADIUS** per autenticare i dispositivi connessi a una rete cablata o wireless
 
 ---
