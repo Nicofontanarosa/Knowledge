@@ -843,7 +843,7 @@
 > - **Supervisionato** -> In questo approccio, l’AI viene "addestrata" fornendo esempi con etichette corrette. Possiamo immaginarlo come un array di pesi in cui ad ogni input corrisponde un output atteso. Le aree più esplorate nell’ambito supervisionato sono **testo** e **immagini**
 > - **Non supervisionato** -> Qui si utilizzano algoritmi di **clustering**, che raggruppano elementi simili tra loro per poi confrontare nuovi dati con questi gruppi ( *cluster* ). Questo approccio è spesso usato, ad esempio, per analizzare **immagini del traffico di rete** ( *non immagini grafiche, ma rappresentazioni di pacchetti o pattern di comunicazione* )
 > 
-> Esistono diversi tipi di algoritmi di clustering. Il + semplice è il <mark>**K-means**</mark> che suddivide gli elementi in _K_ cluster _( nDPI adatta questo algoritmo per produrre al massimo K cluster e non esattamente K ) 
+> Esistono diversi tipi di algoritmi di clustering. Il + semplice è il <mark>**K-means**</mark> che suddivide gli elementi in _K_ cluster _( nDPI adatta questo algoritmo per produrre al massimo K cluster e non esattamente K )_ 
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-16 151758.png" /></p>
 > 
