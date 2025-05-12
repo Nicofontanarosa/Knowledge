@@ -4,9 +4,7 @@
 > Oggi si parla di #MOS => Il The Mean Opinion Score ( **MOS** ) è la misura della qualità della voce di una comunicazione. Viene assegnato un punteggio da 1 a 5 da varie fonti e successivamente viene fatta una media
 > 
 > Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
-> 
-> > *Gli oggetti gestiti non corrispondono necessariamente agli oggetti della programmazione orientata agli oggetti. Nel contesto della gestione delle reti Internet, anche semplici variabili possono corrispondere agli oggetti gestiti*
-> 
+>  
 > <p align="center"><img src="img/Screenshot 2025-03-05 112419.png" /></p>
 > 
 > Questi oggetti presentano **attributi, operazioni, un comportamento ovvero l'interazione con il mondo reale e le notifiche ovvero messaggi generati in determinate situazioni dal managed object**. Il **Manager o Management System** non deve dipendere dall'implementazione fisica del managed object ( *macchinetta caffè* )
