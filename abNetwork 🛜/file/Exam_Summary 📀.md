@@ -957,7 +957,7 @@
 > 
 > Molti applicativi infatti usano + protocolli in base alla funzione richiesta ( *Skype or Facebook are application protocols in the nDPI world but not for IETF* ) e nDPI riconosce + di 300 protocolli
 > 
-> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i <mark>***dissector***</mark> vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
+> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i <mark>***dissector***</mark> ( *analizzando il payload grezzo di un protocollo. Viene chiamato durante la fase di dissezione, ovvero appena Wireshark identifica il protocollo* ) vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
 > 
 > - Ogni flusso mantiene lo stato dei dissector che non hanno corrisposto, in modo da saltarli nelle iterazioni successive
 > - L'analisi continua fino a quando non viene trovata una corrispondenza o dopo troppi tentativi
