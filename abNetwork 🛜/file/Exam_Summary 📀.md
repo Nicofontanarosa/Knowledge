@@ -561,7 +561,7 @@
 >
 > Dalla v.9 c'è un **supporto di IPv6**
 > 
-> Come per il conceetto di **meter**, questo protocollo misura solo il traffico che attraversa il router e quindi dal livello 3 in su
+> Come per il concetto di **meter**, questo protocollo misura solo il traffico che attraversa il router e quindi dal livello 3 in su
 > 
 > nelle versioni precedenti alla 9 c'è un **flow sequence number** per tenere traccia del flusso e di quelli persi. Dalla 9 però, è stato rimosso questo numero e introdotto il **packet sequence number** che tiene traccia dei pacchetti persi ma non dei flussi
 > 
