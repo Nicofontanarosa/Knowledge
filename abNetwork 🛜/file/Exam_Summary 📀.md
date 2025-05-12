@@ -748,8 +748,6 @@
 > 
 > La differenza tra le **serie univariate** e le **serie multivariate** è che nella prima riesco a prendere tutte le informazioni che mi servono mentre le seconde devo prima unirle in qualche modo e poi prendere i dati. Quindi nel primo ho un valore **Scalare**, nel secondo ho vari valori che devono essere messi assieme
 > 
-> > *Each variable depends not only on its past values but also has some dependency on other variables*
-> 
 > <p align="center"><img src="img/Screenshot 2025-03-28 114710.png" /></p>
 > 
 > Le **serie temporali** possono essere ***stazionarie e non***. Le prime sono serie dove è stata fatta la differenza tra i valori e quindi sono state normalizzate è hanno un andamento che possiamo studiare. Quelle non stazionarie hanno il valore gouge o counter grezzo
