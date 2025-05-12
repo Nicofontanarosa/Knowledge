@@ -75,7 +75,6 @@
 > Per rispondere alla domanda fatta all'inizio di questo file =>
 > - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-07 194742.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 181844.png" /></p>
 > 
 > E per trasformare la struttura dati scritta in ASN per comunicare tra programmi in una struttura dati del mio linguaggio ci sarà un compilatore che 
