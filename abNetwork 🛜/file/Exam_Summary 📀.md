@@ -1256,11 +1256,6 @@
 > - **Throughput** -> Quantità di dati che vengono effettivamente trasmessi con successo. Non dipende solo dalla velocità ma anche dalla quantità di dati, dai protocolli, dal mezzo trasmissivo etc... -> **Velocità effettiva**
 > -  **Goodput** -> Quantità di dati utili che vengono effettivamente trasmessi con successo -> **Velocità utile**. Viene usato per scoprire connessioni TCP sospette. Viene considerato solo il payload del pacchetto di livello 7
 > - **Bit-rate** -> Quantità di bit trasmessi nell'unità di tempo ( *bits / secondo oppure bps* ) 
->
-> <p align="center"><img src="img/Screenshot 2024-01-21 190400.png" /></p>
-> <p align="center"><img src="img/Screenshot 2024-01-21 191029.png" /></p>
->
-> Minimo per l'effetto ***Bottleneck Link*** => *link sul path end-to-end che limita il throughput end-to-end*
 > 
 > - **Latenza** -> Tempo richiesto affinché un messaggio arrivi a destinazione dal momento in cui il primo bit parte dalla sorgente. Utilizzando la commutazione di pacchetto, questo tempo è dovuto ai ritardi causati da ->
 > 1. **Ritardi di elaborazione del nodo** -> Controllo errori sui bit e determinazione del canale di uscita
