@@ -918,11 +918,9 @@
 > 
 > ***Ethernet Flow Control***
 > 
-> Se provassi a fare un attacco #dos ad una macchina, proverei a mandare dei pacchetti UDP poiché **non essendo connection-oriented**, non prevedono un meccanismo di risposta diretto come avviene con il protocollo TCP. La **Scheda di rete** però, a livello ethernet, genera dei pacchetti di <mark>***PAUSE***</mark> che permettono di arrestare la ricezione dei pacchetti da parte della scheda di rete. Sappiamo che =>
+> Se provassi a fare un attacco #dos ad una macchina, proverei a mandare dei pacchetti UDP poiché **non essendo connection-oriented**, non prevedono un meccanismo di risposta diretto come avviene con il protocollo TCP. La **Scheda di rete** però, a livello ethernet, genera dei pacchetti di <mark>***PAUSE***</mark> che permettono di arrestare la ricezione dei pacchetti da parte della scheda di rete
 > 
-> *Quando uno switch o un router riceve un pacchetto, generalmente opera in modalità store-and-forward, ciò significa che il dispositivo riceve l’intero pacchetto, lo memorizza temporaneamente e ne verifica l’integrità. Una volta verificato, il dispositivo non “mantiene” fisicamente il segnale ricevuto così com’è, ma lo riconverte e lo ritrasmette attraverso la sua interfaccia di uscita anche per adattarsi al segmento di rete che può utilizzare tecnologie o standard fisici differenti, oppure cambia il TTL etc...*
-> 
-> Proprio per questo, la NIC genera questi pacchetti di #PAUSE che valgono solo nel tratto da una #NIC ad un altra, per arrestare la ricezione dei messaggi per quella NIC. L'**indirizzo destinazione MAC è fisso a 01:80:C2:00:00:01** ovvero un indirizzo multicast riservato per questo tipo di pacchetto e che non viene inoltrato oltre il dominio locale
+> La NIC genera questi pacchetti di #PAUSE che valgono solo nel tratto da una #NIC ad un altra, per arrestare la ricezione dei messaggi per quella NIC. L'**indirizzo destinazione MAC è fisso a 01:80:C2:00:00:01** ovvero un indirizzo multicast riservato per questo tipo di pacchetto e che non viene inoltrato oltre il dominio locale
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-01 113325.png" /></p>
 >
