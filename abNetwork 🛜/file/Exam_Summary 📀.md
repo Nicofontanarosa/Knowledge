@@ -821,30 +821,11 @@
 >
 >  <p align="center"><img src="img/Screenshot 2025-03-27 184559.png" /></p>
 >  
->  - **Nome_file.rrd** 
->  - **Step** -> Grandezza in tempo di un singolo slot di un array
->
-> **DS:ds-name:GAUGE | COUNTER | DERIVE | ABSOLUTE:heartbeat:min:max**
-> 
-> - **Tipo di dato** -> GAUGE si aspetta un valore pronto mentre COUNTER si aspetta di fare una sottrazione con il precedente misurato. Nel caso il valore non arriva viene messo **Unknow**
-> - **Heartbeat** -> Tempo massimo per aspettare i valori da ricevere
-> - **Min - Max** -> Minimo e massimo valore scrivibile nel file
-> 
-> **RRA:AVERAGE | MIN | MAX | LAST:xff:steps:rows**
-> 
-> - **RRA** -> Indica come voglio usare i miei dati, quindi facendo il massimo, minimo etc ... Memorizzandoli in archivi
-> - **Xff** -> Significa che se + del Xff dei valori è unknow, non esegui calcoli per quello slot
-> - **Steps** -> Quanti valori dell'archivio soprastante sono usati per calcolare l'archivio tramite l'operazione definita in RRA
-> - **Rows** -> La grandezza del mio archivio moltiplicata per lo **step**
-> 
 > L'esempio in questione significa => Ogni 5 minuti ( *300 secondi* ) catturi un valore di tipo GAUGE. Attendi massimo 500 secondi altrimenti scrivi UNKONW. I valori massimi e minimi scrivibili sono 300 e 0. Di tutti questi valori che misuri memorizzali in un archivio dove fai la **media di un valore** cioè sostanzialmente copia se stesso, infatti era indifferente usare MAX o MIN, e memorizza 120 di questi valori => l'archivio diventa grande 120 x 5m = 10 ore. Da questo archivio creane un altro dove fai la media di 12 slot alla volta e mantieni 96 di queste medie => 12 x 5m ( *5 minuti perchè i valori memorizzati nell'archivio di sopra sono 1 ogni 5 minuti* ) = 1h e di questi nuovi valori memorizzane 96 => 96h complessive. 0.5 è la soglia dalla quale non considerare più i valori per i calcoli ( *se ho soglia 0.5 => 1 2 3 unknow = mi scrive 2, se ho 1 unknow unknow unknow = mi scrive unknow* )
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-27 190830.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-27 191255.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-27 192342.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-28 123620.png" /></p>
 > 
-> L'ultimo comando serve per inserire i dati all'interno dove **N** è il tempo di quel momento preso però lo prende da locale. perché è dispendioso prendere il tempo dal dispositivo destinatario, occupa banda, scarica il dispositivo ... Nella **realtà** non sono io che ogni 5 minuti vado a prendere la misura ma vado a prendere ogni 1 ora le misure fatte ogni 5 minuti dall' host locale x quell'ora
+> Questo comando ( _update_ ) serve per inserire i dati all'interno dove **N** è il tempo di quel momento preso però lo prende da locale. perché è dispendioso prendere il tempo dal dispositivo destinatario, occupa banda, scarica il dispositivo ... Nella **realtà** non sono io che ogni 5 minuti vado a prendere la misura ma vado a prendere ogni 1 ora le misure fatte ogni 5 minuti dall' host locale x quell'ora
 > 
 > L'inserimento in questo database funziona in questo modo =>
 > 
