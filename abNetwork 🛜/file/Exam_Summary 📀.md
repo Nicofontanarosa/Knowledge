@@ -768,8 +768,6 @@
 > - #ARIMA **AutoRegressive Integrated Moving Average** -> Algoritmo che tiene presente alla regressione della variabile ( *tiene conto del recente passato quindi* ) e tiene conto anche degli **errori** per **adattarsi**
 > - #Prophet ( #Meta ), #TimeGTP ( *AI-based* )
 > 
-> Notazione -> Y^x+1 è il valore Y predetto ^ nell'istante x+1
-> 
 > La previsione più facile è la **media** oppure la **media mobile** ovvero una media che tiene in considerazione i valori + recenti per calcolare la media e quindi considera l'andamento, oppure la **media pesata**
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-28 174541.png" /></p>
@@ -780,30 +778,14 @@
 > 
 > > *α: smoothing factor or “memory decay rate”: the higher α, the faster the method forgets*
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-28 175646.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-28 175812.png" /></p>
-> 
-> Tramite questo appen è possibile usare questa formula per predirre il valore successivo
-> 
 > - <mark>**Double Exponential Smoothing**</mark> -> Introduco B ovvero il trend ovvero quanto sarà inclinata la mia funzione di previsione per il prossimo punto
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-28 181821.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-28 182122.png" /></p>
-> 
 > - <mark>**Triple Exponential Smoothing**</mark> -> Introduco la stagionalità ovvero la ripetizione del segnale ad intervalli stabiliti quindi posso prevedere n punti a piacere. Ovviamente più vado lontano più aumenta l'errore perché mi baso solo sulla stagionalità
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-28 182729.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-29 082334.png" /></p>
-> 
-> Interpretazione grafica life [qui](ExponentialSmoothing.xlsx)
 > 
 > Un <mark>***Anomalia***</mark> è un valore che esce dalla mia previsione. Nella maggior parte del tempo però, picchi nei valori non sono anomalie ( *tutta la classe visita un web detto dal prof* ) -> Un sintomo solo non è sufficiente per alzare la bandierina di allarme. Definiamo quindi un **upper bound e lower bound**
 > 
 > - Un **problema** è che questi allarmi non possono essere fatti sui **byte grezzi** perché non avrebbe senso, se iniziassi a scaricare un file avrei un allarme scattato
 > - Un altro **problema** è che questi algoritmi **imparano dalla storia** quindi se l'**anomalia** diventa la **normalità** possono dare non pochi problemi 
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-29 090544.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-29 090715.png" /></p>
 > 
 
 > [!TIP]
