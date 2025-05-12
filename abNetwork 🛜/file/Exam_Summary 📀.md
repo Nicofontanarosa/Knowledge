@@ -232,10 +232,6 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 200711.png" /></p>
 > 
-> Che analizzato su #whireshark esce in questo modo
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-14 200906.png" /></p>
-> 
 > Tutto il processo di SNMPWalk si basa sull'agent che richiede il next object id di uno di default dato alla partenza, e il server risponde. SNPMWalk visualizza la risposta e genera la getNext dell'oggetto che ha ricevuto
 > 
 > Dopo l'<mark>***indirizzo IP dell'agent***</mark> posso mettere gli object identifier che voglio chiedere ( 1 ... n se parliamo di **get** ) opppure l'object identifier da cui partire con la snmpwalk ( parliamo di una serie di **getnext** )
