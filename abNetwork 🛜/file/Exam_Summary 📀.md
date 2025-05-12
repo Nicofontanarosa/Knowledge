@@ -1,5 +1,5 @@
 
-,# Internet paradigms 📡
+# Internet paradigms 📡
 
 > [!NOTE]
 > 
