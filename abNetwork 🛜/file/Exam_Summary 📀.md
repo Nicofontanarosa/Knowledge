@@ -1260,9 +1260,6 @@
 > Sappiamo che ogni processo sulla macchina vede solo ciò che il sistema operativo gli consente di vedere. Possiamo quindi affermare che ogni processo è "chiuso" nel proprio ambiente. **Ma come può un processo in spazio utente leggere i dati che viaggiano sulla scheda di rete, senza accedere direttamente allo spazio kernel ?**
 > 
 > In passato si usavano **chiamate di sistema**, che però, pur essendo sicure, risultavano lente. Una soluzione più efficiente è usare applicazioni che accedono direttamente alla memoria tramite #DMA ( _Direct Memory Access_ ), permettendo di leggere/scrivere pacchetti bypassando la #CPU e riducendo la latenza
->
-> <p align="center"><img src="img/Screenshot 2025-02-11 171841.png" /></p>   
-> <p align="center"><img src="img/Screenshot 2025-02-11 174853.png" /></p>
 > 
 > Questa **memoria circolare** viene creata nel **kernel** e contiene la copia dei pacchetti catturati. Essa è **condivisa** ( o mappata ) con lo **spazio utente**, permettendo così all'applicazione di monitoraggio di accedervi direttamente
 > 
@@ -1307,8 +1304,6 @@
 > 
 > <mark>_**eXpress Data Path ( XDP )**_</mark> è un framework che consente l'elaborazione dei pacchetti **ad altissima velocità**, integrando programmi BPF direttamente **all'ingresso dell'interfaccia di rete**. In pratica, un programma BPF può essere eseguito **appena il pacchetto viene ricevuto**, _prima ancora che venga processato dallo stack TCP/IP del kernel_, permettendo così azioni immediate come il **drop**, il **redirect** o la **modifica del pacchetto**.
 > 
-> Un interessante approfondimento sull'ottimizzazione della macchina virtuale BPF per architetture **x86** è disponibile in [questo articolo](https://lwn.net/Articles/437981/)
-> 
 
 > [!IMPORTANT]
 > 
@@ -1324,9 +1319,6 @@
 > - Caricare una mezza parola (2 byte) dal pacchetto all'offset 12
 > - Controlla se il valore è 0x0800, altrimenti fallisci. In questo modo viene verificata la presenza del pacchetto IP su un frame Ethernet
 > - ...
-> 
-> Qui è possibile trovare [la documentazione completa della sintassi dei filtri](https://www.kernel.org/doc/Documentation/networking/filter.txt)
-> ed alcuni [esempi](https://unix.stackexchange.com/questions/699500/understanding-of-bpf)
 > 
 > <mark>**The biggest user of this construct ( BPF ) might be libpcap**</mark>. TcpDump quando viene eseguito passa attraverso il compilatore interno di questa libreria che genera una struttura che viene passata al kernel e usata come filtro. Con il flag  `-ddd` mostriamo cosa viene caricato all'interno di questa struttura
 >
@@ -1350,8 +1342,6 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 191834.png" /></p>
 > 
-> Qui è possibile trovare un ottima [guida](https://andreaskaris.github.io/blog/networking/bpf-and-tcpdump/)
-> 
 
 > [!TIP]
 > 
@@ -1374,19 +1364,12 @@
 > 
 > Sono disponibili due versioni Windows di libpcap. Il più vecchio si chiama [WinPcap](https://wiki.wireshark.org/WinPcap); Non viene più mantenuto attivamente ed è basato su una versione precedente di libpcap. Il più recente si chiama [Npcap](https://nmap.org/npcap/); è attivamente mantenuto ed è basato su una versione relativamente recente di libpcap ed è disponibile solo per Windows 7 e versioni successive di Windows
 > 
-> La versione di Wireshark su terminal è chiamata <mark>**tshark**</mark>. Altre opzioni sono =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-05-04 191432.png" /></p>
-> 
-> In Wireshark, utilizzando il linguaggio Lua, esistono tre meccanismi principali per ispezionare ed elaborare i pacchetti =>
+> In Wireshark, utilizzando il linguaggio Lua o C, esistono tre meccanismi principali per ispezionare ed elaborare i pacchetti =>
 > 
 > - **Dissector** -> Utilizzato quando si vuole modificare il modo in cui Wireshark mostra il pacchetto, analizzando il payload grezzo di un protocollo. Viene chiamato durante la fase di dissezione, ovvero appena Wireshark identifica il protocollo
 > - **Post-dissector** -> Usato quando si vogliono analizzare i pacchetti dopo che tutti i dissector standard hanno terminato la loro analisi, per aggiungere informazioni extra o confrontare dati tra più protocolli. Non analizza direttamente il payload, ma legge i campi già estratti da altri dissector
 > - **Tap** -> Utile per raccogliere statistiche, dati temporali o esportare flussi di pacchetti
 > 
-> Wireshark mostra dei **metadati** racchiusi tra parentesi **quadre \[\]**
-> 
-> <p align="center"><img src="img/Screenshot 2025-05-04 185857.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-05-04 190230.png" /></p>
 > 
 
