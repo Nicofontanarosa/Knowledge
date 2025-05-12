@@ -957,18 +957,10 @@
 > 
 > Molti applicativi infatti usano + protocolli in base alla funzione richiesta ( *Skype or Facebook are application protocols in the nDPI world but not for IETF* ) e nDPI riconosce + di 300 protocolli
 > 
-> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i <mark>***dissector***</mark> ( *analizzando il payload grezzo di un protocollo. Viene chiamato durante la fase di dissezione, ovvero appena Wireshark identifica il protocollo* ) vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
-> 
-> - Ogni flusso mantiene lo stato dei dissector che non hanno corrisposto, in modo da saltarli nelle iterazioni successive
-> - L'analisi continua fino a quando non viene trovata una corrispondenza o dopo troppi tentativi
+> Oggi quasi tutti i protocolli applicativi si basano su HTTPS / TLS e quindi bisogna ricavare le informazioni per riconoscere il protocollo da quei pochi dati non cifrati in TLS. In base al tipo di traffico i <mark>***dissector***</mark> ( *meccanismo che analizza il payload grezzo di un protocollo. Viene chiamato durante la fase di dissezione, ovvero appena viene identificato il protocollo* ) vengono applicati in sequenza a partire da quello che con maggiore probabilità corrisponde al flusso ( *per TCP/80 si prova prima il dissector HTTP* )
 > 
 > Queste parti che nDPI prende dai <mark>**primi pacchetti di un flusso**</mark> per ricavare informazioni sono parti **non cifrate** ma **offuscate** ( *sulla parte cifrata non si può fare nulla* )
-> 
-> <p align="center"><img src="img/Screenshot 2025-04-11 161449.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-04-11 161554.png" /></p>
-> 
-> *prestazioni nDPI*
-> 
+>   
 > nDPI è utile anche in sicurezza poiché posso capire, anche se il traffico è criptato, delle informazioni ovvero dei <mark>***metadati***</mark> e per ogni flusso si associa un **flow risk**
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-11 173720.png" /></p>
