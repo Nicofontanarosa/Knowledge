@@ -1,20 +1,7 @@
 
 > [!NOTE]
 > 
-> ***Paradigmi e Protocolli per la Gestione di Rete***
->
->  Sappiamo che con il passare del tempo il numero di dispositivi in internet cresce sempre di + e la diversità e complessità continua a crescere. Quello che si cerca allora è una **disponibilità permanente dei servizi di rete con qualità ottimale** e una **riduzione dei costi per l'infrastruttura di rete**. Questo può avvenire tramite la <mark>**Gestione di rete**</mark>
->  
->  <p align="center"><img src="img/Screenshot 2025-03-05 090852.png" /></p>
->  
->  Ci sono tante prospettive per affrontare i problemi che risolve la gestione di reti =>
->  
->  - Dal punto di vista dell'**operatore**, cercherà in tutti i modi di far entrare + clienti possibili su un filo anche se non c'è spazio
->  - Dal punto di vista della **sicurezza** bisogna garantire la sicurezza della rete
->  - Dal punto di vista delle **performance** bisogna garantire delle prestazioni che non vanno a degradarsi e queste performance devo andarle a **dedurre** dai dati che raccolgo ( *prima si origliava la conversazione per capire la qualità della trasmissione* ) 
->
-> Oggi si parla di #MOS =>
-> > The Mean Opinion Score ( **MOS** ) is **a measurement of the voice quality of an interaction**. The calculation of MOS uses an industry standard measurement methodology to rank audio quality from 1 (unacceptable) to 5 (excellent)
+> Oggi si parla di #MOS => Il The Mean Opinion Score ( **MOS** ) è la misura della qualità della voce di una comunicazione. Viene assegnato un punteggio da 1 a 5 da varie fonti e successivamente viene fatta una media
 > 
 > Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
 > 
