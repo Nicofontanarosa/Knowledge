@@ -1018,7 +1018,7 @@
 > 
 
 ---
-# Physical Layer 
+# Physical Layer 🔢
 
 > [!IMPORTANT]
 > 
@@ -1236,6 +1236,7 @@
 >
 
 ---
+# Metrics 📡
 
 > [!IMPORTANT]
 > 
@@ -1347,6 +1348,7 @@
 > 
 
 ---
+# Libcap 📡
 
 > [!TIP]
 > 
@@ -1507,6 +1509,7 @@
 > 
 
 ---
+# CDN 📡
 
 > [!CAUTION]
 > 
