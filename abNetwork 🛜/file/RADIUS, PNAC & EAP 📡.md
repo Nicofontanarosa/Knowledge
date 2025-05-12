@@ -6,7 +6,7 @@
 > 
 > ***Definition of RADIUS***
 >
->  **RADIUS ( Remote Authentication Dial-In User Service )** → Il server che gestisce l'autenticazione. E' un protocollo di autenticazione centralizzato ed è il + utilizzato per i device di rete
+>  **RADIUS ( Remote Authentication Dial-In User Service )** → E' un protocollo di autenticazione centralizzato ed è il + utilizzato per i device di rete
 >  
 > 🔹 **Obiettivo** -> Gestire l’accesso sicuro alle reti ( *Ethernet, Wi-Fi, VPN, ecc* )
 > 
@@ -54,7 +54,7 @@
 > 
 > 3️⃣ Lo switch/AP inoltra il tutto al **server RADIUS**
 > 
-> 4️⃣ Il server chiede ulteriori informazioni (password, certificati, token, ecc.)
+> 4️⃣ Il server chiede ulteriori informazioni ( _password, certificati, token, etc..._ )
 >   
 > 5️⃣ Se l'autenticazione va a buon fine, il client riceve l’**EAP-Success** e può navigare
 > 

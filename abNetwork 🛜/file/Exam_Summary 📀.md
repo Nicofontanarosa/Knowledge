@@ -884,9 +884,6 @@
 > 
 > 5️⃣ Se l’utente non è autorizzato → Il server RADIUS invia **Access-Reject**
 > 
-> <p align="center"><img src="img/Screenshot 2025-04-15 183139.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-04-15 183701.png" /></p>
-> 
 > Oltre alla sua implementazione tramite credenziali è utilizzato anche tramite cavo ( *used for billing activities on wired lines* ) cioè gli operatori di rete sanno che quel cavo arriva a casa di Pippo e quindi tassano il traffico a pippo
 > 
 > La versione per mobile è il protocollo DIAMETER
@@ -898,26 +895,16 @@
 >
 >  **EAP ( Extensible Authentication Protocol )** → Il protocollo utilizzato per scambiare le credenziali tra client e server
  > 
-> 🔹 **Obiettivo** -> Scambiare credenziali tra il dispositivo e il server RADIUS
-> 
-> <mark>**Flusso di una richiesta EAP in una rete 802.1X**</mark>
-> 
 > 1️⃣ Il client si connette alla rete, lo switch/AP invia una richiesta **EAP-Request/Identity**
 > 
 > 2️⃣ Il client risponde con il proprio nome utente **EAP-Response/Identity**
 > 
 > 3️⃣ Lo switch/AP inoltra il tutto al **server RADIUS**
 > 
-> 4️⃣ Il server chiede ulteriori informazioni (password, certificati, token, ecc.)
+> 4️⃣ Il server chiede ulteriori informazioni ( _password, certificati, token, etc..._ )
 >   
 > 5️⃣ Se l'autenticazione va a buon fine, il client riceve l’**EAP-Success** e può navigare
 > 
-> <mark>**Tipologie di EAP più usate**</mark>
->   
-> - **EAP-TLS** → Usa certificati digitali ( *molto sicuro* )
-> - **EAP-PEAP** → Incapsula le credenziali in una connessione sicura TLS
-> - **EAP-MSCHAPv2** → Usato spesso con Windows ( *meno sicuro* )
-> - **EAP-TTLS** → Simile a PEAP, ma più flessibile
 
 > [!IMPORTANT]
 > 
