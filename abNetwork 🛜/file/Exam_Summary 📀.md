@@ -1256,7 +1256,6 @@
 > - **Throughput** -> Quantità di dati che vengono effettivamente trasmessi con successo. Non dipende solo dalla velocità ma anche dalla quantità di dati, dai protocolli, dal mezzo trasmissivo etc... -> **Velocità effettiva**
 > -  **Goodput** -> Quantità di dati utili che vengono effettivamente trasmessi con successo -> **Velocità utile**. Viene usato per scoprire connessioni TCP sospette. Viene considerato solo il payload del pacchetto di livello 7
 > - **Bit-rate** -> Quantità di bit trasmessi nell'unità di tempo ( *bits / secondo oppure bps* ) 
-> 
 > - **Latenza** -> Tempo richiesto affinché un messaggio arrivi a destinazione dal momento in cui il primo bit parte dalla sorgente. Utilizzando la commutazione di pacchetto, questo tempo è dovuto ai ritardi causati da ->
 > 1. **Ritardi di elaborazione del nodo** -> Controllo errori sui bit e determinazione del canale di uscita
 > 2. **Ritardi di accodamento** -> Attese di trasmissione e intensità del traffico
@@ -1264,19 +1263,6 @@
 > 4. **Ritardo di propagazione** -> Tempo impiegato da 1 bit per raggiungere l'altro nodo ( d/s ovvero lunghezza del collegamento / velocità di propagazione del mezzo ( 3 \* 10^8 m/sec ) )
 > 
 > <p align="center"><img src="img/Screenshot 2025-05-04 100140.png" /></p>
-> <p align="center"><img src="img/Screenshot 2024-01-21 192647.png" /></p> 
-> 
-> Trascurando il ritardo di elaborazione e di accodamento, un **Ritardo end-to-end** =>
-> 
-> <p align="center"><img src="img/Screenshot 2024-01-21 194748.png" /></p>
->
-> - Prodotto **Rate \* Ritardo** -> Numero massimo di bit che il link può contenere ad un certo istante
-> 
-> <p align="center"><img src="img/Screenshot 2024-01-22 115159.png" /></p>
-> 
-> *Se ho un link con un rate di 1bps e un ritardo di 5 secondi* => volume = 5 => 5 è il massimo numero di bit che possono riempire il collegamento e non possono esserci + di 5 contemporaneamente
-> 
-> <p align="center"><img src="img/Screenshot 2024-01-22 115443.png" /></p>
 > 
 > - **RTT ( Round-Trip Time )** -> L’RTT è il tempo che un pacchetto impiega per viaggiare dalla sorgente alla destinazione e poi ritornare alla sorgente. È una misura comune utilizzata per valutare la latenza di una rete e può essere influenzato da vari fattori, come la distanza fisica tra i nodi, la congestione della rete, e la qualità della connessione. Sappiamo inoltre che in base alla distanza e all' RTT, viene regolata la windows possibile per trasmettere i dati
 > 
@@ -1288,7 +1274,6 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-05-04 101629.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-05-04 101731.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-05-04 101839.png" /></p>
 >
 
 > [!IMPORTANT]
@@ -1329,18 +1314,7 @@
 > z = *( x - media ) / deviazione*
 > 
 > dove x è il valore osservato. Lo z-score è utile per identificare valori anomali in una distribuzione normale, poiché valori di z che si discostano significativamente dalla media ( _|z| > 2_ ) possono essere considerati fuori dal normale intervallo di variabilità. Questo è particolarmente utile nell'analisi dei dati per rilevare outliers
-> 
-> <p align="center"><img src="img/Screenshot 2025-05-04 101018.png" /></p> 
 >
-
-> [!TIP]
-> 
-> #mind
-> 
-> Praticamente per capire la **latenza** possiamo usare il comando <mark>**tracert**</mark> che invia dei pacchetti verso la destinazione e ci mostra quanto tempo serve per raggiungere tutti i nodi
-> 
-> <p align="center"><img src="img/Screenshot 2024-01-21 195854.png" /></p>
-> 
 
 ---
 # Libcap 📡
