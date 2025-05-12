@@ -1,8 +1,5 @@
 
-# TEST
-
-## PROVA
-
+# Internet paradigms 📡
 
 > [!NOTE]
 > 
@@ -88,6 +85,7 @@
 > 
 
 ---
+# SNMP 📡
 
 > [!IMPORTANT]
 > 
