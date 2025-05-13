@@ -29,8 +29,6 @@
 >
 > <mark>***FCAPS***</mark> ( #FCAPS ) è il termine con il quale si riassumono queste 5 proprietà o **aree funzionali** che non sono indipendenti tra di loro ma si influenzano a vicenda
 > 
-> Per comunicare manager e agent a livello internet si utilizza lo stack TCP / IP che è l'evoluzione dello stack ISO/OSI poiché molto più semplice da implementare
-> 
 > *Ma come fanno effettivamente a comunicarsi i dati ?* Cioè 2 router comunicano tra di loro mediante indirizzo ip, oppure una scheda wifi comunica con un'altra scheda wifi, non con una ethernet poiché i dati non sono compatibili ( *WhatsApp comunica con WhatsApp* ). Diciamo che le interfacce attraverso le quali si può accedere alle primitive di servizio ( *request, indication, response e confirm* ) sono chiamate **punti di accesso al servizio** ( **Service Access Points** #SAP )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 154232.png" /></p>
