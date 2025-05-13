@@ -399,19 +399,7 @@
 > 
 > ***SNMPv3***
 > 
-> Molto **più complesso** ma anche molto **più sicuro**
-> 
-> La novità principale di SNMPv3 è l'aggiunta di un contesto ovvero una quantità di informazioni di gestione a cui un'**entità SNMP** può accedere. Non ci basiamo + sulla community ma sull'user
-> 
-> Si usa il #MAC per autenticare il messaggio ovvero l'unione tra **Chiave utente e dati**. La funzione di hash e di cifratura è cambiata nel tempo =>
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 163610.png" /></p>
-> 
-> Il problema adesso, oltre all'autenticazione del messaggio, è che se una attaccante conserva un pacchetto con permessi che ha intercettato nel passato, quando vuole può rinviare questi pacchetti
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-22 164748.png" /></p>
-> 
-> Dove il Manger e l'Agent hanno il <mark>**Timestamp Sincronizzato**</mark>
+> Molto **più complesso** ma anche molto **più sicuro**. La novità principale di SNMPv3 è l'aggiunta di un contesto ovvero una quantità di informazioni di gestione a cui un'**entità SNMP** può accedere. Non ci basiamo + sulla community ma sull'user. Si usa il #MAC per autenticare il messaggio ovvero l'unione tra **Chiave utente e dati**. Oltre all'autenticazione del messaggio, se una attaccante conserva un pacchetto con permessi che ha intercettato nel passato, quando vuole può rinviare questi pacchetti => Il Manger e l'Agent hanno il <mark>**Timestamp Sincronizzato**</mark>
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 165827.png" /></p>
 > 
