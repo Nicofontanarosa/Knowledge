@@ -507,13 +507,13 @@
 > 
 > Nella rete occorre analizzare il traffico ma non è possibile fare il **mirror** di tutto il traffico che si genera perché sarebbe troppo e dal punto di vista della rete, la riempie e la rallenta. Un altro problema è che il traffico è **Criptato** è quindi **difficilmente comprimibile**, diverso per file di testo, simile per le immagini che già per loro definizione / creazione, sono compresse e di qualità ridotta
 > 
-> Sono così nate delle **sonde** posizionate in rete chiamate <mark>**meter**</mark> che non inoltra il traffico ma fa un analisi che poi invia al manager ( **delega l'elaborazione dell'analisi** ). Spacchettare il pacchetto "criptato" è una pura curiosità 
+> Sono così nate delle **sonde** posizionate in rete chiamate <mark>**meter**</mark> che non inoltra il traffico ma fa un analisi che poi invia al manager ( **delega l'elaborazione dell'analisi** )
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-29 154557.png" /></p>
 > 
-> SNMP implementa questo paradigma **manager-agent** ( [[SNMP 📡]] ) e i contatori SNMP possono essere usati per il **monitoraggio del traffico**. Il problema è che devo specificare quali contatori vedere e analizzare e l'Agent deve avere delle soglie per informare il manager dell'avvenimento di un certo evento, che però per i dispositivi su internet sono inutili perché sarebbero una diversa dall'altra
+> SNMP implementa questo paradigma **manager-agent** e i contatori SNMP possono essere usati per il **monitoraggio del traffico**. Il problema è che devo specificare quali contatori vedere e analizzare e l'Agent deve avere delle soglie per informare il manager dell'avvenimento di un certo evento, che però per i dispositivi su internet sono inutili perché sarebbero una diversa dall'altra
 > 
-> Questo meccanismo di pooling è anche sbagliato quando ad esempio stabilisco una connessione per risolvere un nome DNS ma la connessione dira pochi secondi e quindi il manager non fa in tempo a chiedere cosa è successo che la connessione è stata già chiusa e dimenticata
+> Questo meccanismo di pooling è anche sbagliato quando ad esempio stabilisco una connessione per risolvere un nome DNS poiché la connessione dura pochi secondi e quindi il manager non fa in tempo a chiedere cosa è successo che la connessione è stata già chiusa e dimenticata
 > 
 > Quindi si è optato per non usare SNMP ma un **flusso di rete** ovvero un sistema di misura x per il traffico di rete ( *pensato per il router* ) e il singolo flusso di rete contiene informazioni ( **proto - ip_s - prt_s - ip_d - prt_d -> packets, bytes, time, AS, network mask, interfaces** ) analizzate dai meter che utilizzano **UDP** come protocollo di trasporto e le informazioni che misuro sono =>
 > 
