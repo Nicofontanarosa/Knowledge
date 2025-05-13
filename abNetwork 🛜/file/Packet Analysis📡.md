@@ -162,7 +162,7 @@
 > 
 > Come per il concetto di **meter**, questo protocollo misura solo il traffico che attraversa il router e quindi dal livello 3 in su
 > 
-> nelle versioni precedenti alla 9 c'è un **flow sequence number** per tenere traccia del flusso e di quelli persi. Dalla 9 però, è stato rimosso questo numero e introdotto il **packet sequence number** che tiene traccia dei pacchetti persi ma non dei flussi
+> nelle versioni precedenti alla 9 c'è un **flow sequence number** per tenere traccia del flusso e di quelli persi. Dalla 9 però, è stato rimosso questo numero e introdotto il **packet sequence number** che tiene traccia dei pacchetti persi e non dei flussi
 > 
 > Iniziamo con il dire che un flusso ha una **chiave** -> **quintupletta proto ip porta ip porta** e una parte di **valore** -> 
 > 
@@ -172,7 +172,7 @@
 > 
 > I **contatori** sono gli stessi di **SNMP**, e le **interfacce** sono importanti poiché io malintenzionato potrei spacciarmi per un client interno alla rete e ad esempio fingermi il server DHCP e cambiare gli indirizzi agli host. Quindi sapere da quale interfaccia è arrivato un indirizzo IP è importante. Banalmente la rete interna avrà un indirizzo IP e dalle porte che escono non potranno entrare pacchetti con la stessa famiglia di indirizzi ( *pacchetto kamikaze* )
 > 
-> I **flussi attivi** vengono memorizzati in RAM nella cosiddetta **cache NetFlow**. Una volta comunicato il flusso svuoto la cache. Il flusso termina quando dura troppo a lungo, oppure se contiene il flag FIN oppure è rimasto inattivo per troppo tempo. Una **Conseguenza importante** è che quindi un flusso può essere inviato al collector in maniera segmentata che quindi ha anche un compito di **riassemblatore**
+> I **flussi attivi** vengono memorizzati in RAM nella cosiddetta **cache NetFlow**. Una volta comunicato il flusso, svuoto la cache. Il flusso termina quando dura troppo a lungo, oppure se contiene il flag FIN oppure è rimasto inattivo per troppo tempo. Una **Conseguenza importante** è che quindi un flusso può essere inviato al collector in maniera segmentata che quindi ha anche un compito di **riassemblatore**
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-13 174619.png" /></p>
 > 
