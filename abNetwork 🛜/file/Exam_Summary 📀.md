@@ -982,65 +982,6 @@
 > Questo livello è **connectionless e non affidabile** poiché che non abbiamo ACK e i pacchetti danneggiati che si perdono o non arrivano a destinazione, vengono eliminati. Per rilevare le collisioni si usa **CSMA/CD** con **binary backoff**. Un protocollo per aggiungere sicurezza a questo livello è l' <mark>**802.1X**</mark>
 > 
 
-> [!NOTE]
-> 
-> ***802.1X***
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-04 093057.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-02-04 094106.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-02-04 094141.png" /></p>
->  
-> IEEE **802.1X** è uno **standard di autenticazione per reti cablate e Wi-Fi** che garantisce che solo i dispositivi autorizzati possano connettersi alla rete Ethernet o Wi-Fi
-> 
-> - Viene utilizzato per il **port-based network access control ( #PNAC )**, cioè per controllare **chi può accedere alla rete** già a livello di switch o access point
-> 
-> 802.1X si basa su **tre attori principali** =>
-> 
->  1. **Supplicant** ( *Dispositivo dell’utente* ) → Il client che vuole connettersi alla rete
->  2. **Authenticator**  ( *Switch o Access Point* ) → Il dispositivo di rete che fa da intermediario
->  3. **Authentication Server** ( *Tipicamente un server #RADIUS* ) → Decide se il dispositivo è autorizzato
->
-> <mark>**Processo di autenticazione**</mark>
->
-> 1️⃣ **Il dispositivo si collega alla rete**, ma lo switch/AP blocca il traffico tranne quello di autenticazione
->
-> 2️⃣ **Lo switch invia una richiesta #EAP ( Extensible Authentication Protocol )** al dispositivo per chiedere le credenziali
->
-> 3️⃣ **Il dispositivo risponde con username e password (o certificato)**
-> 
-> 4️⃣ **Lo switch inoltra la richiesta al server RADIUS**, che verifica le credenziali
-> 
-> 5️⃣ **Se l’autenticazione è corretta**, lo switch sblocca la connessione e permette l’accesso alla rete
->
-
-> [!TIP]
-> 
-> ***Connection Cable***
-> 
-> Anche chiamato **medium**, non sono altro che il canale tramite il quale il messaggio passa dalla sorgente alla destinazione. Distinguiamo =>
-> 
-> - **Cavi in rame** -> Utilizza segnali elettrici per trasmettere dati tra i dispositivi. Il **cavo coassiale** è generalmente di rame o alluminio ed è utilizzato per tv o sistemi di comunicazione satellitari. Sostituiti poi dai **cavi UTP**. Ne esistono di 3 tipi =>
-> 	- **10BASE5** -> 10Mb/s
-> 	- **RG-59** -> Tv americane
-> 	- **RG-6** -> Superiore a tutti
-> 
-> <p align="center"><img src="img/Screenshot 2025-01-03 212253.png" /></p>
-> 
-> Poi abbiamo il cavo twisted che è usato per la maggior parte delle reti. Sono 4 coppie intrecciate per proteggere il segnale da errori di diafonia ( *errore generato da una coppia di cavi adiacenti* ). Questo cavo però non è protetto da interferenze elettromagnetiche o radiofrequenze
->
-> <p align="center"><img src="img/types_of_enterprise_network_cables-f_mobile.png" /></p>
-> 
-> - **Cavi in Fibra Ottica** -> Utilizza fibra di vetro o di plastica per trasmettere dati sotto forma di impulsi luminosi. Distinguiamo **fibra single mode** e **fibra multi mode**. La prima è + costosa ma usa tecnologia laser per inviare raggi di luce in un core + piccolo. Il secondo ha un core + grande e utilizza emettitori LED per gli impulsi luminosi
-> 
-> <p align="center"><img src="img/modes-of-fiber-optik-communication.jpg" /></p>
-> <p align="center"><img src="img/maxresdefault.jpg" /></p>
-> <p align="center"><img src="img/Screenshot 2025-01-28 102723.png" /></p>
->
-> - **Connessioni Wireless** -> Si utilizzano onde radio, raggi infrarossi o trasmissioni satellitari 
-> 
-> <p align="center"><img src="img/Screenshot 2025-01-28 103115.png" /></p>
-> 
-
 > [!TIP]
 > 
 > ***Ethernet***
@@ -1082,10 +1023,7 @@
 >
 > - **Patch Panel** -> Punto di raccolta dei cavi
 > - **Repeater** => Opera solo a livello fisico, rigenera il segnale che riceve
-> - **Hub** => Reapeater multi porta
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 181951.png" /></p>
-> 
+> - **Hub** => Reapeater multi porta 
 > - ***Switch*** => Operano sia a livello fisico rigenerando il segnale che a livello link verificando gli indirizzi MAC. Lo switch distrugge e rigenera il pacchetto dato che controlla il CRC e genera il preambolo. Una sua proprietà è chiamata di <mark>**Store and Forward**</mark>. Questi dispositivi hanno una tabella che usano per filtrare i frame in maniera selettiva
 > 
 > <p align="center"><img src="img/Screenshot 2024-08-30 182437.png" /></p>
