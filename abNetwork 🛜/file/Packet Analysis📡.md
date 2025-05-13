@@ -115,9 +115,9 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-29 154557.png" /></p>
 > 
-> SNMP implementa questo paradigma **manager-agent** ( [[SNMP 📡]] ) e i contatori SNMP possono essere usati per il **monitoraggio del traffico**. Il problema è che devo specificare quali contatori vedere e analizzare e l'Agent deve avere delle soglie per informare il manager dell'avvenimento di un certo evento, che però per i dispositivi su internet sono inutili perché sarebbero una diversa dall'altra
+> SNMP implementa questo paradigma **manager-agent** e i contatori SNMP possono essere usati per il **monitoraggio del traffico**. Il problema è che devo specificare quali contatori vedere e analizzare e l'Agent deve avere delle soglie per informare il manager dell'avvenimento di un certo evento, che però per i dispositivi su internet sono inutili perché sarebbero una diversa dall'altra
 > 
-> Questo meccanismo di pooling è anche sbagliato quando ad esempio stabilisco una connessione per risolvere un nome DNS ma la connessione dira pochi secondi e quindi il manager non fa in tempo a chiedere cosa è successo che la connessione è stata già chiusa e dimenticata
+> Questo meccanismo di pooling è anche sbagliato quando ad esempio stabilisco una connessione per risolvere un nome DNS poiché la connessione dura pochi secondi e quindi il manager non fa in tempo a chiedere cosa è successo che la connessione è stata già chiusa e dimenticata
 > 
 > Quindi si è optato per non usare SNMP ma un **flusso di rete** ovvero un sistema di misura x per il traffico di rete ( *pensato per il router* ) e il singolo flusso di rete contiene informazioni ( **proto - ip_s - prt_s - ip_d - prt_d -> packets, bytes, time, AS, network mask, interfaces** ) analizzate dai meter che utilizzano **UDP** come protocollo di trasporto e le informazioni che misuro sono =>
 > 
