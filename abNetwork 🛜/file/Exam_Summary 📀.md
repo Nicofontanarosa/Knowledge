@@ -360,14 +360,7 @@
 > 
 > ***SNMPv2c***
 > 
-> Ci sono + versioni di SNMP versione 2 =>
-> 
-> 1. **SNMPv2p** -> Implementato con il party-based security model ( *storico* )
-> 2. ==**SNMPv2c**== -> Implementato con la comunity
-> 3. **SNMPv2u** -> Implementato con il user-based security model ( *storico* )
-> 4. **SNMPv2\*** -> Implementato con il security and administration model ( *storico* )
-> 
-> ( *varie proposte ma venne accettata quella della comunity* )
+> Ci sono + versioni di SNMP versione 2 ma quela che venneaccettata fu la ==**SNMPv2c**== -> Implementato con la comunity
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 093719.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-14 093838.png" /></p>
