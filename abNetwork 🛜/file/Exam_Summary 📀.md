@@ -515,7 +515,6 @@
 > <p align="center"><img src="img/Screenshot 2025-03-29 190841.png" /></p>
 > 
 > In questo grafico possiamo vedere come il flusso però attraversa più router quindi devo stare attento a non considerare + di una volta lo stesso flusso. Questo viene evitato tramite un blocco di analisi del traffico da parte del probe di una direzione ( *conta solo il traffico in entrata / uscita* )
-> 
 
 > [!IMPORTANT]
 > 
