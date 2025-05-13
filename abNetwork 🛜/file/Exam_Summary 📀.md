@@ -981,15 +981,6 @@
 > 
 > Questo livello è **connectionless e non affidabile** poiché che non abbiamo ACK e i pacchetti danneggiati che si perdono o non arrivano a destinazione, vengono eliminati. Per rilevare le collisioni si usa **CSMA/CD** con **binary backoff**. Un protocollo per aggiungere sicurezza a questo livello è l' <mark>**802.1X**</mark>
 > 
-> <p align="center"><img src="img/Screenshot 2024-08-30 180942.png" /></p>
-> 
-> Con il tempo la velocità della connessione è cambiata aumentando sempre di + =>
-> 
-> <p align="center"><img src="img/Screenshot 2024-08-30 181318.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-02-01 130438.png" /></p>
->
-> *Ho tanti pacchetti che viaggiano nel canale* 
-> 
 
 > [!NOTE]
 > 
