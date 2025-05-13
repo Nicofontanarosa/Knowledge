@@ -453,18 +453,12 @@
 > 
 > ***What can i mesure?***
 >
->  **Analisi quantitativa del traffico di rete**
->  
-> L'**analisi quantitativa** si concentra sulla **misurazione** e **classificazione** del traffico di rete sulla base di parametri rilevanti. Gli aspetti principali includono =>
+>  **Analisi quantitativa del traffico di rete** => Si concentra sulla **misurazione** e **classificazione** del traffico di rete sulla base di parametri rilevanti. Gli aspetti principali includono =>
 > 
 > - **Identificazione dei protocolli applicativi utilizzati** → Rilevazione e classificazione del traffico generato da applicazioni come Microsoft Teams, Skype, servizi email, etc ...
 > - **Top Talkers** → Analisi degli host che generano o ricevono il maggior volume di traffico
-> - **Origine e destinazione del traffico** → Monitoraggio delle principali origini e destinazioni per individuare gli endpoint di comunicazione più rilevanti
-> - **Rendicontazione del traffico per host** → Creazione di report dettagliati che suddividono il volume di traffico per singolo dispositivo o utente
 > 
-> **Analisi qualitativa del traffico di rete**
-> 
-> L'**analisi qualitativa** si concentra sugli aspetti legati alla **sicurezza** e alla **funzionalità** del traffico di rete, con l'obiettivo di individuare anomalie o potenziali minacce. Gli aspetti principali includono =>
+> **Analisi qualitativa del traffico di rete** => Si concentra sugli aspetti legati alla **sicurezza** e alla **funzionalità** del traffico di rete, con l'obiettivo di individuare anomalie o potenziali minacce. Gli aspetti principali includono =>
 > 
 > - **Individuazione di strumenti per l'anonimato** → Rilevamento dell'uso di tecnologie come Tor o VPN anonime, che possono nascondere l'identità degli utenti o mascherare il traffico
 > - **Identificazione di errori** → Analisi di problemi e anomalie nella comunicazione di rete, come perdita di pacchetti, configurazioni errate o malfunzionamenti applicativi
@@ -485,6 +479,7 @@
 > Ovviamente, o la porta che esegue il mirror supporta una velocità maggiore, oppure devo stare attento a non superare la sua capacità. Infatti, normalmente una porta genera traffico in modalità **full duplex** (es. 1 Gbps in upload + 1 Gbps in download), mentre sulla porta mirror tutto il traffico viene **inviato** verso il sistema di analisi. Quindi, se non ho abbastanza banda disponibile sulla porta di destinazione (es. 2 Gbps in totale), rischio di perdere pacchetti. In pratica, il traffico viene visto **in modalità half duplex** (solo una direzione per volta nella pratica del mirroring).
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-04 191831.png" /></p>
+> 
 > *In questo modo però rischio di perdere pacchetti durante il tragitto*
 > 
 > **ERSPAN** (_Encapsulated Remote SPAN_) invece estende il concetto di RSPAN, permettendo di inviare i pacchetti mirrorati anche attraverso dispositivi intermedi **non configurati per SPAN o RSPAN**, grazie all'incapsulamento tramite **GRE** ( _Generic Routing Encapsulation_ ) #GRE
