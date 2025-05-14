@@ -1,11 +1,12 @@
-
 # Internet paradigms 📡
 
 > [!NOTE]
 > 
 > Oggi si parla di #MOS => Il The Mean Opinion Score ( **MOS** ) è la misura della qualità della voce di una comunicazione. Viene assegnato un punteggio da 1 a 5 da varie fonti e successivamente viene fatta una media
 > 
-> Tutte le funzioni quindi di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
+> ---
+> 
+> Tutte le funzioni di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
 >  
 > <p align="center"><img src="img/Screenshot 2025-03-05 112419.png" /></p>
 > 
