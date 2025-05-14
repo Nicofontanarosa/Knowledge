@@ -483,11 +483,7 @@
 >  
 > Il **limite** di questo approccio è che tutto il **traffico non ip** non riesco a vederlo poiché non passa dal router. Con SNMP invece riesco a capire a livello fisico da quale porta sta passando il traffico ( **congestion, delay, packet loss** ), e non posso misurare neanche **transaction latency, # positive/negative replies & protocol errors**
 > 
-> Un altro problema è che il meter può decidere di mandare i dati alla fine del flusso oppure durante il flusso. Mandarli alla fine è peggio ( *il meter si può interrompere e i dati non arriveranno mai all'operatore telefonico* ). Tutto questo determina =>
-> 
-> - ***Overhead & Accuratezza*** -> Maggiore misurazione comporta una maggiore quantità di dati raccolti ma + Overhead ( *carico della CPU* ) su **router, switch** e **host finali**
-> 
-> - ***Sicurezza*** ->I **flussi emessi** devono raggiungere i **collector** attraverso percorsi protetti e anche questi meter devono essere protetti
+> Un altro problema è che il meter può decidere di mandare i dati alla fine del flusso oppure durante il flusso. Mandarli alla fine è peggio ( *il meter si può interrompere e i dati non arriveranno mai all'operatore telefonico* ). Tutto questo determina un overhead maggiore poiché andrò ad inviare + dati
 > 
 > L'**architettura** usata **oggi** è la seguente =>
 > 
