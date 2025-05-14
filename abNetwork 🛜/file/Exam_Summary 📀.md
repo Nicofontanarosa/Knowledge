@@ -480,10 +480,8 @@
 > - Tracciare i **virus di rete** fino ai dispositivi host
 > 
 > Questi flussi possono essere <mark>**unidirezionali o bidirezionali**</mark>. 2 flussi unidirezionali corrispondono ad un flusso bidirezionale e i flussi bidirezionali possono contenere informazioni quali ***RTT***. Questo perché il flusso unidirezionale è composto da informazioni da sorgente a destinatario e un altro flusso unidirezionale sarà composto da informazioni da destinatario a sorgente. Il bidirezionale ha tutte le informazioni insieme
-> 
-> Il problema di questi flussi è che di quintuplette proto - ip_s - prt_s - ip_d - prt_d c'è ne sono tantissime e quindi normalmente si guarda solo il traffico in uscita o in entrata prendendo come costanti proto - ip_s - ip_d
 >  
-> Il **limite** di questo approccio è che tutto il **traffico non ip** non riesco a vederlo poiché non passa dal router. Con SNMP invece riesco a capire a livello fisico da quale porta sta passando il traffico ( **congestion, delay, packet loss** ) e non posso misurare neanche **transaction latency, # positive/negative replies & protocol errors**
+> Il **limite** di questo approccio è che tutto il **traffico non ip** non riesco a vederlo poiché non passa dal router. Con SNMP invece riesco a capire a livello fisico da quale porta sta passando il traffico ( **congestion, delay, packet loss** ), e non posso misurare neanche **transaction latency, # positive/negative replies & protocol errors**
 > 
 > Un altro problema è che il meter può decidere di mandare i dati alla fine del flusso oppure durante il flusso. Mandarli alla fine è peggio ( *il meter si può interrompere e i dati non arriveranno mai all'operatore telefonico* ). Tutto questo determina =>
 > 
