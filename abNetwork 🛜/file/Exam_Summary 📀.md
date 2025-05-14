@@ -526,6 +526,8 @@
 > 
 > Per capire quali flussi stanno per scadere dovrei scansionare tutta l'hash table per calcolare l'idle e vedere se è molto grande. Per ottimizzare questo posso tenermi una lista dedicata all'idle e una dedicata all'active. Per vedere il flusso più vecchio vedo il primo che sta in lista poiché avrà l'active che calcolerò maggiore. Mentre per capire i flussi inattivi la lista deve aggiornarsi aggiungendo gli elementi uno sotto l'altro però un elemento che viene modificato presente in lista diventa l'ultimo
 > 
+> ---
+> 
 > <mark>***IPFIX***</mark> è un protocollo che implementa una tecnologia per l'IP Trafﬁc Flow measurement che fa le stesse cose di NetFlow v9 però non dipende da CISCO. Si basa sul protocollo di trasporto SCTP ( *non funziona su windows* ) che però non usa nessuno e infatti si può usare anche sopra il protocollo TPC/UDP
 > 
 > La differenze + grande è che non si manda un template ma un PEN prima di inviare i dati, ovvero un ***identificativo univoco assegnato da IANA*** ad un'organizzazione. Serve a definire **template personalizzati** nei protocolli come IPFIX
@@ -539,7 +541,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 105519.png" /></p>
 > 
-> I numeri di record possibili sono N che in v5 era max 30
+> Per ogni record potevo I numeri di record possibili sono N che in v5 era max 30
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 105705.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-04-15 105804.png" /></p>
