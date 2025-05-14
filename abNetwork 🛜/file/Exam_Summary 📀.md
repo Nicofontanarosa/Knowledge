@@ -11,7 +11,7 @@
 > 
 > Questi oggetti presentano **attributi, operazioni, un comportamento ovvero l'interazione con il mondo reale e le notifiche ovvero messaggi generati in determinate situazioni dal managed object**. Il **Manager o Management System** non deve dipendere dall'implementazione fisica del managed object ( *macchinetta caffè* )
 > 
-> Il <mark>**MIB**</mark> ( **Management Information Base**  #MIB ) ovvero l'unione di tutti i managed object contenuti in un sistema ( *in sostanza un db con tanti pezzettini* ) ed è composto da moduli intercambiali e modificabili da sistema a sistema. Questo MIB dovrebbe essere conosciuto sia dal manager che dal responsabile ( *macchinetta* )
+> Il <mark>**MIB**</mark> ( **Management Information Base**  #MIB ) ovvero l'unione di tutti i managed object contenuti in un sistema. Questo MIB dovrebbe essere conosciuto sia dal manager che dal responsabile ( *macchinetta* )
 > 
 > l' **agent** ( *responsabile* ) è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
 > 
