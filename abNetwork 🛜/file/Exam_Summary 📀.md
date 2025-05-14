@@ -541,12 +541,12 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 105519.png" /></p>
 > 
-> Per ogni record potevo I numeri di record possibili sono N che in v5 era max 30
+> Per ogni record potevo inserire massimo 30 campi in v5
 > 
 > <p align="center"><img src="img/Screenshot 2025-04-15 105705.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-04-15 105804.png" /></p>
 > 
-> Questo modo di definire i flussi è **statico e non estendibile, anche se molto veloce** poiché occupa **poca banda**. Per questi motivi è stata definita la v9 che propone il concetto di template. Ogni X tempo, si invia il template e subito dopo i date che quindi il collector riesce ad interpretare. Nel template posso decidere se mettere dei parametri o meno
+> Questo modo di definire i flussi è **statico e non estendibile, anche se molto veloce** poiché occupa **poca banda**. Per questi motivi è stata definita la v9 che propone il concetto di template. Ogni X tempo, si invia il template e subito dopo i dati che quindi il collector riesce ad interpretare. Nel template posso decidere se mettere dei parametri o meno
 >  
 > <p align="center"><img src="img/Screenshot 2025-04-15 110856.png" /></p>
 >
