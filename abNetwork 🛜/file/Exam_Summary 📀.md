@@ -68,7 +68,6 @@
 > 
 > Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere. Ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
 > 
-> Per rispondere alla domanda fatta all'inizio di questo file =>
 > - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-14 181844.png" /></p>
