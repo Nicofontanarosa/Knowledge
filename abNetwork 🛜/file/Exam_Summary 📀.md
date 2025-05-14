@@ -1205,17 +1205,6 @@
 > 5. Il singolo programma BPF ha meno di 4096 istruzioni
 >
 
-> [!NOTE]
-> 
-> ***Usage of TcpDump***
-> 
-> ***Promisque*** ci consente di vedere effettivamente il traffico internet che non viene dalla nostra scheda di rete, poiché le schede di rete fanno il filtraggio del MAC address
-> 
-> `sudo tcpdump -i any`
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-13 191834.png" /></p>
-> 
-
 > [!TIP]
 > 
 > ***What is Libpcap ?***
