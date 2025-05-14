@@ -164,20 +164,6 @@
 > Un altro esempio sono le **notifiche ( trap )** inviate quando la **porta di un dispositivo cambia stato**. Se accendo un dispositivo con molte porte attive, riceverò **molti pacchetti trap in poco tempo**: questa situazione è nota come <mark>**_Trap Storm_**</mark>
 > 
 
-> [!TIP]
-> 
-> **MIB-II** definisce una serie di oggetti standard ( circa **170** ) relativi ai protocolli **IP, ICMP, UDP, TCP** e **SNMP**. L’implementazione di questo MIB **non dovrebbe interferire** con il normale funzionamento delle attività di rete
->  
->  <p align="center"><img src="img/Screenshot 2025-03-08 163224.png" /></p>
->  <p align="center"><img src="img/Screenshot 2025-03-08 163348.png" /></p>
->  
->  Un **Agent** può rendere disponibili gli stessi oggetti visti da **prospettive diverse**, perché esistono **diversi MIB** che osservano le stesse informazioni a **livelli differenti** del modello di rete. Ad esempio, le **statistiche di rete** possono essere presenti in **tre MIB diversi** =>
->  
->  - A livello **repeater**, trovi statistiche su quante volte è stato amplificato il segnale
->  - A livello **bridge**, i dati riguardano il **livello 2 del modello ISO/OSI**, come il numero di **MAC address** osservati ...
->  - ...
->  
-
 > [!IMPORTANT]
 > 
 > ***SNMPv1***
@@ -238,7 +224,16 @@
 > 
 > ***MIB Implementation***
 > 
->  È stato definito il **MIB-II**, che introduce oggetti per la gestione dei protocolli Internet come **IP, ICMP, UDP, TCP**, ecc., aggiungendo circa **170 nuovi oggetti**. Molti di questi oggetti sono stati inclusi per comodità, ad esempio la **routing table** e la **interface table**.
+>  È stato definito il **MIB-II**, che introduce oggetti per la gestione dei protocolli Internet come **IP, ICMP, UDP, TCP**, ecc., aggiungendo circa **170 nuovi oggetti**. Molti di questi oggetti sono stati inclusi per comodità, ad esempio la **routing table** e la **interface table**
+>  
+>  <p align="center"><img src="img/Screenshot 2025-03-08 163224.png" /></p>
+>  <p align="center"><img src="img/Screenshot 2025-03-08 163348.png" /></p>
+>  
+>  Un **Agent** può rendere disponibili gli stessi oggetti visti da **prospettive diverse**, perché esistono **diversi MIB** che osservano le stesse informazioni a **livelli differenti** del modello di rete. Ad esempio, le **statistiche di rete** possono essere presenti in **tre MIB diversi** =>
+>  
+>  - A livello **repeater**, trovi statistiche su quante volte è stato amplificato il segnale
+>  - A livello **bridge**, i dati riguardano il **livello 2 del modello ISO/OSI**, come il numero di **MAC address** osservati ...
+>  - ...
 >  
 >  Il **MIB-II** utilizza indirizzi a **4 byte** per rappresentare gli indirizzi **IPv4**; per **IPv6**, invece, si utilizza **SNMPv2** o versioni successive
 >  
