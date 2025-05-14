@@ -60,7 +60,7 @@
 > 
 > > *Big endian sono processori tipo Motorola 68k e PowerPC mentre Little endian Intel x64 e Apple Silicon*
 > 
-> Quindi **presentazione dei dati != dati rappresentati da una applicazione** e questa sintassi definisce i dati durante il trasferimento e stabiliscono come poi dovranno essere transformati
+> Quindi **presentazione dei dati != dati rappresentati da una applicazione** e questa sintassi definisce i dati durante il trasferimento e stabiliscono come poi dovranno essere trasformati
 >
 
 > [!NOTE]
