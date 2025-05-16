@@ -1153,7 +1153,7 @@
 > 
 > Un **filtro di pacchetti** è semplicemente una **funzione booleana** applicata a ogni pacchetto
 > 
-> Più il pacchetto è grande, **maggiore sarà la dimensione della cella** nel buffer circolare.
+> Più il pacchetto è grande, **maggiore sarà la dimensione della cella** nel buffer circolare
 > 
 > <p align="center"><img src="img/Screenshot 2025-02-13 185937.png" /></p>
 > 
@@ -1166,7 +1166,7 @@
 > 
 > ***What is Libpcap ?***
 >
->  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento ( *livello 2 nel modello OSI* ) su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
+>  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
 >  
 >  <mark>**The biggest user of this construct ( BPF ) might be libpcap**</mark>
 >
@@ -1189,7 +1189,7 @@
 > TcpDump quando viene eseguito passa attraverso il compilatore interno di questa libreria che genera una struttura che viene passata al kernel e usata come filtro. Con il flag  `-ddd` mostriamo cosa viene caricato all'interno di questa struttura
 >
 >  1. Il bytecode BPF è collegato all'interfaccia di rete #TAP
->  2. TcpDumpo stampa i pacchetti per cui il filtro è soddisfatto
+>  2. TcpDump stampa i pacchetti per cui il filtro è soddisfatto
 >
 > In sostanza, Tcpdump chiede al kernel di eseguire un programma BPF all'interno del contesto del kernel. Potrebbe sembrare rischioso, ma in realtà non lo è. Prima di eseguire il bytecode BPF, il kernel si assicura che sia sicuro ->
 > 
