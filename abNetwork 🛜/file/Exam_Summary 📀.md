@@ -1159,8 +1159,17 @@
 > 
 > Il **BPF** ( e la sua evoluzione **eBPF** ) è una vera e propria **macchina virtuale** che accetta **programmi ( filtri )** scritti in uno specifico **bytecode**, provenienti dallo **spazio utente**. Questi programmi vengono caricati nel kernel tramite una **chiamata di sistema** – che avviene **una sola volta** – e da quel momento in poi vengono eseguiti direttamente nel kernel, senza ulteriori interventi dallo spazio utente.
 > 
-> <mark>_**eXpress Data Path ( XDP )**_</mark> è un framework che consente l'elaborazione dei pacchetti **ad altissima velocità**, integrando programmi BPF direttamente **all'ingresso dell'interfaccia di rete**. In pratica, un programma BPF può essere eseguito **appena il pacchetto viene ricevuto**, _prima ancora che venga processato dallo stack TCP/IP del kernel_, permettendo così azioni immediate come il **drop**, il **redirect** o la **modifica del pacchetto**.
+> <mark>_**eXpress Data Path ( XDP )**_</mark> è un framework che consente l'elaborazione dei pacchetti **ad altissima velocità**, integrando programmi BPF direttamente **all'ingresso dell'interfaccia di rete**. In pratica, un programma BPF può essere eseguito **appena il pacchetto viene ricevuto**, _prima ancora che venga processato dallo stack TCP/IP del kernel_
 > 
+
+> [!TIP]
+> 
+> ***What is Libpcap ?***
+>
+>  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento ( *livello 2 nel modello OSI* ) su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
+>  
+>  <mark>**The biggest user of this construct ( BPF ) might be libpcap**</mark>
+>
 
 > [!IMPORTANT]
 > 
@@ -1177,7 +1186,7 @@
 > - Controlla se il valore è 0x0800, altrimenti fallisci. In questo modo viene verificata la presenza del pacchetto IP su un frame Ethernet
 > - ...
 > 
-> <mark>**The biggest user of this construct ( BPF ) might be libpcap**</mark>. TcpDump quando viene eseguito passa attraverso il compilatore interno di questa libreria che genera una struttura che viene passata al kernel e usata come filtro. Con il flag  `-ddd` mostriamo cosa viene caricato all'interno di questa struttura
+> TcpDump quando viene eseguito passa attraverso il compilatore interno di questa libreria che genera una struttura che viene passata al kernel e usata come filtro. Con il flag  `-ddd` mostriamo cosa viene caricato all'interno di questa struttura
 >
 >  1. Il bytecode BPF è collegato all'interfaccia di rete #TAP
 >  2. TcpDumpo stampa i pacchetti per cui il filtro è soddisfatto
@@ -1187,13 +1196,6 @@
 > 3. Tutti i salti sono solo in avanti, il che garantisce che non ci siano loop nel programma BPF. Pertanto deve terminare
 > 4. Tutte le istruzioni, in particolare le letture in memoria, sono valide e nel raggio d'azione
 > 5. Il singolo programma BPF ha meno di 4096 istruzioni
->
-
-> [!TIP]
-> 
-> ***What is Libpcap ?***
->
->  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento ( *livello 2 nel modello OSI* ) su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
 >
 
 > [!IMPORTANT]
