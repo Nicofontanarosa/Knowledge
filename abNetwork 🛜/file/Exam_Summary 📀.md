@@ -1130,7 +1130,7 @@
 > 
 > Normalmente, il traffico Internet segue lo stack a destra, passando attraverso il **driver della scheda di rete ( Ethernet device driver )**, che permette al sistema operativo di interagire con l'hardware di rete.
 > 
-> Sappiamo che ogni processo sulla macchina vede solo ciò che il sistema operativo gli consente di vedere. Possiamo quindi affermare che ogni processo è "chiuso" nel proprio ambiente. **Ma come può un processo in spazio utente leggere i dati che viaggiano sulla scheda di rete, senza accedere direttamente allo spazio kernel ?**
+> **Ma come può un processo in spazio utente leggere i dati che viaggiano sulla scheda di rete, senza accedere direttamente allo spazio kernel ?**
 > 
 > In passato si usavano **chiamate di sistema**, che però, pur essendo sicure, risultavano lente. Una soluzione più efficiente è usare applicazioni che accedono direttamente alla memoria tramite #DMA ( _Direct Memory Access_ ), permettendo di leggere/scrivere pacchetti bypassando la #CPU e riducendo la latenza
 > 
@@ -1147,7 +1147,7 @@
 > - **Se un pacchetto deve essere accettato**
 > - **Quanti byte del pacchetto devono essere salvati**
 >
-> Per ogni filtro che accetta il pacchetto, **BPF copia nel buffer associato** solo la quantità di dati richiesta. Prima dell’applicazione del filtro, viene utilizzato un **puntatore**: il pacchetto viene **filtrato "sul posto"** ( **direttamente nella memoria dove il motore DMA della scheda di rete lo ha scritto** ), evitando di copiarlo in un altro buffer prima di applicare il filtro. Il numero di **reference** del pacchetto viene aggiornato per gestire l’accesso ai dati
+> Per ogni filtro che accetta il pacchetto, **BPF copia nel buffer associato** solo la quantità di dati richiesta. Prima dell’applicazione del filtro, viene utilizzato un **puntatore**: il pacchetto viene **filtrato "sul posto"** ( **direttamente nella memoria dove il motore DMA della scheda di rete lo ha scritto** ), evitando di copiarlo in un altro buffer prima di applicare il filtro
 > 
 > Successivamente, lo **sniffer** legge i pacchetti dal **buffer condiviso** e li trasferisce nel proprio **buffer locale** per l’elaborazione
 > 
