@@ -1136,22 +1136,6 @@
 > 
 > Questa **memoria circolare** viene creata nel **kernel** e contiene la copia dei pacchetti catturati. Essa è **condivisa** ( o mappata ) con lo **spazio utente**, permettendo così all'applicazione di monitoraggio di accedervi direttamente
 > 
-> Per migliorare la velocità di accesso, **non viene usata sincronizzazione con variabili di controllo**, poiché esiste **un solo produttore** ( kernel ) e **un solo consumatore** ( sniffer ). Il buffer è gestito con un **indice di testa** ( _write index_ ) e un **indice di coda** ( *read index* ) che **non devono mai coincidere**: devono sempre essere distanziati almeno di una cella. Questo consente allo sniffer di leggere in sicurezza tutti i pacchetti **fino al penultimo inserito**, lasciando sempre una cella vuota per distinguere il buffer pieno da quello vuoto
-> 
-> Questo tipo di **buffer circolare** consente un accesso molto efficiente ai pacchetti, ma in situazioni di traffico intenso può comunque verificarsi la perdita di pacchetti ( _kernel packet drops_ )
-> 
-> Se l'applicazione sniffer è **multi-thread**, si presentano nuove sfide -> **più thread** proveranno ad accedere a **un unico buffer** condiviso, causando **contenzione** ( *nic -> buffer condiviso -> buffer applicazione* ). Una prima ottimizzazione consiste nell'introdurre **n buffer separati**, ognuno gestito da un #thread diverso. Un **thread smistatore** si occupa di leggere dal buffer condiviso ( kernel-user ) e distribuire i pacchetti nei buffer locali dei thread sniffer
-> 
-> Per migliorare ulteriormente, è possibile **eliminare il thread smistatore** spostando la logica di smistamento **nel kernel stesso**. In questo caso, il kernel **mappa direttamente n buffer**, uno per ogni thread dell'applicazione utente. Così, il kernel smista i pacchetti ricevuti dalla NIC **direttamente nei buffer corrispondenti** usando una politica ( #round_robin )
-> 
-> Queste ottimizzazioni funzionano bene in scenari **1:1 ( un produttore e un consumatore )**. In configurazioni **1:n** diventano più complesse da gestire
-> 
-> Questa tecnica prende il nome di <mark>**Receive Side Scaling ( RSS )**</mark> ->
-> 
-> #RSS distribuisce la ricezione dei pacchetti **tra i vari core** della CPU per evitare il **collo di bottiglia** derivante dall'accesso simultaneo a un'unica struttura dati. Di default, il kernel può assegnare **un buffer per ogni core**, ma si può anche configurare un numero maggiore. Infatti, avere **più buffer rispetto ai core** può essere vantaggioso ( *mettere - buffer significa che + core lavoreranno su un unico buffer avendo problemi di sincronizzazione, metterne di + non è una soluzione così sbagliata invece poiché se un core è abbastanza veloce potrebbe lavorare su + buffer* )
-> 
-> <p align="center"><img src="img/Screenshot 2025-02-11 164123.png" /></p>
-> 
 > ---
 > 
 > A livello concettuale, troviamo il **driver BPF** mantiene l’elenco delle **applicazioni registrate** per catturare pacchetti e, per ognuna, gestisce una **coda dedicata** contenente i pacchetti filtrati. Questo significa che sniffare i pacchetti **consuma memoria**, poiché ogni applicazione ha il proprio spazio di buffering
@@ -1210,10 +1194,6 @@
 > ***What is Libpcap ?***
 >
 >  La **libreria** libpcap <mark>**Packet capture library**</mark> è stata scritta come **parte di un programma** più ampio chiamato <mark>***TCPDump***</mark>. La libreria libpcap ha permesso agli sviluppatori di scrivere codice per ricevere pacchetti di livello di collegamento ( *livello 2 nel modello OSI* ) su diversi tipi di **sistemi operativi UNIX** senza doversi preoccupare delle differenze sulle varie schede di rete e dei driver dei diversi sistemi operativi. In sostanza, la libreria libpcap **cattura i pacchetti direttamente dalle schede di rete**, il che ha permesso agli sviluppatori di scrivere programmi per decodificare, visualizzare o registrare i pacchetti
->  
-> Questa libreria è usata frequentemente negli strumenti di sicurezza di rete per una varietà di scopi, inclusi scanner di rete e software di monitoraggio di rete. Mentre molte piattaforme UNIX sono fornite di default con _libpcap_ , **la piattaforma Windows** non lo è ma è fornita di un driver di pacchetti <mark>**WinPcap**</mark>  
->  
->  Il programma **TCPDump** ha fatto proprio questo. **Uno sniffer multipiattaforma**, originariamente scritto da #Van_Jacobson, #Craig_Leres e #Steven_McCanne presso i #Lawrence #Berkeley Labs per **analizzare i problemi di prestazioni TCP**, TCPDump ha permesso di catturare pacchetti e quindi decodificarli e visualizzarli. Un giorno, frustrato dalle limitazioni e dai formati di output di TCPDump, #Marty_Roesch ha scritto <mark>**Snort**</mark> come sostituto di TCPDump ( *era semplicemente un TCPDump migliore* )
 >
 
 > [!IMPORTANT]
