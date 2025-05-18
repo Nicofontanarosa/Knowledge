@@ -62,7 +62,9 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 184203.png" /></p>
 > 
-> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito della sintassi di trasferimento che verrà usata
+> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito del compilatore ASN
+> 
+> <p align="center"><img src="img/Screenshot 2025-03-07 195012.png" /></p>
 > 
 > L'<mark>**ISO Registration Tree**</mark> è un albero per identificare univocamente oggetti, tipi di dato, protocolli, documenti, ... insomma è un modo per standardizzare tutto
 > 
@@ -71,10 +73,7 @@
 > <p align="center"><img src="img/Screenshot 2025-03-07 183915.png" /></p>
 > 
 > Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere. Ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
-> 
-> E per trasformare la struttura dati scritta in ASN per comunicare tra programmi in una struttura dati del mio linguaggio ci sarà un compilatore che 
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-07 195012.png" /></p>
+>
 > 
 
 ---
