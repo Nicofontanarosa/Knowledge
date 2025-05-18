@@ -8,7 +8,7 @@
 >
 >  <p align="center"><img src="img/Screenshot 2025-03-07 201616.png" /></p>
 >  
->  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, ecc., per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
+>  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, etc... , per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
 >  
 >  - Minimizzare la complessità delle funzioni di gestione implementate dagli agent
 >  - Utilizzare le stesse funzioni su tutti i dispositivi di rete

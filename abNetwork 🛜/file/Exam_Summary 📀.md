@@ -62,7 +62,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 184203.png" /></p>
 > 
-> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito del compilatore ASN
+> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito del compilatore ASN che trasformare la struttura dati astratta in una struttura dati del mio linguaggio
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 195012.png" /></p>
 > 
@@ -72,8 +72,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 183915.png" /></p>
 > 
-> Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere. Ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
->
+> Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere. Un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* ) viene tradotto in una stringa comprensibile dall'uomo
 > 
 
 ---
@@ -85,7 +84,7 @@
 >
 >  <p align="center"><img src="img/Screenshot 2025-03-07 201616.png" /></p>
 >  
->  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, ecc., per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
+>  C'era la necessità di gestire dispositivi di rete come switch, router, ma anche sensori, apparecchiature mediche, etc... , per ottenere informazioni sul loro stato o per ricevere dati da essi. Il protocollo è rimasto costante nel tempo, mentre i dati gestiti si sono evoluti ( *ASN tree* ). Gli obiettivi di SNMP sono =>
 >  
 >  - Minimizzare la complessità delle funzioni di gestione implementate dagli agent
 >  - Utilizzare le stesse funzioni su tutti i dispositivi di rete
