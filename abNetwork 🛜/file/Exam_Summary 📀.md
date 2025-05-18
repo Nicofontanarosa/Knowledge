@@ -328,8 +328,6 @@
 > 
 > - **GetBulk** -> Migliora la velocità della get e getnext di SNMPv1. Con queste 2 primitive infatti bisogna richiedere ogni volta un elemento, aspettare la risposta e successivamente richiedere la get della risposta ( *velendo* ) -> Funzionamento della **snmpwalk**. Con la GetBulk vado a richiedere più elementi dell'albero consecutivi senza aspettare una risposta tra un elemento e l'altro
 > 
-> <p align="center"><img src="img/Screenshot 2025-03-22 123024.png" /></p>
-> 
 > Dove **nonrepeaters** sono quanti OID prendo con la get mentre **maxrepetition** sono quanti OID prendo con la get next
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 123456.png" /></p>
