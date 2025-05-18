@@ -52,11 +52,13 @@
 > ***Abstract Syntax and Transfer Syntax***
 > 
 > **ASN.1** consente diverse regole di codifica che trasformano la sintassi astratta in un flusso di byte adatto al trasferimento. Definiamo quindi la <mark>**BER**</mark> ( _Basic Encoding Rules_ #BER ) definisce la mappatura tra la sintassi astratta e quella di trasferimento quindi codifica i tipi di dato ASN in stream di byte ( *nei browser è* #DER )
-> > - Le applicazioni normalmente utilizzano una sintassi locale a seconda del linguaggio di programmazione utilizzato
 > 
+> - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
+> 
+> <p align="center"><img src="img/Screenshot 2025-03-14 181844.png" /></p>
 > <p align="center"><img src="img/Screenshot 2025-03-07 183242.png" /></p>
 > 
-> > *l'object identifier da un significato a degli oggetti: se voglio dire che una stringa è un nome di persona userò l'oi che dice che quella stringa rappresenta un nome*
+> *l'object identifier da un significato a degli oggetti: se voglio dire che una stringa è un nome di persona userò l'oi che dice che quella stringa rappresenta un nome*
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 184203.png" /></p>
 > 
@@ -69,10 +71,6 @@
 > <p align="center"><img src="img/Screenshot 2025-03-07 183915.png" /></p>
 > 
 > Quindi possiamo dire che l'object identifier è un **riferimento assoluto** che la macchina deve essere in grado di risolvere. Ogni stringa è la traduzione di un object identifier tipo 1.6.3.1.1.2.3 = WWW-HIR ( *non è vero* )
-> 
-> - BER definisce anche la direzione di trasmissione del flusso di bit oltre alla codifica dei tipi di dato ASN.1
-> 
-> <p align="center"><img src="img/Screenshot 2025-03-14 181844.png" /></p>
 > 
 > E per trasformare la struttura dati scritta in ASN per comunicare tra programmi in una struttura dati del mio linguaggio ci sarà un compilatore che 
 > 
