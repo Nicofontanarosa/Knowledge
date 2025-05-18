@@ -131,7 +131,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-07 184203.png" /></p>
 > 
-> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito della sintassi di trasferimento che verrà usata
+> - Come possiamo vedere, qui definiamo una sintassi astratta per i tipi, non andiamo a specificare quanti bit occorrono poiché quello è il compito del compilatore ASN
 > 
 > L'<mark>**ISO Registration Tree**</mark> è un albero per identificare univocamente oggetti, tipi di dato, protocolli, documenti, ... insomma è un modo per standardizzare tutto
 > 
