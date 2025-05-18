@@ -14,17 +14,15 @@
 > 
 > Questi oggetti presentano **attributi, operazioni, un comportamento ovvero l'interazione con il mondo reale e le notifiche ovvero messaggi generati in determinate situazioni dal managed object**. Il **Manager o Management System** non deve dipendere dall'implementazione fisica del managed object ( *macchinetta caffè* )
 > 
-> Il <mark>**MIB**</mark> ( **Management Information Base**  #MIB ) ovvero l'unione di tutti i managed object contenuti in un sistema. Questo MIB dovrebbe essere conosciuto sia dal manager che dal responsabile ( *macchinetta* )
-> 
-> l' **agent** ( *responsabile* ) è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
+> Il <mark>**MIB**</mark> ( **Management Information Base**  #MIB ) ovvero l'unione di tutti i managed object contenuti in un sistema. Questo MIB dovrebbe essere conosciuto sia dal manager che dal responsabile ovvero dall' **agent** è un software che gira all'interno della risorsa fisica e implementa i managed object del MIB accedendo a questa e attende un comando del **manager**, comunica delle notifiche ad un cambio di stato nel MIB e protegge i moduli da accessi esterni al manager tramite **Regole di accesso**
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-05 132503.png" /></p>
 > 
 > > *spesso il manager e agent girano sullo stesso host*
 >  
->  Un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
+>  Il tutto è basato su un **protocollo di gestione** implementa l'accesso a managed object remoti codificando i dati di gestione, che vengono poi protetti durante il trasferimento. Questo protocollo di management si basa su =>
 >  
->  - **Fault management** -> Identificazione degli errori e riparazione. Bisogna far in modo di non intaccare il funzionamento del sistema anche in caso di errore però bisogna comunicarlo ( *if you fail, fail hard* )
+>  - **Fault management** -> Identificazione degli errori e riparazione
 >  - **Configuration management** -> Configurazione secondo standard amministrativi
 >  - **Account management** -> - Inserimento dei dati di consumo ( *utilizzo* ), distribuzione e monitoraggio e fatturazione ai clienti per il consumo delle risorse. L'utilizzo degli account ci permette di andare a capire dove fare più manutenzione poiché ci sono utenti che usano di più un pezzo
 >  - **Performance management** -> Bisogna capire se si sta andano in peggio oppure in meglio e quindi investire 
