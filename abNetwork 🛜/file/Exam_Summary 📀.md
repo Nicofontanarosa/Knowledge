@@ -306,8 +306,6 @@
 > Un MIB particolare è chiamato LLDP. *Come faccio a sapere come sono realmente collegati i dispositivi allo switch?* Con il Bridge MIB scopriamo che una porta ha visto un determinato MAC. X conoscere la topologia della rete uso LLDP che mi consente di scoprire le adiacenze dello switch che supporta SNMP e questo MIB inviando **periodicamente** pacchetti #LLDP in multicast  
 > 
 > <p align="center"><img src="img/Screenshot 2025-03-22 084039.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-22 085026.png" /></p>
-> <p align="center"><img src="img/Screenshot 2025-03-22 085050.png" /></p>
 > 
 > Il time sarebbe il timestamp in cui si è ricevuto il pacchetto LLDP quindi potrei avere più righe per porta con tempo diverso
 > 
