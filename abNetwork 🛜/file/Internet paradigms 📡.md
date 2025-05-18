@@ -40,7 +40,7 @@
 >  - **Fault management** -> Identificazione degli errori e riparazione. Bisogna far in modo di non intaccare il funzionamento del sistema anche in caso di errore però bisogna comunicarlo ( *if you fail, fail hard* )
 >  - **Configuration management** -> Configurazione secondo standard amministrativi
 >  - **Account management** -> - Inserimento dei dati di consumo ( *utilizzo* ), distribuzione e monitoraggio e fatturazione ai clienti per il consumo delle risorse. L'utilizzo degli account ci permette di andare a capire dove fare più manutenzione poiché ci sono utenti che usano di più un pezzo
->  - **Performance management** -> Bisogna capire se si sta andano in peggio oppure in meglio e quindi investire 
+>  - **Performance management** -> Bisogna capire se si sta andando in peggio oppure in meglio e quindi investire 
 >  - **Security management** -> Autenticazione e segnalazione di attività illecite
 >
 > <mark>***FCAPS***</mark> ( #FCAPS ) è il termine con il quale si riassumono queste 5 proprietà o **aree funzionali** che non sono indipendenti tra di loro ma si influenzano a vicenda
