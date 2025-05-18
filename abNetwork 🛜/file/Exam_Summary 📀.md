@@ -6,6 +6,8 @@
 > 
 > ---
 > 
+> **Protocollo Agent - Manager** ->
+> 
 > Tutte le funzioni di **controllo, coordinamento e gestione** vengono fatte su un *managed objects* che **è la rappresentazione astratta di una risorsa che ne presenta le sue proprietà**. Questi oggetti sono una rappresentazione astratta di una risorsa reale
 >  
 > <p align="center"><img src="img/Screenshot 2025-03-05 112419.png" /></p>
