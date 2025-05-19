@@ -521,22 +521,12 @@
 > I **flussi grezzi** sono utili, ma a volte è necessario rispondere a varie domande, come ad esempio ->
 > 
 > - Quanta parte del nostro traffico è web, news, email, Quake (gioco) ?
-> - Quanto traffico proviene o va verso i vari reparti ?
-> - Quanto traffico va verso altri reparti, il provider X, Google, ecc. ?
 > - Qual è la quantità di traffico che attraversa l’interfaccia X ?
 > 
 > Quindi quello che si fa è unire i flussi per risparmiare spazio e poter rispondere ad informazioni di questo tipo. Questa aggregazione può essere fatta dal probe, dal collector o da entrambi ( *il collector è + potente ma anche + costoso* )
 > 
 > Questi **flussi** possono essere anche **filtrati** tramite parametri quali **Flow duration, Flow src / dst, ports etc ...**. Il filtraggio è diverso dall'aggregazione anche se possono coesistere
 >
-> Combinando aggregazione e filtraggio è possibile identificare ->
-> 
-> - Portscan / portmap detection
-> - Detect activities on suspicious ports
-> - Identify sources of spam, unauthorised servers
-> - Flow with to many packets in it ( *count* )
-> - 1 ip contact more destination -> Host Scanning
-> 
 
 > [!IMPORTANT]
 > 
@@ -546,7 +536,6 @@
 >  
 >  - **Costo** -> Il monitoraggio delle reti richiedeva l'uso di più sonde, le soluzioni di monitoraggio integrate richiedevano hardware e/o software aggiuntivo e i costi amministrativi sono elevati per la gestione di apparecchiature aggiuntive
 >  - **Impatto sulle prestazioni della rete** -> Le prestazioni degli switch venivano compromesse dalla misurazione dei flussi di traffico e la comunicazione dei dati di flusso consumava una quantità eccessiva di banda di rete
->  - **Scarsa scalabilità del sistema di monitoraggio** -> Incapacità di tenere il passo con velocità dell’ordine del Gigabit e l'impossibilità di costruire una visione globale del traffico di rete in ambienti grandi e molto utilizzati
 >
 > Proprio per questo è nato sFlow che implementa come Netflow e IPFIX una tecnologia per monitorare i flussi di rete ma non pretende di essere veloce come loro perché tanto questi dati vengono persi. **Analizza un singolo pacchetto ogni X pacchetti** -> <mark>**packet sample**</mark>  ( *questi pacchetti vengono mandati dal probe al collezionatore* )
 > 
