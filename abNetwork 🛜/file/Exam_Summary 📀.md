@@ -381,15 +381,9 @@
 > 
 > ***What can i mesure?***
 >
->  **Analisi quantitativa del traffico di rete** => Si concentra sulla **misurazione** e **classificazione** del traffico di rete sulla base di parametri rilevanti. Gli aspetti principali includono =>
+>  **Analisi quantitativa del traffico di rete** => Si concentra sulla **misurazione** e **classificazione** del traffico di rete sulla base di parametri rilevanti tipo Identificazione dei protocolli applicativi utilizzati o Top Talkers etc ...
 > 
-> - **Identificazione dei protocolli applicativi utilizzati** → Rilevazione e classificazione del traffico generato da applicazioni come Microsoft Teams, Skype, servizi email, etc ...
-> - **Top Talkers** → Analisi degli host che generano o ricevono il maggior volume di traffico
-> 
-> **Analisi qualitativa del traffico di rete** => Si concentra sugli aspetti legati alla **sicurezza** e alla **funzionalità** del traffico di rete, con l'obiettivo di individuare anomalie o potenziali minacce. Gli aspetti principali includono =>
-> 
-> - **Individuazione di strumenti per l'anonimato** → Rilevamento dell'uso di tecnologie come Tor o VPN anonime, che possono nascondere l'identità degli utenti o mascherare il traffico
-> - **Identificazione di errori** → Analisi di problemi e anomalie nella comunicazione di rete, come perdita di pacchetti, configurazioni errate o malfunzionamenti applicativi
+> **Analisi qualitativa del traffico di rete** => Si concentra sugli aspetti legati alla **sicurezza** e alla **funzionalità** del traffico di rete, con l'obiettivo di individuare anomalie o potenziali minacce tipo rilevamento dell'uso di tecnologie come Tor o VPN etc ...
 > 
 
 > [!TIP]
