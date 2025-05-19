@@ -414,7 +414,6 @@
 > I <mark>**vantaggi**</mark> dei **tap** sono =>
 > 
 > - **Eliminazione del rischio di perdita pacchetti**
-> - **Monitoring dei pacchetti**
 > 
 > Gli <mark>**svantaggi**</mark> dei tap sono =>
 > 
