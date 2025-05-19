@@ -995,7 +995,7 @@
 > 
 > <p align="center"><img src="img/Screenshot 2025-05-04 100554.png" /></p>
 > 
-> - **Utilization** -> **L'utilizzo** è una misura più dettagliata rispetto alla **throughput**. Indica la **percentuale di tempo in cui una risorsa è effettivamente in uso** in un dato intervallo di tempo. Un valore molto basso di utilizzo può essere un segnale che qualcosa non sta funzionando correttamente ( _poco traffico perché il file server è andato in crash_ )
+> - **Utilization** -> Indica la **percentuale di tempo in cui una risorsa è effettivamente in uso** in un dato intervallo di tempo. Un valore molto basso di utilizzo può essere un segnale che qualcosa non sta funzionando correttamente ( _poco traffico perché il file server è andato in crash_ )
 > 
 > - **Jitter** -> E' la **variazione nel ritardo tra pacchetti consecutivi** su un collegamento in una sola direzione. E' un parametro molto importante per le applicazioni multimediali, come le **telefonate via Internet** o le **trasmissioni video**. In sostanza, il **jitter misura quanto è irregolare il flusso di dati** -> Nella telefonia il Jitter deve essere molto basso
 > 
